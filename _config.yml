@@ -1,7 +1,7 @@
 title: Aspia Remote Desktop
 email: "dmitry@aspia.ru"
 description: >- # this means to ignore newlines until "baseurl:"
-  Free open source application for real-time desktop remote control and file transfer.
+  Free open source application for real-time desktop remote control.
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
