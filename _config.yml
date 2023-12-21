@@ -1,16 +1,29 @@
 title: Aspia Remote Desktop
+author: Dmitry Chapyshev
 email: "dmitry@aspia.ru"
 description: >- # this means to ignore newlines until "baseurl:"
   Free open source application for real-time desktop remote control.
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
+
+# Social
+#stackoverflow_id:
+#twitter_username:
+#linkedin_username:
 github_username:  dchapyshev
 
 repository: "dchapyshev/dchapyshev.github.io"
 
+# Google services
+#google_verification:
+#google_analytics:
+#google_tag_manager:
+
 # kramdown or GFM
 markdown: kramdown
+
+show_subscribe_cta: True
+show_social_icons: True
 
 # Build settings
 plugins:
