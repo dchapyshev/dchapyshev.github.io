@@ -8,6 +8,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 github_username:  dchapyshev
 
 repository: "dchapyshev/dchapyshev.github.io"
+markdown: GFM
 
 # Build settings
 plugins:
