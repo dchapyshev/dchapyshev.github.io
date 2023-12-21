@@ -10,7 +10,7 @@ github_username:  dchapyshev
 repository: "dchapyshev/dchapyshev.github.io"
 
 # kramdown or GFM
-markdown: GFM
+markdown: kramdown
 
 # Build settings
 plugins:
