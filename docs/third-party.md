@@ -3,9 +3,6 @@ layout: page
 title: Third-party components
 ---
 
-Third-party components information
-==================================
-
 | Name       | License                        | URL                                              |
 |------------|--------------------------------|--------------------------------------------------|
 | asio       | Boost Software License 1.0     | https://github.com/chriskohlhoff/asio            |

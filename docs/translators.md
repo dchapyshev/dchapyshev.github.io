@@ -36,9 +36,9 @@ Change directory to "[installer/translations](https://github.com/dchapyshev/aspi
 
 This directory contains installer translations for Aspia Console and Aspia Host.
 
-File to translate Aspia Console: **console.<language_code>.wxl**
+File to translate Aspia Console: ```console.<language_code>.wxl```
 
-File to translate Aspia Host: **host.<language_code>.wxl**
+File to translate Aspia Host: ```host.<language_code>.wxl```
 
 You need to translate both files.
 
