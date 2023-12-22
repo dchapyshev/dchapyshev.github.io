@@ -4,7 +4,7 @@ title: Main Page
 ---
 
 <div class="bs-wrap bs-wrap-jumbotron jumbotron">
-<h2>Aspia</h2>
+<h1>Aspia Remote Desktop</h1>
 <a href="https://github.com/dchapyshev/aspia"><img src="https://img.shields.io/github/stars/dchapyshev/aspia?style=social"></a>
 <br/><br/>
 Free open source application for real-time desktop remote control and file transfer.
