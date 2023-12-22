@@ -31,33 +31,33 @@ Linux
 
 ## Command Line <a name="command-line"></a>
 
-| Argument                     | Description                                                                                         |
-|------------------------------|-----------------------------------------------------------------------------------------------------|
-| -? -h --help                 | Displays help on command line options.                                                              |
-| -v -version                  | Displays version information.                                                                       |
-| --address <address>          | Remote computer address or ID.                                                                      |
-| --port <port>                | Remote computer port.                                                                               |
-| --name <name>                | Display name of host.                                                                               |
-| --username <username>        | Name of user.                                                                                       |
-| --password <password>        | Password of user.                                                                                   |
-| --session-type <type>        | Session type. Possible values: desktop-manage, desktop-view, file-transfer, system-info, text-chat. |
-| --codec <codec>              | Type of codec. Possible values: vp8, vp9, zstd.                                                     |
-| --color-depth <value>        | Color depth. Possible values: 3, 6, 8, 16, 32.                                                      |
-| --compress-ratio <value>     | Compression ratio. Possible values: 1-22.                                                           |
-| --audio <value>              | Enable or disable audio. Possible values: 0 or 1.                                                   |
-| --cursor-shape <value>       | Enable or disable cursor shape. Possible values: 0 or 1.                                            |
-| --cursor-position <value>    | Enable or disable cursor position. Possible values: 0 or 1.                                         |
-| --clipboard <value>          | Enable or disable clipboard. Possible values: 0 or 1.                                               |
-| --desktop-effects <value>    | Enable or disable desktop effects. Possible values: 0 or 1.                                         |
-| --desktop-wallpaper <value>  | Enable or disable desktop wallpaper. Possible values: 0 or 1.                                       |
-| --font-smoothing <value>     | Enable or disable font smoothing. Possible values: 0 or 1.                                          |
-| --clear-clipboard <value>    | Clear clipboard at disconnect. Possible values: 0 or 1.                                             |
-| --lock-at-disconnect <value> | Lock computer at disconnect. Possible values: 0 or 1.                                               |
-| --block-remote-input <value> | Block remote input. Possible values: 0 or 1.                                                        |
-| --router-address <address>   | Router address.                                                                                     |
-| --router-port <port>         | Router port.                                                                                        |
-| --router-username <username> | Router name of user.                                                                                |
-| --router-password <password> | Router password of user.                                                                            |
+| Argument                       | Description                                                                                         |
+|--------------------------------|-----------------------------------------------------------------------------------------------------|
+| `-? -h --help`                 | Displays help on command line options.                                                              |
+| `-v -version`                  | Displays version information.                                                                       |
+| `--address <address>`          | Remote computer address or ID.                                                                      |
+| `--port <port>`                | Remote computer port.                                                                               |
+| `--name <name>`                | Display name of host.                                                                               |
+| `--username <username>`        | Name of user.                                                                                       |
+| `--password <password>`        | Password of user.                                                                                   |
+| `--session-type <type>`        | Session type. Possible values: desktop-manage, desktop-view, file-transfer, system-info, text-chat. |
+| `--codec <codec>`              | Type of codec. Possible values: vp8, vp9, zstd.                                                     |
+| `--color-depth <value>`        | Color depth. Possible values: 3, 6, 8, 16, 32.                                                      |
+| `--compress-ratio <value>`     | Compression ratio. Possible values: 1-22.                                                           |
+| `--audio <value>`              | Enable or disable audio. Possible values: 0 or 1.                                                   |
+| `--cursor-shape <value>`       | Enable or disable cursor shape. Possible values: 0 or 1.                                            |
+| `--cursor-position <value>`    | Enable or disable cursor position. Possible values: 0 or 1.                                         |
+| `--clipboard <value>`          | Enable or disable clipboard. Possible values: 0 or 1.                                               |
+| `--desktop-effects <value>`    | Enable or disable desktop effects. Possible values: 0 or 1.                                         |
+| `--desktop-wallpaper <value>`  | Enable or disable desktop wallpaper. Possible values: 0 or 1.                                       |
+| `--font-smoothing <value>`     | Enable or disable font smoothing. Possible values: 0 or 1.                                          |
+| `--clear-clipboard <value>`    | Clear clipboard at disconnect. Possible values: 0 or 1.                                             |
+| `--lock-at-disconnect <value>` | Lock computer at disconnect. Possible values: 0 or 1.                                               |
+| `--block-remote-input <value>` | Block remote input. Possible values: 0 or 1.                                                        |
+| `--router-address <address>`   | Router address.                                                                                     |
+| `--router-port <port>`         | Router port.                                                                                        |
+| `--router-username <username>` | Router name of user.                                                                                |
+| `--router-password <password>` | Router password of user.                                                                            |
 
 <br/>
 ## Environment variables <a name="env-vars"></a>

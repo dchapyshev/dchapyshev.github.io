@@ -108,14 +108,14 @@ sudo journalctl -u aspia-relay
 ## Command line <a name="command-line"></a>
 The Relay supports the following command line arguments:
 
-| Argument        | Description                                                                                                                    |
-|-----------------|--------------------------------------------------------------------------------------------------------------------------------|
-| --install       | Performs a Relay service installation. Administrator rights are required to execute. The command is only available in Windows. |
-| --remove        | Performs removal of the Relay service. Administrator rights are required to execute. The command is only available in Windows. |
-| --start         | Starts the Relay service. Administrator rights are required to execute. The command is only available in Windows.              |
-| --stop          | Stops the Relay service. Administrator rights are required to execute. The command is only available in Windows.               |
-| --create-config | Creates an initial configuration.                                                                                              |
-| --help          | Displays help about command line arguments.                                                                                    |
+| Argument          | Description                                                                                                                    |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| `--install`       | Performs a Relay service installation. Administrator rights are required to execute. The command is only available in Windows. |
+| `--remove`        | Performs removal of the Relay service. Administrator rights are required to execute. The command is only available in Windows. |
+| `--start`         | Starts the Relay service. Administrator rights are required to execute. The command is only available in Windows.              |
+| `--stop`          | Stops the Relay service. Administrator rights are required to execute. The command is only available in Windows.               |
+| `--create-config` | Creates an initial configuration.                                                                                              |
+| `--help`          | Displays help about command line arguments.                                                                                    |
 
 <br/>
 ## Notes <a name="notes"></a>

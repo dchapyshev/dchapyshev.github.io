@@ -30,11 +30,11 @@ Linux
 
 ## Command Line <a name="command-line"></a>
 
-| Argument                     | Description                            |
-|------------------------------|----------------------------------------|
-| -? -h --help                 | Displays help on command line options. |
-| -v -version                  | Displays version information.          |
-| ``<address_book_file.aab>``  | Address book file to open.             |
+| Argument                  | Description                            |
+|---------------------------|----------------------------------------|
+| `-? -h --help`            | Displays help on command line options. |
+| `-v -version`             | Displays version information.          |
+| `<address_book_file.aab>` | Address book file to open.             |
 
 <br/>
 ## Environment variables <a name="env-vars"></a>

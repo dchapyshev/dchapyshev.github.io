@@ -135,15 +135,15 @@ sudo journalctl -u aspia-router
 ## Command line <a name="command-line"></a>
 The Router supports the following command line arguments:
 
-| Argument        | Description                                                                                                                               |
-|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| --install       | Performs a Router service installation. Administrator rights are required to execute. The command is only available in Windows.           |
-| --remove        | Performs removal of the Router service. Administrator rights are required to execute. The command is only available in Windows.           |
-| --start         | Starts the Router service. Administrator rights are required to execute. The command is only available in Windows.                        |
-| --stop          | Stops the Router service. Administrator rights are required to execute. The command is only available in Windows.                         |
-| --keygen        | Generates private and public keys. The keys are displayed in the terminal. Running the command does not affect the current configuration. |
-| --create-config | Creates an initial configuration.                                                                                                         |
-| --help          | Displays help about command line arguments.                                                                                               |
+| Argument          | Description                                                                                                                               |
+|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| `--install`       | Performs a Router service installation. Administrator rights are required to execute. The command is only available in Windows.           |
+| `--remove`        | Performs removal of the Router service. Administrator rights are required to execute. The command is only available in Windows.           |
+| `--start`         | Starts the Router service. Administrator rights are required to execute. The command is only available in Windows.                        |
+| `--stop`          | Stops the Router service. Administrator rights are required to execute. The command is only available in Windows.                         |
+| `--keygen`        | Generates private and public keys. The keys are displayed in the terminal. Running the command does not affect the current configuration. |
+| `--create-config` | Creates an initial configuration.                                                                                                         |
+| `--help`          | Displays help about command line arguments.                                                                                               |
 
 <br/>
 ## Notes <a name="notes"></a>

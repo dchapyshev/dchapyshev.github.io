@@ -29,27 +29,27 @@ Windows x86_64
 
 **aspia_host_service**
 
-| Argument   | Description                                                                         |
-|------------|-------------------------------------------------------------------------------------|
-| --host-id  | Displays the current Host ID. Note that the console and RDP sessions have separate IDs and the output of the command will depend on which session the process is running in. Displays the last received ID (cached ID). This means that the ID must be obtained at least once for the command to work. |
-| --version  | Displays the current version of the application.                                    |
-| --install  | Performs a Host service installation. Administrator rights are required to execute. |
-| --remove   | Performs removal of the Host service. Administrator rights are required to execute. |
-| --start    | Starts the Host service. Administrator rights are required to execute.              |
-| --stop     | Stops the Host service. Administrator rights are required to execute.               |
-| --help     | Displays help about command line arguments.                                         |
+| Argument     | Description                                                                         |
+|--------------|-------------------------------------------------------------------------------------|
+| `--host-id`  | Displays the current Host ID. Note that the console and RDP sessions have separate IDs and the output of the command will depend on which session the process is running in. Displays the last received ID (cached ID). This means that the ID must be obtained at least once for the command to work. |
+| `--version`  | Displays the current version of the application.                                    |
+| `--install`  | Performs a Host service installation. Administrator rights are required to execute. |
+| `--remove`   | Performs removal of the Host service. Administrator rights are required to execute. |
+| `--start`    | Starts the Host service. Administrator rights are required to execute.              |
+| `--stop`     | Stops the Host service. Administrator rights are required to execute.               |
+| `--help`     | Displays help about command line arguments.                                         |
 
 <br/>
 **aspia_host**
 
-| Argument                         | Description                                      |
-|----------------------------------|--------------------------------------------------|
-| --import=<config_file_path.json> | Imports a configuration file.                    |
-| --export=<config_file_path.json> | Exports a configuration file.                    |
-| --silent                         | Enables silent mode for importing or exporting a configuration file. When this option is enabled, no messages are displayed. |
-| --version                        | Displays the current version of the application. |
-| --update                         | Displays an update check dialog.                 |
-| --config                         | Displays the host configuration dialog.          |
+| Argument                           | Description                                      |
+|------------------------------------|--------------------------------------------------|
+| `--import=<config_file_path.json>` | Imports a configuration file.                    |
+| `--export=<config_file_path.json>` | Exports a configuration file.                    |
+| `--silent`                         | Enables silent mode for importing or exporting a configuration file. When this option is enabled, no messages are displayed. |
+| `--version`                        | Displays the current version of the application. |
+| `--update`                         | Displays an update check dialog.                 |
+| `--config`                         | Displays the host configuration dialog.          |
 
 <br/>
 ## Environment variables <a name="env-vars"></a>
