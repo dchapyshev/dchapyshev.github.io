@@ -8,10 +8,10 @@ title: Aspia Host
 2. [Installing](#installing)
 3. [Automation of installation](#automation)
 4. [Settings](#settings)
-    1. [General](#settings-general)
-    2. [Security](#settings-security)
-    3. [Router](#settings-router)
-    4. [Users](#settings-users)
+    1. [General tab](#settings-general)
+    2. [Security tab](#settings-security)
+    3. [Router tab](#settings-router)
+    4. [Users tab](#settings-users)
 5. [Command line](#command-line)
 6. [Environment variables](#env-vars)
 7. [Logs](#logs)
@@ -45,7 +45,7 @@ Installation must be done from a local location (any of the local disks or a fla
 ## Settings <a name="settings"></a>
 To change Host parameters, the application has a Settings dialog. Below is an overview of the possible options.
 
-### General <a name="settings-general"></a>
+### General tab <a name="settings-general"></a>
 On the "General" tab, you can configure basic application settings, as well as import and export settings.
 <p align="center"><img src="/images/settings-general.png"/></p>
 
@@ -63,7 +63,7 @@ aspia_host --export <file>
 ```
 <br/>
 
-### Security <a name="settings-security"></a>
+### Security tab <a name="settings-security"></a>
 On the "Security" tab, you can configure settings for additional protection of the application.
 
 <p align="center"><img src="/images/settings-security.png"/></p>
@@ -80,14 +80,14 @@ specify the characters that the password can contain and the length of the passw
 You can also configure the time interval after which the incoming connection will be automatically confirmed and the action that will be performed if there is no active user in the computer’s
 operating system when connecting (the connection can be automatically accepted or rejected).
 
-### Router <a name="settings-router"></a>
+### Router tab <a name="settings-router"></a>
 On the "Router" tab you can specify parameters for connecting to the [Aspia Router](/docs/router). Enter the server address and public key and apply the settings.
 <p align="center"><img src="/images/settings-router.png"/></p>
 
-### Users <a name="settings-users"></a>
+### Users tab <a name="settings-users"></a>
+To manage users, you need to run the Aspia Host Settings and go to the “Users” tab.
 <p align="center"><img src="/images/settings-users.png"/></p>
 
-To manage users, you need to run the Aspia Host Settings and go to the “Users” tab.
 To add a user, click on the button with the icon ![add](/images/plus.png). To delete a user, use the button ![delete](/images/minus.png), and to edit button ![edit](/images/pencil.png).
 When adding a new user, you need to enter a username and password, as well as select the types of sessions that this user can connect to.
 
