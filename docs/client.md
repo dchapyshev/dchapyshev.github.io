@@ -6,6 +6,11 @@ title: Aspia Client
 ## Table of contents
 1. [Purpose](#purpose)
 2. [Installing](#installing)
+3. [Session types](#session-types)
+    1. [Desktop manage and view](#session-desktop)
+    2. [File transfer](#session-filetransfer)
+    3. [System information](#session-sysinfo)
+    4. [Text chat](#session-textchat)
 3. [Command line](#command-line)
 4. [Environment variables](#env-vars)
 5. [Logs](#logs)
@@ -28,6 +33,48 @@ Linux
   sudo apt install ./aspia-client-2.7.0-x86_64.deb
 ```
 <br/>
+
+## Session types <a name="session-types"></a>
+
+### Desktop manage and view <a name="session-desktop"></a>
+TODO
+
+### File transfer <a name="session-filetransfer"></a>
+Allows you to transfer a file between local and remote computers, delete, rename files, create directories.
+When connected to a remote computer lists of disks are displayed that allow you to estimate the amount of free space on them.
+<p align="center"><img src="/images/file-transfer-window.png"/></p>
+
+**Hot keys**
+
+| Key combination | Description                   |
+|-----------------|-------------------------------|
+| Backspace       | Go to parent directory        |
+| F2              | Rename selected item          |
+| F4              | View list of disks            |
+| F5              | Refresh                       |
+| F11             | Send selected item or items   |
+| Delete          | Delete selected item or items |
+
+<br/>
+
+### System information <a name="session-sysinfo"></a>
+Allows you to view basic information about the remote computer. The resulting information can be saved to an HTML file or printed out on a printer.
+Double-clicking on any line with information about the system will be copied to the clipboard. In the context menu, you can selectively copy the name of the parameter, its value or a string in its entirety.
+<p align="center"><img src="/images/system-info-window.png"/></p>
+
+**Hot keys**
+
+| Key combination | Description                      |
+|-----------------|----------------------------------|
+| Ctrl+S          | Save information to file         |
+| Ctrl+P          | Print information on the printer |
+| Ctrl+C          | Copy current line of information |
+| F5              | Refresh                          |
+
+<br/>
+
+### Text chat <a name="session-textchat"></a>
+TODO
 
 ## Command Line <a name="command-line"></a>
 

@@ -6,9 +6,10 @@ title: Aspia Console
 ## Table of contents
 1. [Purpose](#purpose)
 2. [Installing](#installing)
-3. [Command line](#command-line)
-4. [Environment variables](#env-vars)
-5. [Logs](#logs)
+3. [Hot keys](#hotkeys)
+4. [Command line](#command-line)
+5. [Environment variables](#env-vars)
+6. [Logs](#logs)
 
 ## Purpose <a name="purpose"></a>
 Allows you to create address books, add computers to them and group them. It also allows you to manage computers and routers.
@@ -26,6 +27,26 @@ MacOS X x86_64/arm64
 Linux
   sudo apt install ./aspia-console-2.7.0-x86_64.deb
 ```
+<br/>
+
+## Hot keys <a name="hotkeys"></a>
+
+| Key combination | Description                                                                      |
+|-----------------|----------------------------------------------------------------------------------|
+| Ctrl+N          | Creating a new address book                                                      |
+| Ctrl+O          | Opening the address book file                                                    |
+| Ctrl+S          | Saving an address book file                                                      |
+| Ctrl+Alt+S      | Save address book as ...                                                         |
+| Ctrl+Shift+S    | Save all address books                                                           |
+| Ctrl+W          | Close address book                                                               |
+| Ctrl+Shift+W    | Close all address books                                                          |
+| Alt+F4          | Exit application                                                                 |
+| F1              | Call online help                                                                 |
+| Insert          | Adding a group of computers or a computer (depending on the current input focus) |
+| F2              | Change group of computers or computer (depending on the current input focus)     |
+| Delete          | Delete a computer group or computer (depending on the current input focus)       |
+| Enter           | Connect to computer                                                              |
+
 <br/>
 
 ## Command Line <a name="command-line"></a>
