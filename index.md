@@ -5,7 +5,7 @@ title: Main Page
 
 <div class="bs-wrap bs-wrap-jumbotron jumbotron">
 <h1>Aspia Remote Desktop</h1>
-<a href="https://github.com/dchapyshev/aspia"><img src="https://img.shields.io/github/stars/dchapyshev/aspia?style=social"></a>
+<a href="https://github.com/dchapyshev/aspia"><img loading="lazy" src="https://img.shields.io/github/stars/dchapyshev/aspia?style=social"></a>
 <br/><br/>
 Free open source application for real-time desktop remote control and file transfer.
 <br/><br/>
@@ -17,23 +17,37 @@ Current version: <b>2.6.5</b> (<a href="/changelog">change log</a>)
 <button type="button" class="btn btn-danger" onclick="window.location.href='/donate';">Donate</button>
 </div>
 
-<table>
-<tr style="vertical-align:top;">
-<th><img style="max-width:350px; height:auto; padding-bottom:15px;" src="/images/address-book.png"/></th>
-<th><img style="max-width:350px; height:auto; padding-bottom:15px;" src="/images/desktop.png"/></th>
-<th><img style="max-width:350px; height:auto; padding-bottom:15px;" src="/images/file-transfer.png"/></th>
-</tr>
-<tr>
-<td><b>Address book</b></td>
-<td><b>Desktop management</b></td>
-<td><b>File transfer</b></td>
-</tr>
-<tr style="vertical-align:top;">
-<td>Add computers for quick connection, create computer groups. Encryption of address books with a master password is supported.</td>
-<td>Connect to computers from your address book for work or remote assistance. Simple and fast.</td>
-<td>Manage files on the remote and local computer, transfer them to a remote computer or copy from it.</td>
-</tr>
-</table>
+<div class="bs-wrap bs-wrap-row row">
+  <div class="bs-wrap bs-wrap-col col-md-4 cl-xs-6">
+    <div class="bs-wrap bs-wrap-thumbnail thumbnail">
+      <img style="padding-bottom:15px;" width="400" loading="lazy" src="/images/address-book.png"/>
+      <div class="bs-wrap bs-wrap-caption caption">
+        <h4>Address book</h4>
+        <p>Add computers for quick connection, create computer groups. Encryption of address books with a master password is supported.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bs-wrap bs-wrap-col col-md-4 cl-xs-6">
+    <div class="bs-wrap bs-wrap-thumbnail thumbnail">
+      <img style="padding-bottom:15px;" width="400" loading="lazy" src="/images/desktop.png"/>
+      <div class="bs-wrap bs-wrap-caption caption">
+        <h4>Desktop management</h4>
+        <p>Connect to computers from your address book for work or remote assistance. Simple and fast.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bs-wrap bs-wrap-col col-md-4 cl-xs-6">
+    <div class="bs-wrap bs-wrap-thumbnail thumbnail">
+      <img style="padding-bottom:15px;" width="400" loading="lazy" src="/images/file-transfer.png"/>
+      <div class="bs-wrap bs-wrap-caption caption">
+        <h4>File transfer</h4>
+        <p>Manage files on the remote and local computer, transfer them to a remote computer or copy from it.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <br/>
 
