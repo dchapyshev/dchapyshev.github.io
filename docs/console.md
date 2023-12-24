@@ -6,10 +6,13 @@ title: Aspia Console
 ## Table of contents
 1. [Purpose](#purpose)
 2. [Installing](#installing)
-3. [Hot keys](#hotkeys)
-4. [Command line](#command-line)
-5. [Environment variables](#env-vars)
-6. [Logs](#logs)
+3. [Address book](/docs/console#address-book)
+4. [Computer groups](/docs/console#computer-groups)
+5. [Computers](/docs/console#computers)
+6. [Hot keys](#hotkeys)
+7. [Command line](#command-line)
+8. [Environment variables](#env-vars)
+9. [Logs](#logs)
 
 ## Purpose <a name="purpose"></a>
 Allows you to create address books, add computers to them and group them. It also allows you to manage computers and routers.
@@ -28,6 +31,12 @@ Linux
   sudo apt install ./aspia-console-2.7.0-x86_64.deb
 ```
 <br/>
+
+## Address book <a name="address-book"></a>
+
+## Computer groups <a name="computer-groups"></a>
+
+## Computers <a name="computers"></a>
 
 ## Hot keys <a name="hotkeys"></a>
 

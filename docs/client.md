@@ -16,7 +16,7 @@ title: Aspia Client
 5. [Logs](#logs)
 
 ## Purpose <a name="purpose"></a>
-Allows you to connect to and control hosts.
+Allows you to connect to and control Hosts.
 
 ## Installing <a name="installing"></a>
 ```bash
@@ -37,10 +37,63 @@ Linux
 ## Session types <a name="session-types"></a>
 
 ### Desktop manage and view <a name="session-desktop"></a>
-TODO
+Allows to connect to a remote computer to interact with desktop (or view desktop).
+<p align="center"><img src="/images/desktop-window.png"/></p>
+
+At the top of the desktop control window is a toolbar that allows you to perform a number of actions.
+<p align="center"><img src="/images/desktop-toolbar.png"/></p>
+
+This panel appears when you hover the mouse cursor and hides when the mouse cursor leaves the toolbar area (you can dock the toolbar, then it will be permanently displayed).
+
+The toolbar can be moved around the top of the window. To do this, hold down the right mouse button above the toolbar and move it left or right.
+
+**Toolbar buttons**
+
+| Name                                                     | Description                                                                                                                                                         |
+|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![pin](/images/pin.png) Pin                              | If the button is checked, the toolbar will always be displayed. Otherwise, after a few seconds after moving the mouse pointer outside the panel, it will be hidden. |
+| ![settings](/images/settings.png) Settings               | Invokes the dialog to change session parameters.                                                                                                                    |
+| ![monitor](/images/monitor.png) Screen resolution        | Allows to change screen resolution.                                                                                                                                 |
+| ![mon1](/images/monitor-1.png) Select screen             | Allows to select the monitor to be displayed.                                                                                                                       |
+| ![mon1](/images/monitors.png) Full desktop               | Selecting this option will display all monitors.                                                                                                                    |
+| ![power](/images/lightning.png) Power management         | Allows to shut down or restart the computer, end or block a user session.                                                                                           |
+| ![cad](/images/ctrl-alt-del.png) Ctrl+Alt+Del            | Sends Ctrl+Alt+Del key combination to a remote computer.                                                                                                            |
+| ![autosize](/images/autosize.png) Automatic size         | Changes the window size to the optimal one based on the size of the monitors of the remote and local computers.                                                     |
+| ![fullscreen](/images/fullscreen.png) Full screen        | Switches the control window to full screen or returns the original state.                                                                                           |
+| ![filetransfer](/images/ft-icon.png) File transfer       | Starts file transfer.                                                                                                                                               |
+| ![sysinfo](/images/computer-info.png) System information | Displays a window with information about the remote computer.                                                                                                       |
+| ![chat](/images/text-chat.png) Text chat                 | Starts text chat.                                                                                                                                                   |
+| ![taskmgr](/images/task-manager.png) Task manager        | Starts task manager.                                                                                                                                                |
+| ![update](/images/update.png) Remote update              | Runs an application update on a remote computer. Displayed only when the host version is smaller than the Console.                                                  |
+| ![menu](/images/menu.png) Extended menu                  | Displays an extended menu of advanced features.                                                                                                                     |
+
+<br/>
+
+**Extended menu**
+
+| Name                          | Description                                                                                                                                                    |
+|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paste clipboard as keystrokes | Pastes the contents of the clipboard on the remote computer in the form of keyboard key presses.                                                               |
+| Scale                         | Allows to change the scaling mode (window filling or specified percentage scale).                                                                              |
+| Automatic scrolling           | The contents of the window will automatically scroll as the cursor approaches the window borders.                                                              |
+| Send key combinations         | Enables sending key combinations to the remote computer.                                                                                                       |
+| Pause video when minimizing   | When you minimize the window, video transmission over the network will pause.                                                                                  |
+| Pause audio when minimizing   | When you minimize the window, audio transmission over the network will pause.                                                                                  |
+| Save screenshot...            | Allows to save the current remote desktop image to a file.                                                                                                     |
+| Recording settings...         | Allows to configure the path in which the video recording of the session will be saved and enable or disable the automatic start of recording upon connection. |
+| Start recording               | Starts or stops recording the session to a video file.                                                                                                         |
+| Statistics                    | Opens the statistics dialog to view service connection metrics.                                                                                                |
+
+<br/>
+
+**Session settings**
+
+In the session settings dialog you can change the parameters used in the current session. These settings only affect the current connection and will not be used for the next one.
+<p align="center"><img src="/images/desktop-settings.png"/></p>
+
 
 ### File transfer <a name="session-filetransfer"></a>
-Allows you to transfer a file between local and remote computers, delete, rename files, create directories.
+Allows to transfer a file between local and remote computers, delete, rename files, create directories.
 When connected to a remote computer lists of disks are displayed that allow you to estimate the amount of free space on them.
 <p align="center"><img src="/images/file-transfer-window.png"/></p>
 
@@ -58,7 +111,7 @@ When connected to a remote computer lists of disks are displayed that allow you 
 <br/>
 
 ### System information <a name="session-sysinfo"></a>
-Allows you to view basic information about the remote computer. The resulting information can be saved to an HTML file or printed out on a printer.
+Allows to view basic information about the remote computer. The resulting information can be saved to an HTML file or printed out on a printer.
 Double-clicking on any line with information about the system will be copied to the clipboard. In the context menu, you can selectively copy the name of the parameter, its value or a string in its entirety.
 <p align="center"><img src="/images/system-info-window.png"/></p>
 
@@ -74,7 +127,8 @@ Double-clicking on any line with information about the system will be copied to 
 <br/>
 
 ### Text chat <a name="session-textchat"></a>
-TODO
+Allows you to open a text chat with a user on a remote computer.
+<p align="center"><img src="/images/text-chat-window.png"/></p>
 
 ## Command Line <a name="command-line"></a>
 
