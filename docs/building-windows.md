@@ -26,9 +26,7 @@ cd vcpkg4aspia
 ./bootstrap-vcpkg.bat
 ```
 <br/>
-
 6. In vcpkg, you need to install the following libraries (use triplet **x86-windows-static** or **x64-windows-static** in all cases; for example: **./vcpkg install asio:x86-windows-static**):
-
 * asio
 * curl
 * fmt
@@ -45,17 +43,13 @@ cd vcpkg4aspia
 * sqlite3
 * wtl
 * zstd
-
 <br/>
-
 7. Go to the directory with source code (root directory) and run the following commands:
-
 ```bash
 mkdir build
 cd build
 cmake ..\ -G "Visual Studio 16 2019" -A Win32 -DCMAKE_TOOLCHAIN_FILE=<vcpkg_path>\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET=<triplet_name>
 ```
-
 (replace ```<vcpkg_path>``` with real path to vcpkg; replace ```<triplet_name>``` to x86-windows-static or x64-windows-static)
 You can also use CMake GUI for these purposes.
 After these actions, the ```aspia.sln``` file will be generated in directory "build".
