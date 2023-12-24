@@ -1,4 +1,4 @@
 ---
 layout: forward
-target: /documentation/
+target: /documentation
 ---
