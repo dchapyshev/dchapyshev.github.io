@@ -112,6 +112,7 @@ The dialog for adding or editing a user is as follows:
 | `--help`     | Displays help about command line arguments.                                         |
 
 <br/>
+
 **aspia_host**
 
 | Argument                           | Description                                      |
@@ -124,7 +125,9 @@ The dialog for adding or editing a user is as follows:
 | `--config`                         | Displays the host configuration dialog.          |
 
 <br/>
+
 ## Environment variables <a name="env-vars"></a>
+
   - **ASPIA_NO_OVERFLOW_DETECTION** - If the variable exists (with any value), then the automatic network stack overflow detection mechanism is disabled. If the variable does not exist, then Aspia tries to automatically adjust to the change in bandwidth by changing the FPS, scaling the image or other actions.
   - **ASPIA_DEFAULT_FPS** - Determines the FPS with which the connection starts. If variable ASPIA_NO_OVERFLOW_DETECTION is not declared, then in the future the FPS can be lowered or increased. If variable ASPIA_NO_OVERFLOW_DETECTION is declared, then this FPS value will be used for the duration of the connection. It can take values from 1 to 60. The default value is 20.
   - **ASPIA_MIN_FPS** - Determines the value to which the FPS can be reduced during automatic bandwidth adjustment. If variable ASPIA_NO_OVERFLOW_DETECTION is declared, then this value is ignored. It can take values from 1 to 60. The default value is 1.
@@ -140,12 +143,14 @@ To configure the Router logging parameters, use the following recommendations:
   - By default, log files older than 14 days are automatically deleted. If you want to change this value, then declare environment variable ASPIA_MAX_LOG_FILE_AGE with a numeric value in days. The variable can take a value from 0 to 366. If the variable is set to 0, then the log files will not be automatically deleted.
 
 The log file for Windows is located in the following path:
-```
+
+```bash
 C:\Users\<user_name>\AppData\Local\Temp\aspia\aspia_host-*.log
 C:\Windows\Temp\aspia\aspia_host_service-*.log
 C:\Windows\Temp\aspia\aspia_desktop_agent-*.log
 C:\Windows\Temp\aspia\aspia_file_transfer _agent-*.log
 ```
+
 <br/>
 
 ## Notes <a name="notes"></a>

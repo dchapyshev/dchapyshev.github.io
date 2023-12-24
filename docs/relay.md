@@ -30,8 +30,11 @@ Linux
   sudo apt install ./aspia-relay-2.7.0-x86_64.deb
   sudo systemctl enable aspia-relay
 ```
+
 <br/>
+
 To start and stop the service, use the following commands:
+
 ```bash
 Windows
   net start aspia-relay
@@ -41,14 +44,15 @@ Linux
   sudo service aspia-relay start
   sudo service aspia-relay stop
 ```
+
 <br/>
 
 ## Creating a default configuration <a name="create-config"></a>
 **WARNING!** There must be no existing configuration file in the destination directory.
 The Relay never overwrites the current configurations and creating a new configuration is possible only if the previous one does not exist.
 
-
 **WARNING!** Administrator rights are required to create a configuration.
+
 ```bash
 Windows x86
   cd /d "C:\Program Files (x86)\Aspia\Relay"
@@ -65,15 +69,18 @@ Linux
 
 ## Configuration file <a name="config-file"></a>
 The Relay configuration file is located in the following paths:
-```
+
+```bash
 Windows
   C:\ProgramData\aspia\relay.json
 
 Linux
   /etc/aspia/relay.json
 ```
+
 <br/>
 Description of configuration file fields:
+
   - **RouterAddress (REQUIRED FIELD)** Router address. At this address, the Relay server connects to the Router. It can be equal to localhost (or 127.0.0.1) if the router is installed on the same computer.
   - **RouterPort** If you did not change the port in the Router configuration file, then the field must be left with the default value. If you changed the configuration of the Router, then write the required value. You can leave the default value. Do not change this parameter unless you do so consciously. The default value is 8060.
   - **RouterPublicKey (REQUIRED FIELD)** Should contain the public key of the Router that you received when installing it. Enter here the public key that is contained in file router.pub, which created by the Router.
@@ -95,14 +102,18 @@ Logging for the Relay is disabled by default. To configure the Relay logging par
   - By default, log files older than 14 days are automatically deleted. If you want to change this value, then declare environment variable ASPIA_MAX_LOG_FILE_AGE with a numeric value in days. The variable can take a value from 0 to 366. If the variable is set to 0, then the log files will not be automatically deleted.
 
 The log file for Windows is located in the following path:
+
 ```bash
 C:\Windows\Temp\aspia\aspia_relay-*.log
 ```
+
 <br/>
 For Linux, you can enable log output to a file through environment variables or use the command to output the log:
+
 ```bash
 sudo journalctl -u aspia-relay
 ```
+
 <br/>
 
 ## Command line <a name="command-line"></a>
@@ -118,6 +129,7 @@ The Relay supports the following command line arguments:
 | `--help`          | Displays help about command line arguments.                                                                                    |
 
 <br/>
+
 ## Notes <a name="notes"></a>
   - Don't forget to add rules in your firewall to access the Relay. The Relay does not add rules automatically.
   - When uninstalling, the Relay does not delete its configuration files.

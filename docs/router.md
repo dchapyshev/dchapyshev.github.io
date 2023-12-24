@@ -21,6 +21,7 @@ The Router server must have a public IP address. Router and Relay can only work 
 <br/>
 
 ## Installing <a name="installing"></a>
+
 ```bash
 Windows x86
   Run aspia-router-2.7.0-x86.msi and follow the instructions on the screen.
@@ -32,8 +33,10 @@ Linux
   sudo apt install ./aspia-router-2.7.0-x86_64.deb
   sudo systemctl enable aspia-router
 ```
+
 <br/>
 To start and stop the service, use the following commands:
+
 ```bash
 Windows
   net start aspia-router
@@ -43,16 +46,14 @@ Linux
   sudo service aspia-router start
   sudo service aspia-router stop
 ```
+
 <br/>
 
 ## Creating a default configuration <a name="create-config"></a>
-
 **WARNING!** There must be no existing configuration file or database in the destination directory.
 The router never overwrites the current configurations and creating a new configuration is possible only if the previous one does not exist.
 
-
 **WARNING!** Administrator rights are required to create a configuration.
-
 
 **WARNING!** Default username and password: admin/admin. Don't forget to change this after installation!
 
@@ -68,19 +69,24 @@ Windows x64
 Linux
   sudo aspia_router --create-config
 ```
+
 <br/>
 
 ## Configuration file <a name="config-file"></a>
+
 The Router configuration file is located in the following paths:
-```
+
+```bash
 Windows
   C:\ProgramData\aspia\router.json
 
 Linux
   /etc/aspia/router.json
 ```
+
 <br/>
 Description of configuration file fields:
+
   - **PrivateKey (REQUIRED FIELD)** If you already have a private key, then write it here. This option is automatically generated when the configuration is created using command line option “--create-config”. Do not change this setting unless you really need to.
   - **SeedKey (REQUIRED FIELD)** This option is automatically generated when the configuration is created using command line option “--create-config”. Do not change this setting unless you really need to.
   - **Port** The port on which incoming connections will be accepted. You can leave the default value. Do not change this parameter unless you do so consciously. The default value is 8060.
@@ -92,6 +98,7 @@ Description of configuration file fields:
 
 ## Data base <a name="db-file"></a>
 The database file is located in the following paths:
+
 ```bash
 Windows
   C:\ProgramData\aspia\router.db3
@@ -99,11 +106,13 @@ Windows
 Linux
   /var/lib/aspia/router.db3
 ```
+
 <br/>
 
 ## Public key <a name="public-key"></a>
 The contents of the public key file are needed to configure Relays and Hosts.
 The public key file is located in the following paths:
+
 ```bash
 Windows
   C:\ProgramData\aspia\router.pub
@@ -111,6 +120,7 @@ Windows
 Linux
   /etc/aspia/router.pub
 ```
+
 <br/>
 
 ## Logs <a name="logs"></a>
@@ -122,14 +132,18 @@ Logging for the Router is disabled by default. To configure the Router logging p
   - By default, log files older than 14 days are automatically deleted. If you want to change this value, then declare environment variable ASPIA_MAX_LOG_FILE_AGE with a numeric value in days. The variable can take a value from 0 to 366. If the variable is set to 0, then the log files will not be automatically deleted.
 
 The log file for Windows is located in the following path:
+
 ```bash
 C:\Windows\Temp\aspia\aspia_router-*.log
 ```
+
 <br/>
 For Linux, you can enable log output to a file through environment variables or use the command to output the log:
+
 ```bash
 sudo journalctl -u aspia-router
 ```
+
 <br/>
 
 ## Command line <a name="command-line"></a>
@@ -146,6 +160,7 @@ The Router supports the following command line arguments:
 | `--help`          | Displays help about command line arguments.                                                                                               |
 
 <br/>
+
 ## Notes <a name="notes"></a>
   - Hosts and Relays connect to the Router using a public key.
   - Clients and the Console connect using a username and password. You can add additional users when managing Routers in the Console.

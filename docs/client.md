@@ -176,12 +176,14 @@ To configure the Router logging parameters, use the following recommendations:
   - By default, log files older than 14 days are automatically deleted. If you want to change this value, then declare environment variable ASPIA_MAX_LOG_FILE_AGE with a numeric value in days. The variable can take a value from 0 to 366. If the variable is set to 0, then the log files will not be automatically deleted.
 
 The log file for Windows is located in the following path:
+
 ```bash
 C:\Users\<user_name>\AppData\Local\Temp\aspia\aspia_client-*.log
 ```
+
 <br/>
 For Linux and MacOS:
+
 ```bash
 Logs are written to the terminal.
 ```
-<br/>

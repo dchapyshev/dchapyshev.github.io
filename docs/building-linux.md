@@ -7,14 +7,18 @@ The build for Linux was tested only in Ubuntu 20.04. If you have a different dis
 1. Install [QtCreator](https://download.qt.io/official_releases/online_installers/).
 
 2. Download and install [vcpkg4aspia](https://github.com/dchapyshev/vcpkg4aspia) (forked from Microsoft repository). To do this, go to the directory where you want to install and run the commands:
+
 ```bash
 git clone https://github.com/dchapyshev/vcpkg4aspia.git
 cd vcpkg4aspia
 ./bootstrap-vcpkg.sh
 ```
+
 <br/>
+
 3. Install the following packages in your package manager (**packages must be installed before installing vcpkg and its packages**):
-```
+
+```bash
 ninja-build
 autoconf
 autoconf-archive
@@ -66,12 +70,17 @@ git
 cmake
 curl
 ```
+
 <br/>
+
 4. Make sure that the version of CMake in your Linux is greater than or equal to 3.21.0. To do this, run the command:
-```
+
+```bash
 cmake --version
 ```
+
 If the version does not match, then remove the package. Run the following commands to build the required version of CMake:
+
 ```bash
 sudo apt-get install libcrypt-dev
 sudo apt-get install libcrypt-dev
@@ -82,9 +91,12 @@ cd CMake
 make -j4
 sudo make install
 ```
+
 <br/>
+
 5. In vcpkg, you need to install the following libraries (for example: **./vcpkg install asio**):
-```
+
+```bash
 asio
 curl
 fmt
@@ -101,7 +113,9 @@ rapidjson
 sqlite3
 zstd
 ```
+
 <br/>
+
 6. Open **QtCreator -> Tools -> Options -> Kits -> Qt Versions**. Click the Add button and specify the path to **<vcpkg_path>/installed/x64-linux/tools/qt5/bin/qmake**.
 
 7. Open **QtCreator -> Tools -> Options -> Kits -> Kits**. Click the Add button. Enter a display name for the profile, specify the compilers (gcc/g++), and the Qt profile you added earlier.
