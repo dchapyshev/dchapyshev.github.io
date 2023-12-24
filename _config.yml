@@ -20,10 +20,7 @@ repository: "dchapyshev/dchapyshev.github.io"
 #google_tag_manager:
 
 # kramdown or GFM
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+markdown: GFM
 
 show_subscribe_cta: True
 show_social_icons: True

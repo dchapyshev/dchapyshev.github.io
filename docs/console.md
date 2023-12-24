@@ -6,13 +6,16 @@ title: Aspia Console
 ## Table of contents
 1. [Purpose](#purpose)
 2. [Installing](#installing)
-3. [Address book](/docs/console#address-book)
-4. [Computer groups](/docs/console#computer-groups)
-5. [Computers](/docs/console#computers)
-6. [Hot keys](#hotkeys)
-7. [Command line](#command-line)
-8. [Environment variables](#env-vars)
-9. [Logs](#logs)
+3. [Address book](#address-book)
+4. [Computer groups](#computer-groups)
+5. [Computers](#computers)
+6. [Import and export](#import-and-export)
+7. [Online check](#online-check)
+8. [Router Manage](#router-manage)
+9. [Hot keys](#hotkeys)
+10. [Command line](#command-line)
+11. [Environment variables](#env-vars)
+12. [Logs](#logs)
 
 ## Purpose <a name="purpose"></a>
 Allows you to create address books, add computers to them and group them. It also allows you to manage computers and routers.
@@ -33,10 +36,90 @@ Linux
 <br/>
 
 ## Address book <a name="address-book"></a>
+Address book is used to perform a quick connection to computers. You can add computer groups, computers, manage connection settings to computers.
+Address book can be encrypted and not encrypted. When you open an encrypted address book, you must enter a password to access it.
+To do this, when creating an address book, select a mode with or without encryption. This setting can be changed at any time in the future in the address book properties.
+<p align="center"><img src="/images/console-address-book-general.png"/></p>
+
+**Warning!** When storing passwords in your address book without encryption or with a very simple password, you need to understand that this is a
+potential security risk and third parties can access the management of computers from the address book.
+
+To connect using Aspie Router, go to the Router tab in the address book properties and enter the server address, username and password.
+**Default username and password: admin/admin.** Don't forget to change the password the first time you connect to the Router.
+<p align="center"><img src="/images/console-address-book-router.png"/></p>
+
+On the Default Configuration tab, you can set default settings. When you create computer groups and computers in the address book, they can inherit from these settings
+(if inheritance is enabled in the properties of the computer group or computer). Using settings inheritance allows you to simplify address book management if all or most
+of the computers in your address book have identical settings.
+<p align="center"><img src="/images/console-address-book-defconf.png"/></p>
+
+In the Other tab, you can set your display name. This name will be displayed in the Host's notification bar and when using Text Chat.
+<p align="center"><img src="/images/console-address-book-other.png"/></p>
+
+Address books open in the Aspia Console and are tabs. You can create multiple address books and open them simultaneously.
+<p align="center"><img src="/images/console-address-book.png"/></p>
+
+To simplify the opening of address books, a list of recent open address books is maintained:
+<p align="center"><img src="/images/console-recent-open.png"/></p>
+
+You can also use the option to “pin” tabs with address books. To do this, click on the tab title with the right mouse button and select “Pin tab”.
+Pinned tabs will automatically open when the application starts.
+<p align="center"><img src="/images/console-pin-address-book.png"/></p>
 
 ## Computer groups <a name="computer-groups"></a>
+To make it easier to find the necessary computers (if there are many of them), it is possible to group them into computer groups.
+Computer groups can be nested and have an unlimited number of child computers and computer groups.
+
+On the "General" tab in computer properties, you can specify the name of the computer group and leave a comment. The comment can contain free text (for example, your notes regarding a group of computers).
+<p align="center"><img src="/images/console-computer-group-general.png"/></p>
+
+On the "Default Configuration" tab, you can specify the parameters that will be used for connection by child computers in this group (if inheritance from the parent group is enabled for these computers).
+
+If the "Inherit from parent" checkboxes are checked, then the parameters inherited from the parent group of computers or address book will be used.
+<p align="center"><img src="/images/console-computer-group-defconf.png"/></p>
 
 ## Computers <a name="computers"></a>
+To create or change computer properties, there is a computer properties dialog. In this dialog you can change connection parameters.
+Connection credentials and settings for desktop manageme and view sessions can be inherited from the parent group or address book if the “Inherit from parent” checkboxes are set.
+
+The Name field specifies the display name of the computer that you will see in the address book.
+
+In the Address/ID field you must specify the domain name, address (IPv4 or IPv6) or ID (if you are using Aspia Router). If it is necessary to specify a port, it is indicated using a colon character.
+
+Examples of correct address input:
+```bash
+IPv4 (without port)
+  192.168.1.10
+
+IPv4 (with port)
+  192.168.1.10:8000
+
+IPv6 (without port)
+  [2001:0db8:11a3:09d7:1f34:8a2e:07a0:765d]
+
+IPv6 (with port)
+  [2001:0db8:11a3:09d7:1f34:8a2e:07a0:765d]:8080
+
+Computer or domain name (without port)
+  home-pc
+
+Computer or domain name (with port)
+  home-pc:8080
+```
+
+<br/>
+In the Comment field you can enter any text (for example, your notes for this computer).
+<p align="center"><img src="/images/console-computer-general.png"/></p>
+
+## Import and export <a name="import-and-export"></a>
+TODO
+
+## Online check <a name="online-check"></a>
+To check computers online, there is an automatic check function. To check, go to the group of computers you are interested in and click F5 (or the update button on the toolbar).
+The progress of the scan will be displayed in the status bar, and information about the state of the computer (online or offline) will appear in the “Status” column in the list of computers.
+
+## Router Manage <a name="router-manage"></a>
+TODO
 
 ## Hot keys <a name="hotkeys"></a>
 
@@ -55,6 +138,8 @@ Linux
 | F2              | Change group of computers or computer (depending on the current input focus)     |
 | Delete          | Delete a computer group or computer (depending on the current input focus)       |
 | Enter           | Connect to computer                                                              |
+| F5              | Checking computers online                                                        |
+| F8              | Fast connect                                                                     |
 
 <br/>
 
@@ -67,6 +152,7 @@ Linux
 | `<address_book_file.aab>` | Address book file to open.             |
 
 <br/>
+
 ## Environment variables <a name="env-vars"></a>
   - **ASPIA_NO_VERIFY_TLS_PEER** - If the variable is declared, then the validity of the TLS certificate is not checked when checking for updates.
   It is not recommended to declare this variable unnecessarily. Declaring this variable can help solve the problem with checking for updates in Windows 7/2008R2,
@@ -85,6 +171,7 @@ The log file for Windows is located in the following path:
 C:\Users\<user_name>\AppData\Local\Temp\aspia\aspia_console-*.log
 ```
 <br/>
+
 For Linux and MacOS:
 ```bash
 Logs are written to the terminal.
