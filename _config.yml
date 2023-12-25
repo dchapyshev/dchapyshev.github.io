@@ -14,11 +14,6 @@ github_username: dchapyshev
 
 repository: "dchapyshev/dchapyshev.github.io"
 
-# Google services
-#google_verification:
-#google_analytics:
-#google_tag_manager:
-
 # kramdown or GFM
 markdown: kramdown
 kramdown:
