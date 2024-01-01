@@ -33,4 +33,5 @@ header_pages:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
   - node_modules
