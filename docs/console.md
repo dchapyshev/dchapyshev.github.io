@@ -17,16 +17,17 @@ title: Aspia Console
 11. [Environment variables](#env-vars)
 12. [Logs](#logs)
 
-## Purpose <a name="purpose"></a>
+## 1. Purpose <a name="purpose"></a>
 Allows you to create address books, add computers to them and group them. It also allows you to manage computers and routers.
 
-## Installing <a name="installing"></a>
+## 2. Installing <a name="installing"></a>
 ```bash
 Windows x86
   Run aspia-console-2.7.0-x86.msi and follow the instructions on the screen.
 
 Windows x86_64
   Run aspia-console-2.7.0-x64.msi and follow the instructions on the screen.
+
 MacOS X x86_64/arm64
   Open aspia-console-2.7.0-x86_64.dmg and move “Aspia Console” to “Applications”.
 
@@ -35,7 +36,7 @@ Linux
 ```
 <br/>
 
-## Address book <a name="address-book"></a>
+## 3. Address book <a name="address-book"></a>
 Address book is used to perform a quick connection to computers. You can add computer groups, computers, manage connection settings to computers.
 Address book can be encrypted and not encrypted. When you open an encrypted address book, you must enter a password to access it.
 To do this, when creating an address book, select a mode with or without encryption. This setting can be changed at any time in the future in the address book properties.
@@ -66,7 +67,7 @@ You can also use the option to “pin” tabs with address books. To do this, cl
 Pinned tabs will automatically open when the application starts.
 <p align="center"><img src="/images/console-pin-address-book.png"/></p>
 
-## Computer groups <a name="computer-groups"></a>
+## 4. Computer groups <a name="computer-groups"></a>
 To make it easier to find the necessary computers (if there are many of them), it is possible to group them into computer groups.
 Computer groups can be nested and have an unlimited number of child computers and computer groups.
 
@@ -78,7 +79,7 @@ On the "Default Configuration" tab, you can specify the parameters that will be 
 If the "Inherit from parent" checkboxes are checked, then the parameters inherited from the parent group of computers or address book will be used.
 <p align="center"><img src="/images/console-computer-group-defconf.png"/></p>
 
-## Computers <a name="computers"></a>
+## 5. Computers <a name="computers"></a>
 To create or change computer properties, there is a computer properties dialog. In this dialog you can change connection parameters.
 Connection credentials and settings for desktop manageme and view sessions can be inherited from the parent group or address book if the “Inherit from parent” checkboxes are set.
 
@@ -111,30 +112,30 @@ Computer or domain name (with port)
 In the Comment field you can enter any text (for example, your notes for this computer).
 <p align="center"><img src="/images/console-computer-general.png"/></p>
 
-## Import and export <a name="import-and-export"></a>
+## 6. Import and export <a name="import-and-export"></a>
 TODO
 
-## Online check <a name="online-check"></a>
+## 7. Online check <a name="online-check"></a>
 To check computers online, there is an automatic check function. To check, go to the group of computers you are interested in and click F5 (or the update button on the toolbar).
 The progress of the scan will be displayed in the status bar, and information about the state of the computer (online or offline) will appear in the “Status” column in the list of computers.
 
-## Router manage <a name="router-manage"></a>
+## 8. Router manage <a name="router-manage"></a>
 To manage Aspia Router, go to the main menu **Tools -> Router Manage** (to do this, you must specify the parameters for connecting to the Router in the address book properties).
 <p align="center"><img src="/images/console-router-manage-menu.png"/></p>
 
-### Hosts tab
+### 8.1. Hosts tab
 On the "Hosts" tab, you can view the list of hosts that are currently connected to the Router.
 For each Host, the following is displayed: computer name, IP address, connection time (when the Host established a connection with the Router), ID, version, Host architecture and the
 operating system that is used on the Host computer.
 <p align="center"><img src="/images/console-router-manage-hosts.png"/></p>
 
-### Buttons on the Hosts tab
+### 8.2. Buttons on the Hosts tab
   - **Save to file...** - Saving the current list of Hosts to JSON file. You can import this file into any group of computers in the address book (this can help you automate the compilation of the address book).
   - **Disconnect** - Terminating the connection with the selected Host. After pressing the button, the connection will be disconnected, but this will not prevent the Host from connecting again after some time.
   - **Disconnect All** - Terminates connection with all Hosts in the list.
   - **Refresh** - Forced update of the list of Hosts.
 
-### Relays tab
+### 8.3. Relays tab
 On the "Relays" tab you can view the list of Relays (relay servers) connected to the Router.
 For each Relay, the following is displayed: address, connection time (when the Relay established a connection with the Router), key pool size, versions, computer name, Relay architecture and the
 operating system that is used on the Relay computer.
@@ -142,18 +143,20 @@ operating system that is used on the Relay computer.
 If sending statistics is enabled in the Relay configuration, active peer sessions will be displayed in the lower list.
 <p align="center"><img src="/images/console-router-manage-relays.png"/></p>
 
-### Buttons on the Hosts tab
+### 8.4. Buttons on the Hosts tab
   - **Save to file...** - Saving the current list of Relays to JSON file.
   - **Disconnect** - Terminating the connection with the selected Relay. After pressing the button, the connection will be disconnected, but this will not prevent the Relay from connecting again after some time.
   - **Disconnect All** - Terminates connection with all Relays in the list.
   - **Refresh** - Forced update of the list of Hosts.
 
-### Users tab
+### 8.5. Users tab
+TODO
 <p align="center"><img src="/images/console-router-manage-users.png"/></p>
 
+TODO
 <p align="center"><img src="/images/console-router-manage-user.png"/></p>
 
-## Hot keys <a name="hotkeys"></a>
+## 9. Hot keys <a name="hotkeys"></a>
 
 | Key combination | Description                                                                      |
 |-----------------|----------------------------------------------------------------------------------|
@@ -175,7 +178,7 @@ If sending statistics is enabled in the Relay configuration, active peer session
 
 <br/>
 
-## Command Line <a name="command-line"></a>
+## 10. Command Line <a name="command-line"></a>
 
 | Argument                  | Description                            |
 |---------------------------|----------------------------------------|
@@ -185,12 +188,12 @@ If sending statistics is enabled in the Relay configuration, active peer session
 
 <br/>
 
-## Environment variables <a name="env-vars"></a>
+## 11. Environment variables <a name="env-vars"></a>
   - **ASPIA_NO_VERIFY_TLS_PEER** - If the variable is declared, then the validity of the TLS certificate is not checked when checking for updates.
   It is not recommended to declare this variable unnecessarily. Declaring this variable can help solve the problem with checking for updates in Windows 7/2008R2,
   where root certificates are not updated.
 
-## Logs <a name="logs"></a>
+## 12. Logs <a name="logs"></a>
 To configure the Router logging parameters, use the following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 2. Decreasing the value increases the number of messages in the log.
   - To enable logging to a file (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_FILE with a value other than 0. If the environment variable is declared with a value of 0, then logging to file will be disabled.

@@ -17,10 +17,10 @@ title: Aspia Host
 7. [Logs](#logs)
 8. [Notes](#notes)
 
-## Purpose <a name="purpose"></a>
+## 1. Purpose <a name="purpose"></a>
 Allows accepts incoming connections from Clients and Consoles to manage the computer on which it is installed.
 
-## Installing <a name="installing"></a>
+## 2. Installing <a name="installing"></a>
 The Host is only available for Windows.
 ```bash
 Windows x86
@@ -31,7 +31,7 @@ Windows x86_64
 ```
 <br/>
 
-## Automation of installation <a name="automation"></a>
+## 3. Automation of installation <a name="automation"></a>
 Aspia Host has the ability to automate the installation and configuration of parameters.
 To do this, you must do the following:
   - Install Aspia Host on one of your computers
@@ -42,10 +42,10 @@ To do this, you must do the following:
 If you place this file in the same directory as installation MSI package, the configuration will be automatically imported during installation.
 Installation must be done from a local location (any of the local disks or a flash drive). This may not work when installing from network locations or when deploying using AD.
 
-## Settings <a name="settings"></a>
+## 4. Settings <a name="settings"></a>
 To change Host parameters, the application has a Settings dialog. Below is an overview of the possible options.
 
-### General tab <a name="settings-general"></a>
+### 4.1. General tab <a name="settings-general"></a>
 On the "General" tab, you can configure basic application settings, as well as import and export settings.
 <p align="center"><img src="/images/settings-general.png"/></p>
 
@@ -63,7 +63,7 @@ aspia_host --export <file>
 ```
 <br/>
 
-### Security tab <a name="settings-security"></a>
+### 4.2. Security tab <a name="settings-security"></a>
 On the "Security" tab, you can configure settings for additional protection of the application.
 
 <p align="center"><img src="/images/settings-security.png"/></p>
@@ -80,11 +80,11 @@ specify the characters that the password can contain and the length of the passw
 You can also configure the time interval after which the incoming connection will be automatically confirmed and the action that will be performed if there is no active user in the computer’s
 operating system when connecting (the connection can be automatically accepted or rejected).
 
-### Router tab <a name="settings-router"></a>
+### 4.3. Router tab <a name="settings-router"></a>
 On the "Router" tab you can specify parameters for connecting to the [Aspia Router](/docs/router). Enter the server address and public key and apply the settings.
 <p align="center"><img src="/images/settings-router.png"/></p>
 
-### Users tab <a name="settings-users"></a>
+### 4.4. Users tab <a name="settings-users"></a>
 To manage users, you need to run the Aspia Host Settings and go to the “Users” tab.
 <p align="center"><img src="/images/settings-users.png"/></p>
 
@@ -97,7 +97,7 @@ The dialog for adding or editing a user is as follows:
 
 <p align="center"><img src="/images/settings-user.png"/></p>
 
-## Command Line <a name="command-line"></a>
+## 5. Command Line <a name="command-line"></a>
 
 **aspia_host_service**
 
@@ -126,7 +126,7 @@ The dialog for adding or editing a user is as follows:
 
 <br/>
 
-## Environment variables <a name="env-vars"></a>
+## 6. Environment variables <a name="env-vars"></a>
 
   - **ASPIA_NO_OVERFLOW_DETECTION** - If the variable exists (with any value), then the automatic network stack overflow detection mechanism is disabled. If the variable does not exist, then Aspia tries to automatically adjust to the change in bandwidth by changing the FPS, scaling the image or other actions.
   - **ASPIA_DEFAULT_FPS** - Determines the FPS with which the connection starts. If variable ASPIA_NO_OVERFLOW_DETECTION is not declared, then in the future the FPS can be lowered or increased. If variable ASPIA_NO_OVERFLOW_DETECTION is declared, then this FPS value will be used for the duration of the connection. It can take values from 1 to 60. The default value is 20.
@@ -134,7 +134,7 @@ The dialog for adding or editing a user is as follows:
   - **ASPIA_MAX_FPS** - Determines the maximum value up to which the FPS can be increased during automatic bandwidth control. If variable ASPIA_NO_OVERFLOW_DETECTION is declared, then this value is ignored. It can take values from 1 to 60. For computers with more than 2 processor cores, the default value is 30. Otherwise, the default value is 20.
   - **ASPIA_NO_VERIFY_TLS_PEER** - If the variable is declared, then the validity of the TLS certificate is not checked when checking for updates. It is not recommended to declare this variable unnecessarily. Declaring this variable can help solve the problem with checking for updates in Windows 7/2008R2, where root certificates are not updated.
 
-## Logs <a name="logs"></a>
+## 7. Logs <a name="logs"></a>
 To configure the Router logging parameters, use the following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 2. Decreasing the value increases the number of messages in the log.
   - To enable logging to a file (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_FILE with a value other than 0. If the environment variable is declared with a value of 0, then logging to file will be disabled.
@@ -153,7 +153,7 @@ C:\Windows\Temp\aspia\aspia_file_transfer _agent-*.log
 
 <br/>
 
-## Notes <a name="notes"></a>
+## 8. Notes <a name="notes"></a>
   - The ID is linked to a computer using file C:\ProgramData\aspia\host_key.json. This file does not contain the computer ID, but it allows you to obtain the ID when connecting to the Router. The computer ID is assigned upon first connection. If you delete this file, the computer ID will change. This can be used to restore the computer ID after reinstalling the operating system (make a backup copy of this file before reinstalling the operating system).
   - Important! If you are cloning an operating system to other computers, make sure that file C:\ProgramData\aspia\host_key.json is removed from the image of the operating system being cloned. If you do not do this, then computers containing the same key file will one by one receive the same ID, pushing each other out of the server.
   - The Host configuration is contained in file C:\ProgramData\aspia\host.json. If you need to transfer the configuration, use command line parameters (or similar options in the GUI) to import and export. Do not copy this file as is. This may work "now", but may break your Host later.

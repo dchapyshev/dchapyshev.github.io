@@ -15,10 +15,10 @@ title: Aspia Client
 4. [Environment variables](#env-vars)
 5. [Logs](#logs)
 
-## Purpose <a name="purpose"></a>
+## 1. Purpose <a name="purpose"></a>
 Allows you to connect to and control Hosts.
 
-## Installing <a name="installing"></a>
+## 2. Installing <a name="installing"></a>
 ```bash
 Windows x86
   Run aspia-client-2.7.0-x86.msi and follow the instructions on the screen.
@@ -34,9 +34,9 @@ Linux
 ```
 <br/>
 
-## Session types <a name="session-types"></a>
+## 3. Session types <a name="session-types"></a>
 
-### Desktop manage and view <a name="session-desktop"></a>
+### 3.1. Desktop manage and view <a name="session-desktop"></a>
 Allows to connect to a remote computer to interact with desktop (or view desktop).
 <p align="center"><img src="/images/desktop-window.png"/></p>
 
@@ -92,7 +92,7 @@ In the session settings dialog you can change the parameters used in the current
 <p align="center"><img src="/images/desktop-settings.png"/></p>
 
 
-### File transfer <a name="session-filetransfer"></a>
+### 3.2. File transfer <a name="session-filetransfer"></a>
 Allows to transfer a file between local and remote computers, delete, rename files, create directories.
 When connected to a remote computer lists of disks are displayed that allow you to estimate the amount of free space on them.
 <p align="center"><img src="/images/file-transfer-window.png"/></p>
@@ -110,7 +110,7 @@ When connected to a remote computer lists of disks are displayed that allow you 
 
 <br/>
 
-### System information <a name="session-sysinfo"></a>
+### 3.3. System information <a name="session-sysinfo"></a>
 Allows to view basic information about the remote computer. The resulting information can be saved to an HTML file or printed out on a printer.
 Double-clicking on any line with information about the system will be copied to the clipboard. In the context menu, you can selectively copy the name of the parameter, its value or a string in its entirety.
 <p align="center"><img src="/images/system-info-window.png"/></p>
@@ -126,11 +126,11 @@ Double-clicking on any line with information about the system will be copied to 
 
 <br/>
 
-### Text chat <a name="session-textchat"></a>
+### 3.4. Text chat <a name="session-textchat"></a>
 Allows you to open a text chat with a user on a remote computer.
 <p align="center"><img src="/images/text-chat-window.png"/></p>
 
-## Command Line <a name="command-line"></a>
+## 4. Command Line <a name="command-line"></a>
 
 | Argument                       | Description                                                                                         |
 |--------------------------------|-----------------------------------------------------------------------------------------------------|
@@ -162,12 +162,12 @@ Allows you to open a text chat with a user on a remote computer.
 
 <br/>
 
-## Environment variables <a name="env-vars"></a>
+## 5. Environment variables <a name="env-vars"></a>
   - **ASPIA_NO_VERIFY_TLS_PEER** - If the variable is declared, then the validity of the TLS certificate is not checked when checking for updates.
   It is not recommended to declare this variable unnecessarily. Declaring this variable can help solve the problem with checking for updates in Windows 7/2008R2,
   where root certificates are not updated.
 
-## Logs <a name="logs"></a>
+## 6. Logs <a name="logs"></a>
 To configure the Router logging parameters, use the following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 2. Decreasing the value increases the number of messages in the log.
   - To enable logging to a file (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_FILE with a value other than 0. If the environment variable is declared with a value of 0, then logging to file will be disabled.

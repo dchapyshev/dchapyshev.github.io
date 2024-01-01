@@ -14,13 +14,13 @@ title: Aspia Router
 8. [Command line](#command-line)
 9. [Notes](#notes)
 
-## Purpose <a name="purpose"></a>
+## 1. Purpose <a name="purpose"></a>
 Gives IDs to hosts and allows peers (Hosts and Clients) to agree on how they will bypass NAT.
 All Hosts and Relays are permanently connected to the Router. When the Client wants to connect to the Host, it also connects to the Router.
 The Router server must have a public IP address. Router and Relay can only work together. Don't forget to install Relay.
 <br/>
 
-## Installing <a name="installing"></a>
+## 2. Installing <a name="installing"></a>
 
 ```bash
 Windows x86
@@ -49,7 +49,7 @@ Linux
 
 <br/>
 
-## Creating a default configuration <a name="create-config"></a>
+## 3. Creating a default configuration <a name="create-config"></a>
 **WARNING!** There must be no existing configuration file or database in the destination directory.
 The router never overwrites the current configurations and creating a new configuration is possible only if the previous one does not exist.
 
@@ -72,7 +72,7 @@ Linux
 
 <br/>
 
-## Configuration file <a name="config-file"></a>
+## 4. Configuration file <a name="config-file"></a>
 
 The Router configuration file is located in the following paths:
 
@@ -96,7 +96,7 @@ Description of configuration file fields:
   - **AdminWhiteList** The IP address (not hostnames) list of admins who are allowed to connect to the Router. Addresses are separated by semicolons. If the list is empty, then connections from all admins are allowed. If the list contains items, then only the admins specified in this list can connect. Do not change this setting unless you really need to.
   - **RelayWhiteList** The IP address (not hostnames) list of relays who are allowed to connect to the Router. Addresses are separated by semicolons. If the list is empty, then connections from all Relays are allowed. If the list contains items, then only the Relays specified in this list can connect. Do not change this setting unless you really need to.
 
-## Data base <a name="db-file"></a>
+## 5. Data base <a name="db-file"></a>
 The database file is located in the following paths:
 
 ```bash
@@ -109,7 +109,7 @@ Linux
 
 <br/>
 
-## Public key <a name="public-key"></a>
+## 6. Public key <a name="public-key"></a>
 The contents of the public key file are needed to configure Relays and Hosts.
 The public key file is located in the following paths:
 
@@ -123,7 +123,7 @@ Linux
 
 <br/>
 
-## Logs <a name="logs"></a>
+## 7. Logs <a name="logs"></a>
 Logging for the Router is disabled by default. To configure the Router logging parameters, use the following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 2. Decreasing the value increases the number of messages in the log.
   - To enable logging to a file (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_FILE with a value other than 0. If the environment variable is declared with a value of 0, then logging to file will be disabled.
@@ -146,7 +146,7 @@ sudo journalctl -u aspia-router
 
 <br/>
 
-## Command line <a name="command-line"></a>
+## 8. Command line <a name="command-line"></a>
 The Router supports the following command line arguments:
 
 | Argument          | Description                                                                                                                               |
@@ -161,7 +161,7 @@ The Router supports the following command line arguments:
 
 <br/>
 
-## Notes <a name="notes"></a>
+## 9. Notes <a name="notes"></a>
   - Hosts and Relays connect to the Router using a public key.
   - Clients and the Console connect using a username and password. You can add additional users when managing Routers in the Console.
   - It is recommended that you set up regular backups of your configuration files and database.

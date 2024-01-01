@@ -8,17 +8,16 @@ title: Aspia Relay
 2. [Installing](#installing)
 3. [Creating a default configuration](#create-config)
 4. [Configuration file](#config-file)
-5. [Public key](#public-key)
-6. [Logs](#logs)
-7. [Command line](#command-line)
-8. [Notes](#notes)
+5. [Logs](#logs)
+6. [Command line](#command-line)
+7. [Notes](#notes)
 
-## Purpose <a name="purpose"></a>
+## 1. Purpose <a name="purpose"></a>
 Passes traffic between peers (Hosts and Clients) through itself. The Relay server must have a public IP address.
 There can be a lot of Relay and they can be placed on separate machines from Router. The number of Relay servers can be from one or more.
 You must install at least one Relay server. Router and Relay can only work together.
 
-## Installing <a name="installing"></a>
+## 2. Installing <a name="installing"></a>
 ```bash
 Windows x86
   Run aspia-relay-2.7.0-x86.msi and follow the instructions on the screen.
@@ -47,7 +46,7 @@ Linux
 
 <br/>
 
-## Creating a default configuration <a name="create-config"></a>
+## 3. Creating a default configuration <a name="create-config"></a>
 **WARNING!** There must be no existing configuration file in the destination directory.
 The Relay never overwrites the current configurations and creating a new configuration is possible only if the previous one does not exist.
 
@@ -67,7 +66,7 @@ Linux
 ```
 <br/>
 
-## Configuration file <a name="config-file"></a>
+## 4. Configuration file <a name="config-file"></a>
 The Relay configuration file is located in the following paths:
 
 ```bash
@@ -93,7 +92,7 @@ Description of configuration file fields:
   - **StatisticsEnabled** Enable or disable automatic sending of statistics to the router. You can leave the default value. Can take values: true or false. The default value is false.
   - **StatisticsInterval** Interval in seconds for automatically sending statistics to the router. You can leave the default value. Can take a value from 1 to 60. The default value is 5.
 
-## Logs <a name="logs"></a>
+## 5. Logs <a name="logs"></a>
 Logging for the Relay is disabled by default. To configure the Relay logging parameters, use the following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 2. Decreasing the value increases the number of messages in the log.
   - To enable logging to a file (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_FILE with a value other than 0. If the environment variable is declared with a value of 0, then logging to file will be disabled.
@@ -116,7 +115,7 @@ sudo journalctl -u aspia-relay
 
 <br/>
 
-## Command line <a name="command-line"></a>
+## 6. Command line <a name="command-line"></a>
 The Relay supports the following command line arguments:
 
 | Argument          | Description                                                                                                                    |
@@ -130,7 +129,7 @@ The Relay supports the following command line arguments:
 
 <br/>
 
-## Notes <a name="notes"></a>
+## 7. Notes <a name="notes"></a>
   - Don't forget to add rules in your firewall to access the Relay. The Relay does not add rules automatically.
   - When uninstalling, the Relay does not delete its configuration files.
   - After changing the configuration files, you must restart the Relay service. The Relay reads the configuration at startup!
