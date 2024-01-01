@@ -11,7 +11,7 @@ title: Aspia Console
 5. [Computers](#computers)
 6. [Import and export](#import-and-export)
 7. [Online check](#online-check)
-8. [Router Manage](#router-manage)
+8. [Router manage](#router-manage)
 9. [Hot keys](#hotkeys)
 10. [Command line](#command-line)
 11. [Environment variables](#env-vars)
@@ -118,8 +118,40 @@ TODO
 To check computers online, there is an automatic check function. To check, go to the group of computers you are interested in and click F5 (or the update button on the toolbar).
 The progress of the scan will be displayed in the status bar, and information about the state of the computer (online or offline) will appear in the “Status” column in the list of computers.
 
-## Router Manage <a name="router-manage"></a>
-TODO
+## Router manage <a name="router-manage"></a>
+To manage Aspia Router, go to the main menu **Tools -> Router Manage** (to do this, you must specify the parameters for connecting to the Router in the address book properties).
+<p align="center"><img src="/images/console-router-manage-menu.png"/></p>
+
+### Hosts tab
+On the "Hosts" tab, you can view the list of hosts that are currently connected to the Router.
+For each Host, the following is displayed: computer name, IP address, connection time (when the Host established a connection with the Router), ID, version, Host architecture and the
+operating system that is used on the Host computer.
+<p align="center"><img src="/images/console-router-manage-hosts.png"/></p>
+
+### Buttons on the Hosts tab
+  - **Save to file...** - Saving the current list of Hosts to JSON file. You can import this file into any group of computers in the address book (this can help you automate the compilation of the address book).
+  - **Disconnect** - Terminating the connection with the selected Host. After pressing the button, the connection will be disconnected, but this will not prevent the Host from connecting again after some time.
+  - **Disconnect All** - Terminates connection with all Hosts in the list.
+  - **Refresh** - Forced update of the list of Hosts.
+
+### Relays tab
+On the "Relays" tab you can view the list of Relays (relay servers) connected to the Router.
+For each Relay, the following is displayed: address, connection time (when the Relay established a connection with the Router), key pool size, versions, computer name, Relay architecture and the
+operating system that is used on the Relay computer.
+
+If sending statistics is enabled in the Relay configuration, active peer sessions will be displayed in the lower list.
+<p align="center"><img src="/images/console-router-manage-relays.png"/></p>
+
+### Buttons on the Hosts tab
+  - **Save to file...** - Saving the current list of Relays to JSON file.
+  - **Disconnect** - Terminating the connection with the selected Relay. After pressing the button, the connection will be disconnected, but this will not prevent the Relay from connecting again after some time.
+  - **Disconnect All** - Terminates connection with all Relays in the list.
+  - **Refresh** - Forced update of the list of Hosts.
+
+### Users tab
+<p align="center"><img src="/images/console-router-manage-users.png"/></p>
+
+<p align="center"><img src="/images/console-router-manage-user.png"/></p>
 
 ## Hot keys <a name="hotkeys"></a>
 

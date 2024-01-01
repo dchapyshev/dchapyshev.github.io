@@ -1,6 +1,5 @@
 title: Aspia Remote Desktop
 author: Dmitry Chapyshev
-#email: "dmitry@aspia.ru"
 description: >- # this means to ignore newlines until "baseurl:"
   Free open source application for real-time desktop remote control.
 #baseurl: "" # the subpath of your site, e.g. /blog
@@ -19,9 +18,6 @@ markdown: kramdown
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
-
-show_subscribe_cta: True
-show_social_icons: True
 
 # Build settings
 plugins:

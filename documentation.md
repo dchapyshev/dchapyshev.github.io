@@ -46,7 +46,7 @@ title: Documentation
        5. [Computers](/docs/console#computers)
        6. [Import and export](/docs/console#import-and-export)
        7. [Online check](/docs/console#online-check)
-       8. [Router Manage](/docs/console#router-manage)
+       8. [Router manage](/docs/console#router-manage)
        9. [Hot keys](/docs/console#hotkeys)
        10. [Command line](/docs/console#command-line)
        11. [Environment variables](/docs/console#env-vars)
