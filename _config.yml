@@ -1,7 +1,7 @@
 title: Aspia Remote Desktop
 author: Dmitry Chapyshev
 description: >- # this means to ignore newlines until "baseurl:"
-  Free open source application for real-time desktop remote control.
+  Open source application for real-time desktop remote control and file transfer. Aspia supports many features: NAT traversal, system information, audio, chat.
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
