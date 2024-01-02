@@ -6,16 +6,16 @@ title: Main Page
 <div class="bs-wrap bs-wrap-jumbotron jumbotron">
 <h1>Aspia Remote Desktop</h1>
 <a href="https://github.com/dchapyshev/aspia"><img alt="github stars" loading="lazy" src="https://img.shields.io/github/stars/dchapyshev/aspia?style=social"></a>
-<br/><br/>
+<br><br>
 Free open source application for real-time desktop remote control and file transfer.
-<br/><br/>
+<br><br>
 With Aspia, you can create your own NAT traversal infrastructure (using Router and Relay servers) with connection by ID or use direct connections. Aspia supports many features. Among them, detailed information about the system, task manager, audio, text chat.
 It is safe. All transmitted data is encrypted.
-<br/><br/>
+<br><br>
 Current Version: <b>2.6.5</b> (Nov 26, 2023)
-<br/>
+<br>
 <a href="/changelog">Change Log</a>
-<br/><br/>
+<br><br>
 <button type="button" class="btn btn-primary" onclick="window.location.href='https://github.com/dchapyshev/aspia/releases';">Download</button>
 <button type="button" class="btn btn-danger" onclick="window.location.href='/donate';">Donate</button>
 </div>
@@ -42,8 +42,8 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
   </div>
 
   <div class="bs-wrap bs-wrap-col col-md-4 cl-xs-6">
-    <div alt="file transfer" class="bs-wrap bs-wrap-thumbnail thumbnail">
-      <img style="padding-bottom:15px;" width="400" loading="lazy" src="/images/file-transfer.png"/>
+    <div class="bs-wrap bs-wrap-thumbnail thumbnail">
+      <img alt="file transfer" style="padding-bottom:15px;" width="400" loading="lazy" src="/images/file-transfer.png"/>
       <div class="bs-wrap bs-wrap-caption caption">
         <h4>File transfer</h4>
         <p>Manage files on the remote and local computer, transfer them to a remote computer or copy from it.</p>
@@ -52,7 +52,7 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
   </div>
 </div>
 
-<br/>
+<br>
 
 <table style="width: 100%; border: 1px solid #DDDDDD;">
 <tr>
@@ -73,7 +73,7 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
 </tr>
 </table>
 
-<br/>
+<br>
 
 <table style="width: 100%; border: 1px solid #DDDDDD;">
 <tr>
@@ -91,7 +91,7 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
 </tr>
 </table>
 
-<br/>
+<br>
 
 <table style="width: 100%; border: 1px solid #DDDDDD;">
 <tr>
