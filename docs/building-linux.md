@@ -98,6 +98,7 @@ protobuf
 qt5-base
 qt5-translations
 rapidjson
+rapidxml
 sqlite3
 zstd
 ```
