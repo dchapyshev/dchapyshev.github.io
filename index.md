@@ -5,7 +5,7 @@ title: Main Page
 
 <div class="bs-wrap bs-wrap-jumbotron jumbotron">
 <h1>Aspia Remote Desktop</h1>
-<a href="https://github.com/dchapyshev/aspia"><img loading="lazy" src="https://img.shields.io/github/stars/dchapyshev/aspia?style=social"></a>
+<a href="https://github.com/dchapyshev/aspia"><img alt="github stars" loading="lazy" src="https://img.shields.io/github/stars/dchapyshev/aspia?style=social"></a>
 <br/><br/>
 Free open source application for real-time desktop remote control and file transfer.
 <br/><br/>
@@ -23,7 +23,7 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
 <div class="bs-wrap bs-wrap-row row">
   <div class="bs-wrap bs-wrap-col col-md-4 cl-xs-6">
     <div class="bs-wrap bs-wrap-thumbnail thumbnail">
-      <img style="padding-bottom:15px;" width="400" loading="lazy" src="/images/address-book.png"/>
+      <img alt="address book" style="padding-bottom:15px;" width="400" loading="lazy" src="/images/address-book.png"/>
       <div class="bs-wrap bs-wrap-caption caption">
         <h4>Address book</h4>
         <p>Add computers for quick connection, create computer groups. Encryption of address books with a master password is supported.</p>
@@ -33,7 +33,7 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
 
   <div class="bs-wrap bs-wrap-col col-md-4 cl-xs-6">
     <div class="bs-wrap bs-wrap-thumbnail thumbnail">
-      <img style="padding-bottom:15px;" width="400" loading="lazy" src="/images/desktop.png"/>
+      <img alt="desktop" style="padding-bottom:15px;" width="400" loading="lazy" src="/images/desktop.png"/>
       <div class="bs-wrap bs-wrap-caption caption">
         <h4>Desktop management</h4>
         <p>Connect to computers from your address book for work or remote assistance. Simple and fast.</p>
@@ -42,7 +42,7 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
   </div>
 
   <div class="bs-wrap bs-wrap-col col-md-4 cl-xs-6">
-    <div class="bs-wrap bs-wrap-thumbnail thumbnail">
+    <div alt="file transfer" class="bs-wrap bs-wrap-thumbnail thumbnail">
       <img style="padding-bottom:15px;" width="400" loading="lazy" src="/images/file-transfer.png"/>
       <div class="bs-wrap bs-wrap-caption caption">
         <h4>File transfer</h4>
@@ -54,7 +54,7 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
 
 <br/>
 
-<table width="100%" style="border: 1px solid #DDDDDD;">
+<table style="width: 100%; border: 1px solid #DDDDDD;">
 <tr>
   <th style="background-color:#F5F5F5; padding:7px;">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.1em" height="1.1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1920 1792" data-inline="true" style="vertical-align: -0.143em; transform: rotate(360deg);">
@@ -75,7 +75,7 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
 
 <br/>
 
-<table width="100%" style="border: 1px solid #DDDDDD;">
+<table style="width: 100%; border: 1px solid #DDDDDD;">
 <tr>
   <th style="background-color:#F5F5F5; padding:7px;">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.1em" height="1.1em" preserveAspectRatio="xMidYMid meet" viewBox="0 -256 1856 1792" data-inline="true" style="vertical-align: -0.143em; transform: rotate(360deg);">
@@ -93,7 +93,7 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
 
 <br/>
 
-<table width="100%" style="border: 1px solid #DDDDDD;">
+<table style="width: 100%; border: 1px solid #DDDDDD;">
 <tr>
   <th style="background-color:#F5F5F5; padding:7px;">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.1em" height="1.1em" preserveAspectRatio="xMidYMid meet" viewBox="0 -128 1536 1792" data-inline="true" style="vertical-align: -0.143em; transform: rotate(360deg);">
