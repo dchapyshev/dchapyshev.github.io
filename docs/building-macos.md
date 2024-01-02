@@ -50,6 +50,7 @@ List of libraries to install:
 ```bash
 asio
 curl
+fmt
 gtest
 icu
 libvpx
