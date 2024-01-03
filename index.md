@@ -23,7 +23,7 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
 <div class="bs-wrap bs-wrap-row row">
   <div class="bs-wrap bs-wrap-col col-md-4 cl-xs-6">
     <div class="bs-wrap bs-wrap-thumbnail thumbnail">
-      <img alt="address book" style="padding-bottom:15px;" width="400" loading="lazy" src="/images/address-book.png"/>
+      <img alt="address book" style="padding-bottom:15px;" width="400" loading="lazy" src="/images/address-book.png">
       <div class="bs-wrap bs-wrap-caption caption">
         <h4>Address book</h4>
         <p>Add computers for quick connection, create computer groups. Encryption of address books with a master password is supported.</p>
@@ -33,7 +33,7 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
 
   <div class="bs-wrap bs-wrap-col col-md-4 cl-xs-6">
     <div class="bs-wrap bs-wrap-thumbnail thumbnail">
-      <img alt="desktop" style="padding-bottom:15px;" width="400" loading="lazy" src="/images/desktop.png"/>
+      <img alt="desktop" style="padding-bottom:15px;" width="400" loading="lazy" src="/images/desktop.png">
       <div class="bs-wrap bs-wrap-caption caption">
         <h4>Desktop management</h4>
         <p>Connect to computers from your address book for work or remote assistance. Simple and fast.</p>
@@ -43,7 +43,7 @@ Current Version: <b>2.6.5</b> (Nov 26, 2023)
 
   <div class="bs-wrap bs-wrap-col col-md-4 cl-xs-6">
     <div class="bs-wrap bs-wrap-thumbnail thumbnail">
-      <img alt="file transfer" style="padding-bottom:15px;" width="400" loading="lazy" src="/images/file-transfer.png"/>
+      <img alt="file transfer" style="padding-bottom:15px;" width="400" loading="lazy" src="/images/file-transfer.png">
       <div class="bs-wrap bs-wrap-caption caption">
         <h4>File transfer</h4>
         <p>Manage files on the remote and local computer, transfer them to a remote computer or copy from it.</p>
