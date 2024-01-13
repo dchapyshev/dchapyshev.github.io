@@ -57,6 +57,8 @@ libxdamage-dev
 libxrandr-dev
 libpulse-dev
 flite1-dev
+libsm-dev
+libice-dev
 libspeechd-dev
 speech-dispatcher
 nasm
