@@ -19,7 +19,7 @@ ninja-build
 autoconf
 autoconf-archive
 autopoint
-python
+python3
 bison
 gperf
 dpkg-dev
