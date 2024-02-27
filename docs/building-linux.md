@@ -76,7 +76,7 @@ cmake --version
 If the version does not match, then remove the package. Run the following commands to build the required version of CMake:
 ```bash
 sudo apt-get install libcrypt-dev
-sudo apt-get install libcrypt-dev
+sudo apt-get install libssl-dev
 git clone https://github.com/Kitware/CMake
 git checkout tags/v3.27.7
 cd CMake
