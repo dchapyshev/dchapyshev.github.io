@@ -114,14 +114,19 @@ In the Comment field you can enter any text (for example, your notes for this co
 <p align="center"><img src="/images/console-computer-general.png"/></p>
 
 ## 6. Import and export <a name="import-and-export"></a>
-TODO
+Import and export is used to quickly populate an address book initially or transfer groups of computers between address books.
+To do this, right-click over any of the computer groups (if no groups were added, then over the root group).
+
+Import is available for json files exported in Router Management or json files previously exported from the address book.
+<p align="center"><img src="/images/console-import-export.png"/></p>
 
 ## 7. Online check <a name="online-check"></a>
 To check computers online, there is an automatic check function. To check, go to the group of computers you are interested in and click F5 (or the update button on the toolbar).
 The progress of the scan will be displayed in the status bar, and information about the state of the computer (online or offline) will appear in the “Status” column in the list of computers.
 
 ## 8. Fast connect <a name="fast-connect"></a>
-TODO
+A quick connection is used if you need to connect to a computer one-time without adding it to your address book.
+<p align="center"><img src="/images/console-fast-connect.png"/></p>
 
 ## 9. Router manage <a name="router-manage"></a>
 To manage Aspia Router, go to the main menu **Tools -> Router Manage** (to do this, you must specify the parameters for connecting to the Router in the address book properties).
