@@ -65,7 +65,7 @@ sqlite3
 zstd
 ```
 <br/>
-9. Open **QtCreator -> Tools -> Options -> Kits -> Qt Versions**. Click the Add button and specify the path to **<vcpkg_path>/installed/<arch>/tools/qt5/bin/qmake**.
+9. Open **QtCreator -> Tools -> Options -> Kits -> Qt Versions**. Click the Add button and specify the path to ```<vcpkg_path>/installed/<arch>/tools/qt5/bin/qmake```.
 
 10. Open **QtCreator -> Tools -> Options -> Kits -> Kits**. Click the Add button. Enter a display name for the profile, specify the compilers, and the Qt profile you added earlier.
 

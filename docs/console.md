@@ -154,10 +154,17 @@ If sending statistics is enabled in the Relay configuration, active peer session
   - **Refresh** - Forced update of the list of Hosts.
 
 ### 9.5. Users tab
-TODO
+On the "Users" tab you can manage Router users. To do this, there are buttons for adding, editing and deleting. If you need to reload the list of users from the Router, click the refresh button.
 <p align="center"><img src="/images/console-router-manage-users.png"/></p>
 
-TODO
+Each user can have individual access rights.
+
+“Client” - when specifying these rights, the user will be able to connect to the Router only for subsequent connection to the Hosts. The connection to manage the Router will be unavailable.
+
+“Administrator” - when specifying these rights, the user will be able to connect to the Router for management. Connecting to the Router for subsequent connection to Hosts is not available.
+
+If you simultaneously specify the “Client” and “Administrator” rights, the user will be able to connect to Hosts and manage the Router.
+It is recommended not to use users with Administrator access rights on a daily basis. Create a separate user to administer the Router and separate users to manage the Hosts.
 <p align="center"><img src="/images/console-router-manage-user.png"/></p>
 
 ## 10. Hot keys <a name="hotkeys"></a>
