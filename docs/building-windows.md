@@ -59,7 +59,7 @@ cd vcpkg4aspia
    8.1. Go to menu **Edit** -> **Preferences...**
 
    8.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
-   (for x64: ```vcpkg4aspia\installed\x64-windows-static\tools\qt5\bin\qmake.exe```; for x86: ```vcpkg4aspia\installed\x64-windows-static\tools\qt5\bin\qmake.exe```).
+   (for x64: **vcpkg4aspia\installed\x64-windows-static\tools\qt5\bin\qmake.exe**; for x86: **vcpkg4aspia\installed\x64-windows-static\tools\qt5\bin\qmake.exe**).
 
    8.3. Go to **Kits** -> **Kits**. Click the "Add" button.
 
@@ -74,4 +74,6 @@ cd vcpkg4aspia
      - In the **Compiler** field, specify the compiler for C and C++ (it should be an x64 or x86 compiler, depending on what architecture you are building the project for).
 
 
-9. Open the root CMakeLists.txt file of Aspia in QtCreator and build the project.
+9. Open the root CMakeLists.txt file of Aspia in QtCreator. When configuring, select the Kit that you added earlier (**vcpkg-aspia-x64** or **vcpkg-aspia-x86**).
+
+10. Build the project.
