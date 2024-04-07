@@ -52,14 +52,26 @@ cd vcpkg4aspia
 * wtl
 * zstd
 <br/>
-7. Go to the directory with source code (root directory) and run the following commands:
-```bash
-mkdir build
-cd build
-cmake ..\ -G "Visual Studio 16 2019" -A Win32 -DCMAKE_TOOLCHAIN_FILE=<vcpkg_path>\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET=<triplet_name>
-```
-(replace ```<vcpkg_path>``` with real path to vcpkg; replace ```<triplet_name>``` to x86-windows-static or x64-windows-static)
-You can also use CMake GUI for these purposes.
-After these actions, the ```aspia.sln``` file will be generated in directory "build".
+7. Download and install [QtCreator](https://download.qt.io/official_releases/online_installers/qt-unified-windows-x64-online.exe).
 
-8. Open **aspia.sln** in Visual Studio and build the project.
+8. Launch QtCreator
+
+   8.1. Go to menu **Edit** -> **Preferences...**
+
+   8.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
+   (for x64: ```vcpkg4aspia\installed\x64-windows-static\tools\qt5\bin\qmake.exe```; for x86: ```vcpkg4aspia\installed\x64-windows-static\tools\qt5\bin\qmake.exe```).
+
+   8.3. Go to **Kits** -> **Kits**. Click the "Add" button.
+
+     - In the **Name** field, enter **vcpkg-aspia-x64** (or **vcpkg-aspia-x86** for x86).
+
+     - In the **Qt version** field, select the Qt version that you added in the previous step.
+
+     - In the **CMake Configuration** field, add variables **-DVCPKG_TARGET_TRIPLET:STRING=x64-windows-static** (replace to x86-windows-static for x86) and **-DQT_CREATOR_SKIP_VCPKG_SETUP:BOOL=ON**.
+
+     - In the **Environment** field, add variable **VCPKG_ROOT_DIRECTORY=D:\repo\vcpkg4aspia** (replace the path with the real path to the vcpkg root directory).
+
+     - In the **Compiler** field, specify the compiler for C and C++ (it should be an x64 or x86 compiler, depending on what architecture you are building the project for).
+
+
+9. Open the root CMakeLists.txt file of Aspia in QtCreator and build the project.
