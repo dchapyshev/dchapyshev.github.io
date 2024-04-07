@@ -3,6 +3,10 @@ layout: page
 title: Building for Linux
 ---
 
+**Attention!** A positive result is guaranteed only if the building instructions are strictly followed.
+Read each point carefully and strictly follow the instructions.
+If you do not follow any of the points of these instructions and the project is not builded, then it is entirely your fault.
+
 The build for Linux was tested only in Ubuntu 20.04. If you have a different distribution kit or its version, then additional steps may be required.
 1. Install [QtCreator](https://download.qt.io/official_releases/online_installers/).
 
@@ -104,8 +108,26 @@ sqlite3
 zstd
 ```
 <br/>
-6. Open **QtCreator -> Tools -> Options -> Kits -> Qt Versions**. Click the Add button and specify the path to ```<vcpkg_path>/installed/x64-linux/tools/qt5/bin/qmake```.
+6. Launch QtCreator
 
-7. Open **QtCreator -> Tools -> Options -> Kits -> Kits**. Click the Add button. Enter a display name for the profile, specify the compilers (gcc/g++), and the Qt profile you added earlier.
+   6.1. Go to menu **Edit** -> **Preferences...**
 
-8. Open **CMakeLists.txt** from the Aspia root directory in QtCreator and configure the build using the previously added profile.
+   6.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
+   (**vcpkg4aspia\installed\x64-linux\tools\qt5\bin\qmake.exe**).
+
+   6.3. Go to **Kits** -> **Kits**. Click the "Add" button.
+
+     - In the **Name** field, enter **vcpkg-aspia-x64**.
+
+     - In the **Qt version** field, select the Qt version that you added in the previous step.
+
+     - In the **CMake Configuration** field, add variables **-DVCPKG_TARGET_TRIPLET:STRING=x64-linux** and **-DQT_CREATOR_SKIP_VCPKG_SETUP:BOOL=ON**.
+
+     - In the **Environment** field, add variable **VCPKG_ROOT_DIRECTORY=/home/user/vcpkg4aspia** (replace the path with the real path to the vcpkg root directory).
+
+     - In the **Compiler** field, specify the compiler for C and C++ (it should be an x64 or x86 compiler, depending on what architecture you are building the project for).
+
+
+7. Open the root **CMakeLists.txt** file of Aspia in QtCreator. When configuring, select the Kit that you added earlier (**vcpkg-aspia-x64**).
+
+8. Build the project.
