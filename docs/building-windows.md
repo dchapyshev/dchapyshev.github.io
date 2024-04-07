@@ -22,7 +22,6 @@ title: Building for Windows
     C++ ATL for latest v142 build tools (x86 & x64)
     Windows 10 SDK (10.0.18362)
 ```	  
-
 <br/>
 3. Download and install [CMake](https://cmake.org/download) (version >= 3.21.0).
 
