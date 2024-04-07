@@ -14,7 +14,6 @@ title: Building for Windows
    2.3. **English language pack** (required for vcpkg; **only English language should be installed, without any other**).
 
    2.4. The following packages must be installed in the **Visual Studio Installer**:
-
 ```
     MSVC v142 - VS 2019 C++ x64/x86 build tools (Latest)
     C++ Clang Compiller for Windows (12.0.0)
