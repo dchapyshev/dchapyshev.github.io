@@ -6,6 +6,7 @@ title: Building for Windows
 1. You must use Windows 10/11 x64 to build the project. Build in other versions of Windows is not guaranteed.
 
 2. Download and install [Visual Studio Community 2019](https://www.visualstudio.com/downloads).
+
    2.1. To run the **Visual Studio Installer** in English, go to directory ```C:\Program Files (x86)\Microsoft Visual Studio\Installer``` and execute command ```vs_installer.exe --locale en-US```.
 
    2.2. **Desktop development with C++** workload should be selected when installing.
@@ -23,6 +24,7 @@ title: Building for Windows
     Windows 10 SDK (10.0.18362)
 ```	  
 
+<br/>
 3. Download and install [CMake](https://cmake.org/download) (version >= 3.21.0).
 
 4. Download and install [Git](https://git-scm.com/downloads).
