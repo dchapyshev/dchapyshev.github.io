@@ -3,6 +3,10 @@ layout: page
 title: Building for Windows
 ---
 
+**Attention!** A positive result is guaranteed only if the building instructions are strictly followed.
+Read each point carefully and strictly follow the instructions.
+If you do not follow any of the points of these instructions and the project is not builded, then it is entirely your fault.
+
 1. You must use Windows 10/11 x64 to build the project. Build in other versions of Windows is not guaranteed.
 
 2. Download and install [Visual Studio Community 2019](https://www.visualstudio.com/downloads).
@@ -13,7 +17,9 @@ title: Building for Windows
 
    2.3. **English language pack** (required for vcpkg; **only English language should be installed, without any other**).
 
-   2.4. The following packages must be installed in the **Visual Studio Installer**:
+   2.4. **No other versions of Visual Studio should be installed other than the one specified**.
+
+   2.5. The following packages must be installed in the **Visual Studio Installer**:
 ```
     MSVC v142 - VS 2019 C++ x64/x86 build tools (Latest)
     C++ Clang Compiller for Windows (12.0.0)
