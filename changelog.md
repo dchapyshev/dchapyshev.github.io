@@ -5,6 +5,18 @@ title: Change Log
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 2.7.0 (May 20, 2024)
+  * Implemented the ability to specify the user's display name (which is displayed in the notification panel and when using chat).
+  * Implemented automatic reconnection to Router Manage when the connection is lost.
+  * Implemented waiting for reconnection on reboots (you must force reboot through the application menu).
+  * Optimize performance by reducing the number of memory allocations and using vector instructions.
+  * Added "Aspia Information" to system info.
+  * Fixed problems when checking for updates due to incorrect XML parsing.
+  * Fixed checking computers online with custom port.
+  * The update server address has been changed to update.aspia.net. The old address will be available until the end of 2024.
+  * Updated third party components.
+  * Support for versions older than 2 years has been discontinued (the minimum version is now 2.3.0).
+
 ### Version 2.6.5 (Nov 26, 2023)
   * Fixed checking user status when starting a file transfer session
   * Fixed address reuse when opening sockets
