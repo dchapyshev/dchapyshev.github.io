@@ -3,18 +3,32 @@ layout: page
 title: Building for Windows
 ---
 
+**Attention!** A positive result is guaranteed only if the building instructions are strictly followed.
+Read each point carefully and strictly follow the instructions.
+If you do not follow any of the points of these instructions and the project is not builded, then it is entirely your fault.
+
 1. You must use Windows 10/11 x64 to build the project. Build in other versions of Windows is not guaranteed.
 
 2. Download and install [Visual Studio Community 2019](https://www.visualstudio.com/downloads).
 
-   2.1. **Desktop development with C++** workload should be selected when installing.
+   2.1. To run the **Visual Studio Installer** in English, go to directory ```C:\Program Files (x86)\Microsoft Visual Studio\Installer``` and execute command ```vs_installer.exe --locale en-US```.
 
-   2.2. **SDK 10.0.18362.0** should be selected when installing.
+   2.2. **Desktop development with C++** workload should be selected when installing.
 
-   2.3. **ATL/MFC** libraries should be selected when installing.
+   2.3. **English language pack** (required for vcpkg; **only English language should be installed, without any other**).
 
-   2.4. **English language pack** (required for vcpkg; **only English language should be installed, without any other**).
+   2.4. **No other versions of Visual Studio should be installed other than the one specified**.
 
+   2.5. The following packages must be installed in the **Visual Studio Installer**:
+```
+    MSVC v142 - VS 2019 C++ x64/x86 build tools (Latest)
+    C++ Clang Compiller for Windows (12.0.0)
+    C++ Clang-cl for v142 build tools (x64/x86)
+    C++ MFC for latest v142 build tools (x86 & x64)
+    C++ ATL for latest v142 build tools (x86 & x64)
+    Windows 10 SDK (10.0.18362)
+```	  
+<br/>
 3. Download and install [CMake](https://cmake.org/download) (version >= 3.21.0).
 
 4. Download and install [Git](https://git-scm.com/downloads).
@@ -44,14 +58,28 @@ cd vcpkg4aspia
 * wtl
 * zstd
 <br/>
-7. Go to the directory with source code (root directory) and run the following commands:
-```bash
-mkdir build
-cd build
-cmake ..\ -G "Visual Studio 16 2019" -A Win32 -DCMAKE_TOOLCHAIN_FILE=<vcpkg_path>\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET=<triplet_name>
-```
-(replace ```<vcpkg_path>``` with real path to vcpkg; replace ```<triplet_name>``` to x86-windows-static or x64-windows-static)
-You can also use CMake GUI for these purposes.
-After these actions, the ```aspia.sln``` file will be generated in directory "build".
+7. Download and install [QtCreator](https://download.qt.io/official_releases/online_installers/qt-unified-windows-x64-online.exe).
 
-8. Open **aspia.sln** in Visual Studio and build the project.
+8. Launch QtCreator
+
+   8.1. Go to menu **Edit** -> **Preferences...**
+
+   8.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
+   (for x64: **vcpkg4aspia\installed\x64-windows-static\tools\qt5\bin\qmake.exe**; for x86: **vcpkg4aspia\installed\x86-windows-static\tools\qt5\bin\qmake.exe**).
+
+   8.3. Go to **Kits** -> **Kits**. Click the "Add" button.
+
+     - In the **Name** field, enter **vcpkg-aspia-x64** (or **vcpkg-aspia-x86** for x86).
+
+     - In the **Qt version** field, select the Qt version that you added in the previous step.
+
+     - In the **CMake Configuration** field, add variables **-DVCPKG_TARGET_TRIPLET:STRING=x64-windows-static** (replace to x86-windows-static for x86) and **-DQT_CREATOR_SKIP_VCPKG_SETUP:BOOL=ON**.
+
+     - In the **Environment** field, add variable **VCPKG_ROOT_DIRECTORY=D:\repo\vcpkg4aspia** (replace the path with the real path to the vcpkg root directory).
+
+     - In the **Compiler** field, specify the compiler for C and C++ (it should be an x64 or x86 compiler, depending on what architecture you are building the project for).
+
+
+9. Open the root **CMakeLists.txt** file of Aspia in QtCreator. When configuring, select the Kit that you added earlier (**vcpkg-aspia-x64** or **vcpkg-aspia-x86**).
+
+10. Build the project.

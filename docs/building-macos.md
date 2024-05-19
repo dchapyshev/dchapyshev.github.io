@@ -3,6 +3,10 @@ layout: page
 title: Building for MacOS
 ---
 
+**Attention!** A positive result is guaranteed only if the building instructions are strictly followed.
+Read each point carefully and strictly follow the instructions.
+If you do not follow any of the points of these instructions and the project is not builded, then it is entirely your fault.
+
 1. Install **Xcode** from AppStore.
 
 2. Execute command in terminal: **xcode-select --install**
@@ -65,8 +69,26 @@ sqlite3
 zstd
 ```
 <br/>
-9. Open **QtCreator -> Tools -> Options -> Kits -> Qt Versions**. Click the Add button and specify the path to ```<vcpkg_path>/installed/<arch>/tools/qt5/bin/qmake```.
+9. Launch QtCreator
 
-10. Open **QtCreator -> Tools -> Options -> Kits -> Kits**. Click the Add button. Enter a display name for the profile, specify the compilers, and the Qt profile you added earlier.
+   9.1. Go to menu **Edit** -> **Preferences...**
 
-11. Open **CMakeLists.txt** from the Aspia root directory in QtCreator and configure the build using the previously added profile.
+   9.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
+   (**vcpkg4aspia\installed\x64-osx\tools\qt5\bin\qmake.exe**).
+
+   9.3. Go to **Kits** -> **Kits**. Click the "Add" button.
+
+     - In the **Name** field, enter **vcpkg-aspia-x64**.
+
+     - In the **Qt version** field, select the Qt version that you added in the previous step.
+
+     - In the **CMake Configuration** field, add variables **-DVCPKG_TARGET_TRIPLET:STRING=x64-osx** and **-DQT_CREATOR_SKIP_VCPKG_SETUP:BOOL=ON**.
+
+     - In the **Environment** field, add variable **VCPKG_ROOT_DIRECTORY=/users/user/vcpkg4aspia** (replace the path with the real path to the vcpkg root directory).
+
+     - In the **Compiler** field, specify the compiler for C and C++ (it should be an x64 or x86 compiler, depending on what architecture you are building the project for).
+
+
+10. Open the root **CMakeLists.txt** file of Aspia in QtCreator. When configuring, select the Kit that you added earlier (**vcpkg-aspia-x64**).
+
+11. Build the project.
