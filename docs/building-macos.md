@@ -74,7 +74,7 @@ zstd
    9.1. Go to menu **Edit** -> **Preferences...**
 
    9.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
-   (**vcpkg4aspia\installed\x64-osx\tools\qt5\bin\qmake.exe**).
+   (**vcpkg4aspia\installed\x64-osx\tools\qt5\bin\qmake**).
 
    9.3. Go to **Kits** -> **Kits**. Click the "Add" button.
 

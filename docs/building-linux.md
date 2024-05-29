@@ -113,7 +113,7 @@ zstd
    6.1. Go to menu **Edit** -> **Preferences...**
 
    6.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
-   (**vcpkg4aspia\installed\x64-linux\tools\qt5\bin\qmake.exe**).
+   (**vcpkg4aspia\installed\x64-linux\tools\qt5\bin\qmake**).
 
    6.3. Go to **Kits** -> **Kits**. Click the "Add" button.
 
