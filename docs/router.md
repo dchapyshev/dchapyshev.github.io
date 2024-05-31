@@ -55,7 +55,7 @@ The router never overwrites the current configurations and creating a new config
 
 **WARNING!** Administrator rights are required to create a configuration.
 
-**WARNING!** Default username and password: admin/admin. Don't forget to change this after installation!
+**WARNING!** Default username and password: admin/admin. Don't forget to change this after installation! To manage users, you need to use [Router Manage](https://aspia.org/docs/console#router-manage) in the Console.
 
 ```bash
 Windows x86
@@ -73,6 +73,9 @@ Linux
 <br/>
 
 ## 4. Configuration file <a name="config-file"></a>
+The configuration file contains parameters that do not change while the application is running.
+
+**Important!** Perform regular configuration file backups to avoid the risk of data loss.
 
 The Router configuration file is located in the following paths:
 
@@ -97,6 +100,10 @@ Description of configuration file fields:
   - **RelayWhiteList** The IP address (not hostnames) list of relays who are allowed to connect to the Router. Addresses are separated by semicolons. If the list is empty, then connections from all Relays are allowed. If the list contains items, then only the Relays specified in this list can connect. Do not change this setting unless you really need to.
 
 ## 5. Data base <a name="db-file"></a>
+The database file contains information about users and issued IDs for Hosts. Currently the **sqlite** database is used. If you need to view the contents or make changes to the database, then you can use any graphical editor for this type of database.
+
+**Important!** Perform regular database file backups to avoid the risk of data loss.
+
 The database file is located in the following paths:
 
 ```bash
