@@ -27,6 +27,7 @@ python3
 bison
 gperf
 dpkg-dev
+libtool
 libgl1-mesa-dev
 libglu1-mesa-dev
 libharfbuzz-dev
