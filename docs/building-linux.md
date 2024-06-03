@@ -24,6 +24,7 @@ autoconf
 autoconf-archive
 autopoint
 python3
+python3-jinja2
 bison
 gperf
 dpkg-dev
