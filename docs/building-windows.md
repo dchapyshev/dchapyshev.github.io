@@ -17,9 +17,11 @@ If you do not follow any of the points of these instructions and the project is 
 
    2.3. **English language pack** (required for vcpkg; **only English language should be installed, without any other**).
 
-   2.4. **No other versions of Visual Studio should be installed other than the one specified**.
+   2.4. **No other versions of Visual Studio should be installed other than the one specified.**
 
-   2.5. The following packages must be installed in the **Visual Studio Installer**:
+   2.5. **Only SDK version 10.0.18362 should be installed. No other versions of SDK should be installed.**
+
+   2.6. The following packages must be installed in the **Visual Studio Installer**:
 ```
     MSVC v142 - VS 2019 C++ x64/x86 build tools (Latest)
     C++ Clang Compiller for Windows (12.0.0)
@@ -29,18 +31,21 @@ If you do not follow any of the points of these instructions and the project is 
     Windows 10 SDK (10.0.18362)
 ```	  
 <br/>
-3. Download and install [CMake](https://cmake.org/download) (version >= 3.21.0).
 
-4. Download and install [Git](https://git-scm.com/downloads).
+3. Download and install [WDK for Windows 10 1903 (19H1, build 18362)](https://learn.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads).
 
-5. Download and install [vcpkg4aspia](https://github.com/dchapyshev/vcpkg4aspia) (forked from Microsoft repository). To do this, go to the directory where you want to install and run the commands:
+4. Download and install [CMake](https://cmake.org/download) (version >= 3.21.0).
+
+5. Download and install [Git](https://git-scm.com/downloads).
+
+6. Download and install [vcpkg4aspia](https://github.com/dchapyshev/vcpkg4aspia) (forked from Microsoft repository). To do this, go to the directory where you want to install and run the commands:
 ```bash
 git clone https://github.com/dchapyshev/vcpkg4aspia.git
 cd vcpkg4aspia
 ./bootstrap-vcpkg.bat
 ```
 <br/>
-6. In vcpkg, you need to install the following libraries (use triplet **x86-windows-static** or **x64-windows-static** in all cases; for example: **./vcpkg install asio:x86-windows-static**):
+7. In vcpkg, you need to install the following libraries (use triplet **x86-windows-static** or **x64-windows-static** in all cases; for example: **./vcpkg install asio:x86-windows-static**):
 * asio
 * curl
 * fmt
@@ -58,16 +63,16 @@ cd vcpkg4aspia
 * wtl
 * zstd
 <br/>
-7. Download and install [QtCreator](https://download.qt.io/official_releases/online_installers/qt-unified-windows-x64-online.exe).
+8. Download and install [QtCreator](https://download.qt.io/official_releases/online_installers/qt-unified-windows-x64-online.exe).
 
-8. Launch QtCreator
+9. Launch QtCreator
 
-   8.1. Go to menu **Edit** -> **Preferences...**
+   9.1. Go to menu **Edit** -> **Preferences...**
 
-   8.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
+   9.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
    (for x64: **vcpkg4aspia\installed\x64-windows-static\tools\qt5\bin\qmake.exe**; for x86: **vcpkg4aspia\installed\x86-windows-static\tools\qt5\bin\qmake.exe**).
 
-   8.3. Go to **Kits** -> **Kits**. Click the "Add" button.
+   9.3. Go to **Kits** -> **Kits**. Click the "Add" button.
 
      - In the **Name** field, enter **vcpkg-aspia-x64** (or **vcpkg-aspia-x86** for x86).
 
@@ -80,6 +85,6 @@ cd vcpkg4aspia
      - In the **Compiler** field, specify the compiler for C and C++ (it should be an x64 or x86 compiler, depending on what architecture you are building the project for).
 
 
-9. Open the root **CMakeLists.txt** file of Aspia in QtCreator. When configuring, select the Kit that you added earlier (**vcpkg-aspia-x64** or **vcpkg-aspia-x86**).
+10. Open the root **CMakeLists.txt** file of Aspia in QtCreator. When configuring, select the Kit that you added earlier (**vcpkg-aspia-x64** or **vcpkg-aspia-x86**).
 
-10. Build the project.
+11. Build the project.
