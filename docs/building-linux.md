@@ -23,6 +23,7 @@ ninja-build
 autoconf
 autoconf-archive
 autopoint
+pkg-config
 python3
 python3-jinja2
 bison

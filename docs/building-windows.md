@@ -19,16 +19,19 @@ If you do not follow any of the points of these instructions and the project is 
 
    2.4. **No other versions of Visual Studio should be installed other than the one specified.**
 
-   2.5. **Only SDK version 10.0.18362 should be installed. No other versions of SDK should be installed.**
-
-   2.6. The following packages must be installed in the **Visual Studio Installer**:
+   2.5. The following packages must be installed in the **Visual Studio Installer**:
 ```
     MSVC v142 - VS 2019 C++ x64/x86 build tools (Latest)
+    MSVC v142 - VS 2019 C++ x64/x86 Spectre-mitigation libs (Latest)
     C++ Clang Compiller for Windows (12.0.0)
     C++ Clang-cl for v142 build tools (x64/x86)
+    С++ CMake tools for Windows
     C++ MFC for latest v142 build tools (x86 & x64)
     C++ ATL for latest v142 build tools (x86 & x64)
+    C++ ATL for latest v142 build tools with Spectre Mitigations (x86 & x64)
+    C++ MFC for latest v142 build tools with Spectre Mitigations (x86 & x64)
     Windows 10 SDK (10.0.18362)
+    Windows 10 SDK (10.0.19041)
 ```	  
 <br/>
 
