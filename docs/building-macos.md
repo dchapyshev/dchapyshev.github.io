@@ -26,6 +26,7 @@ brew install pkg-config
 brew install wget
 brew install curl
 brew install ninja
+brew install libtool
 ```
 <br/>
 6. Install [QtCreator](https://download.qt.io/official_releases/online_installers/).
