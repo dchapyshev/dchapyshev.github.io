@@ -15,9 +15,12 @@ then it is recommended to place the Relay and Router on different computers (in 
 It's impossible to do. When connecting to a computer, the user must be explicitly notified that his computer is under remote control.
 Aspia is not an application for hidden tracking of users. Antivirus companies also require this notification in order for the application to be on the antivirus white lists.
 
-### 4. Is data transmitted over the network encrypted?
+### 4. What data transfer protocol does Aspia use?
+Aspia uses its own protocol, which is not interconnected with any other protocol.
+
+### 5. Is data transmitted over the network encrypted?
 Yes. All data transmitted over the network is encrypted using encryption algorithms AES256-GCM or ChaCha20-Poly1305.
 If both sides of the connection support hardware AES encryption, then AES256-GCM is used. Otherwise, ChaCha20-Poly1305 is used.
 
-### 5. Is my connection protected from MITM attacks?
+### 6. Is my connection protected from MITM attacks?
 Yes. Algorithm [SRP](https://en.wikipedia.org/wiki/Secure_Remote_Password_protocol) is used for authentication and authorization, which is resistant to man-in-the-middle attacks.
