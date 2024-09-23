@@ -45,6 +45,7 @@ If you do not follow any of the points of these instructions and the project is 
 ```bash
 Set HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem\LongPathsEnabled to 1
 ```
+<br/>
 
 7. Download and install [vcpkg4aspia](https://github.com/dchapyshev/vcpkg4aspia) (forked from Microsoft repository). To do this, go to the directory where you want to install and run the commands:
 ```bash
