@@ -72,26 +72,27 @@ cd vcpkg4aspia
 * wtl
 * zstd
 <br/>
+
 9. Download and install [QtCreator](https://download.qt.io/official_releases/online_installers/qt-unified-windows-x64-online.exe).
 
 10. Launch QtCreator
 
-   10.1. Go to menu **Edit** -> **Preferences...**
+    10.1. Go to menu **Edit** -> **Preferences...**
 
-   10.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
-   (for x64: **vcpkg4aspia\installed\x64-windows-static\tools\qt5\bin\qmake.exe**; for x86: **vcpkg4aspia\installed\x86-windows-static\tools\qt5\bin\qmake.exe**).
+    10.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
+    (for x64: **vcpkg4aspia\installed\x64-windows-static\tools\qt5\bin\qmake.exe**; for x86: **vcpkg4aspia\installed\x86-windows-static\tools\qt5\bin\qmake.exe**).
 
-   10.3. Go to **Kits** -> **Kits**. Click the "Add" button.
+    10.3. Go to **Kits** -> **Kits**. Click the "Add" button.
 
-     - In the **Name** field, enter **vcpkg-aspia-x64** (or **vcpkg-aspia-x86** for x86).
+       - In the **Name** field, enter **vcpkg-aspia-x64** (or **vcpkg-aspia-x86** for x86).
 
-     - In the **Qt version** field, select the Qt version that you added in the previous step.
+       - In the **Qt version** field, select the Qt version that you added in the previous step.
 
-     - In the **CMake Configuration** field, add variables **-DVCPKG_TARGET_TRIPLET:STRING=x64-windows-static** (replace to x86-windows-static for x86) and **-DQT_CREATOR_SKIP_VCPKG_SETUP:BOOL=ON**.
+       - In the **CMake Configuration** field, add variables **-DVCPKG_TARGET_TRIPLET:STRING=x64-windows-static** (replace to x86-windows-static for x86) and **-DQT_CREATOR_SKIP_VCPKG_SETUP:BOOL=ON**.
 
-     - In the **Environment** field, add variable **VCPKG_ROOT_DIRECTORY=D:\repo\vcpkg4aspia** (replace the path with the real path to the vcpkg root directory).
+       - In the **Environment** field, add variable **VCPKG_ROOT_DIRECTORY=D:\repo\vcpkg4aspia** (replace the path with the real path to the vcpkg root directory).
 
-     - In the **Compiler** field, specify the compiler for C and C++ (it should be an x64 or x86 compiler, depending on what architecture you are building the project for).
+       - In the **Compiler** field, specify the compiler for C and C++ (it should be an x64 or x86 compiler, depending on what architecture you are building the project for).
 
 
 11. Open the root **CMakeLists.txt** file of Aspia in QtCreator. When configuring, select the Kit that you added earlier (**vcpkg-aspia-x64** or **vcpkg-aspia-x86**).
