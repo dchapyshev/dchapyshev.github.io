@@ -41,14 +41,19 @@ If you do not follow any of the points of these instructions and the project is 
 
 5. Download and install [Git](https://git-scm.com/downloads).
 
-6. Download and install [vcpkg4aspia](https://github.com/dchapyshev/vcpkg4aspia) (forked from Microsoft repository). To do this, go to the directory where you want to install and run the commands:
+6. Disable path length limit.
+```bash
+Set HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem\LongPathsEnabled to 1
+```
+
+7. Download and install [vcpkg4aspia](https://github.com/dchapyshev/vcpkg4aspia) (forked from Microsoft repository). To do this, go to the directory where you want to install and run the commands:
 ```bash
 git clone https://github.com/dchapyshev/vcpkg4aspia.git
 cd vcpkg4aspia
 ./bootstrap-vcpkg.bat
 ```
 <br/>
-7. In vcpkg, you need to install the following libraries (use triplet **x86-windows-static** or **x64-windows-static** in all cases; for example: **./vcpkg install asio:x86-windows-static**):
+8. In vcpkg, you need to install the following libraries (use triplet **x86-windows-static** or **x64-windows-static** in all cases; for example: **./vcpkg install asio:x86-windows-static**):
 * asio
 * curl
 * fmt
@@ -66,16 +71,16 @@ cd vcpkg4aspia
 * wtl
 * zstd
 <br/>
-8. Download and install [QtCreator](https://download.qt.io/official_releases/online_installers/qt-unified-windows-x64-online.exe).
+9. Download and install [QtCreator](https://download.qt.io/official_releases/online_installers/qt-unified-windows-x64-online.exe).
 
-9. Launch QtCreator
+10. Launch QtCreator
 
-   9.1. Go to menu **Edit** -> **Preferences...**
+   10.1. Go to menu **Edit** -> **Preferences...**
 
-   9.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
+   10.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
    (for x64: **vcpkg4aspia\installed\x64-windows-static\tools\qt5\bin\qmake.exe**; for x86: **vcpkg4aspia\installed\x86-windows-static\tools\qt5\bin\qmake.exe**).
 
-   9.3. Go to **Kits** -> **Kits**. Click the "Add" button.
+   10.3. Go to **Kits** -> **Kits**. Click the "Add" button.
 
      - In the **Name** field, enter **vcpkg-aspia-x64** (or **vcpkg-aspia-x86** for x86).
 
@@ -88,6 +93,6 @@ cd vcpkg4aspia
      - In the **Compiler** field, specify the compiler for C and C++ (it should be an x64 or x86 compiler, depending on what architecture you are building the project for).
 
 
-10. Open the root **CMakeLists.txt** file of Aspia in QtCreator. When configuring, select the Kit that you added earlier (**vcpkg-aspia-x64** or **vcpkg-aspia-x86**).
+11. Open the root **CMakeLists.txt** file of Aspia in QtCreator. When configuring, select the Kit that you added earlier (**vcpkg-aspia-x64** or **vcpkg-aspia-x86**).
 
-11. Build the project.
+12. Build the project.
