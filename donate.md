@@ -11,19 +11,5 @@ Aspia is a free project for end users, but there are some costs to maintain it. 
 
 <br/>
 
-## WebMoney
-<strong>WMZ:</strong> Z145847226718
-
-<strong>WMP:</strong> P121745239912
-
-<strong>WME:</strong> E882889485959
-
-<br/>
-
 ## GitHub Sponsor
 <a href="https://github.com/sponsors/dchapyshev">Go to GitHub</a>
-
-<br/>
-
-## Liberapay
-<a href="https://liberapay.com/dchapyshev/donate"><img src="https://liberapay.com/assets/widgets/donate.svg" alt="Donate using Liberapay" /></a>
