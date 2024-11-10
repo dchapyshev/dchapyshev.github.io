@@ -9,7 +9,7 @@ If you do not follow any of the points of these instructions and the project is 
 
 1. You must use Windows 10/11 x64 to build the project. Build in other versions of Windows is not guaranteed.
 
-2. Download and install [Visual Studio Community 2019](https://www.visualstudio.com/downloads).
+2. Download and install [Visual Studio Community 2022](https://www.visualstudio.com/downloads).
 
    2.1. To run the **Visual Studio Installer** in English, go to directory ```C:\Program Files (x86)\Microsoft Visual Studio\Installer``` and execute command ```vs_installer.exe --locale en-US```.
 
@@ -21,15 +21,15 @@ If you do not follow any of the points of these instructions and the project is 
 
    2.5. The following packages must be installed in the **Visual Studio Installer**:
 ```
-    MSVC v142 - VS 2019 C++ x64/x86 build tools (Latest)
-    MSVC v142 - VS 2019 C++ x64/x86 Spectre-mitigation libs (Latest)
-    C++ Clang Compiller for Windows (12.0.0)
-    C++ Clang-cl for v142 build tools (x64/x86)
+    MSVC v143 - VS 2022 C++ x64/x86 build tools (Latest)
+    MSVC v143 - VS 2022 C++ x64/x86 Spectre-mitigation libs (Latest)
+    C++ Clang Compiller for Windows (17.0.3)
+    MSBuild support for LLVM (clang-cl) toolset
     С++ CMake tools for Windows
-    C++ MFC for latest v142 build tools (x86 & x64)
-    C++ ATL for latest v142 build tools (x86 & x64)
-    C++ ATL for latest v142 build tools with Spectre Mitigations (x86 & x64)
-    C++ MFC for latest v142 build tools with Spectre Mitigations (x86 & x64)
+    C++ MFC for latest v143 build tools (x86 & x64)
+    C++ ATL for latest v143 build tools (x86 & x64)
+    C++ ATL for latest v143 build tools with Spectre Mitigations (x86 & x64)
+    C++ MFC for latest v143 build tools with Spectre Mitigations (x86 & x64)
     Windows 10 SDK (10.0.18362)
     Windows 10 SDK (10.0.19041)
 ```	  
