@@ -32,6 +32,7 @@ If you do not follow any of the points of these instructions and the project is 
     C++ MFC for latest v143 build tools with Spectre Mitigations (x86 & x64)
     Windows 10 SDK (10.0.18362)
     Windows 10 SDK (10.0.19041)
+    Windows Driver Kit
 ```	  
 <br/>
 
