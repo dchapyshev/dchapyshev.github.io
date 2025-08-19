@@ -7,7 +7,7 @@ title: Building for Linux
 Read each point carefully and strictly follow the instructions.
 If you do not follow any of the points of these instructions and the project is not builded, then it is entirely your fault.
 
-The build for Linux was tested only in Ubuntu 20.04. If you have a different distribution kit or its version, then additional steps may be required.
+The build for Linux was tested only in Ubuntu 22.04. If you have a different distribution kit or its version, then additional steps may be required.
 1. Install [QtCreator](https://download.qt.io/official_releases/online_installers/).
 
 2. Download and install [vcpkg4aspia](https://github.com/dchapyshev/vcpkg4aspia) (forked from Microsoft repository). To do this, go to the directory where you want to install and run the commands:
@@ -56,13 +56,30 @@ libxcb-xinerama0-dev
 libxcb-util-dev
 libxcb-cursor0
 libxcb-cursor-dev
+libxcb-xinput-dev
 libxkbcommon-dev
 libxkbcommon-x11-dev
+xorg-dev
+libxcb-ewmh-dev
+libxcb-present-dev
+libxcb-composite0-dev
+libxcb-damage0-dev
+libxcb-dpms0-dev
+libxcb-dri2-0-dev
+libxcb-dri3-dev
+libxcb-record0-dev
+libxcb-res0-dev
+libxcb-screensaver0-dev
+libxcb-xtest0-dev
+libxcb-xv0-dev
+libxcb-xf86dri0-dev
+libxcb-xvmc0-dev
 libatspi2.0-dev
 libprocps-dev
 libxdamage-dev
 libxrandr-dev
 libpulse-dev
+libltdl-dev
 flite1-dev
 libsm-dev
 libice-dev
@@ -76,7 +93,7 @@ cmake
 curl
 ```
 <br/>
-4. Make sure that the version of CMake in your Linux is greater than or equal to 3.21.0. To do this, run the command:
+4. Make sure that the version of CMake in your Linux is greater than or equal to 4.0.0. To do this, run the command:
 ```bash
 cmake --version
 ```
@@ -85,8 +102,8 @@ If the version does not match, then remove the package. Run the following comman
 sudo apt-get install libcrypt-dev
 sudo apt-get install libssl-dev
 git clone https://github.com/Kitware/CMake
-git checkout tags/v3.27.7
 cd CMake
+git checkout tags/v4.0.0
 ./configure
 make -j4
 sudo make install
@@ -96,7 +113,6 @@ sudo make install
 ```bash
 asio
 curl
-fmt
 gtest
 icu
 libvpx
@@ -104,9 +120,9 @@ libyuv
 openssl
 opus
 protobuf
-qt5-base
-qt5-translations
-rapidjson
+qtbase
+qtsvg
+qttools
 sqlite3
 zstd
 ```
@@ -116,7 +132,7 @@ zstd
    6.1. Go to menu **Edit** -> **Preferences...**
 
    6.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
-   (**vcpkg4aspia\installed\x64-linux\tools\qt5\bin\qmake**).
+   (**vcpkg4aspia\installed\x64-linux\tools\qt6\bin\qmake**).
 
    6.3. Go to **Kits** -> **Kits**. Click the "Add" button.
 
