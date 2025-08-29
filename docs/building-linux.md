@@ -91,6 +91,7 @@ g++
 git
 cmake
 curl
+flex
 ```
 <br/>
 4. Make sure that the version of CMake in your Linux is greater than or equal to 4.0.0. To do this, run the command:
