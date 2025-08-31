@@ -21,18 +21,17 @@ If you do not follow any of the points of these instructions and the project is 
 
    2.5. The following packages must be installed in the **Visual Studio Installer**:
 ```
-    MSVC v142 - VS 2022 C++ x64/x86 build tools (Latest)
-    MSVC v142 - VS 2022 C++ x64/x86 Spectre-mitigation libs (Latest)
-    C++ Clang Compiller for Windows (12.0.0)
-    C++ Clang-cl for v142 build tools (x64/x86)
+    MSVC v143 - VS 2022 C++ x64/x86 build tools (Latest)
+    MSVC v143 - VS 2022 C++ x64/x86 Spectre-mitigation libs (Latest)
+    C++ Clang Compiller for Windows (19.1.5)
+    MSBuild support for LLVM (clang-cl) toolset
     С++ CMake tools for Windows
-    C++ MFC for latest v142 build tools (x86 & x64)
-    C++ ATL for latest v142 build tools (x86 & x64)
-    C++ ATL for latest v142 build tools with Spectre Mitigations (x86 & x64)
-    C++ MFC for latest v142 build tools with Spectre Mitigations (x86 & x64)
-    Windows 10 SDK (10.0.18362)
+    C++ MFC for latest v143 build tools (x86 & x64)
+    C++ ATL for latest v143 build tools (x86 & x64)
+    C++ ATL for latest v143 build tools with Spectre Mitigations (x86 & x64)
+    C++ MFC for latest v143 build tools with Spectre Mitigations (x86 & x64)
     Windows 10 SDK (10.0.19041)
-```	  
+```
 <br/>
 
 3. Download and install [WDK for Windows 10 1903 (19H1, build 18362)](https://learn.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads).
