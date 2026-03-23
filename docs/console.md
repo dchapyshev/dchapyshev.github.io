@@ -208,6 +208,7 @@ It is recommended not to use users with Administrator access rights on a daily b
   - **ASPIA_NO_VERIFY_TLS_PEER** - If the variable is declared, then the validity of the TLS certificate is not checked when checking for updates.
   It is not recommended to declare this variable unnecessarily. Declaring this variable can help solve the problem with checking for updates in Windows 7/2008R2,
   where root certificates are not updated.
+  - **ASPIA_DISABLE_UDP** - If declared with any value, then UDP connections are never performed.
 
 ## 13. Logs <a name="logs"></a>
 To configure the Router logging parameters, use the following recommendations:
