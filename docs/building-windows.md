@@ -30,7 +30,7 @@ If you do not follow any of the points of these instructions and the project is 
     C++ ATL for latest v143 build tools (x86 & x64)
     C++ ATL for latest v143 build tools with Spectre Mitigations (x86 & x64)
     C++ MFC for latest v143 build tools with Spectre Mitigations (x86 & x64)
-    Windows 10 SDK (10.0.26100)
+    Windows 11 SDK (10.0.26100)
 ```
 <br/>
 
