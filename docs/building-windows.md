@@ -30,11 +30,11 @@ If you do not follow any of the points of these instructions and the project is 
     C++ ATL for latest v143 build tools (x86 & x64)
     C++ ATL for latest v143 build tools with Spectre Mitigations (x86 & x64)
     C++ MFC for latest v143 build tools with Spectre Mitigations (x86 & x64)
-    Windows 10 SDK (10.0.19041)
+    Windows 10 SDK (10.0.26100)
 ```
 <br/>
 
-3. Download and install [WDK for Windows 10 1903 (19H1, build 18362)](https://learn.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads).
+3. Download and install [WDK for Windows 11 25H2 (build 26100)](https://learn.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads).
 
 4. Download and install [CMake](https://cmake.org/download) (version >= 4.0.0).
 
@@ -56,7 +56,9 @@ cd vcpkg4aspia
 8. In vcpkg, you need to install the following libraries (use triplet **x86-windows-static** or **x64-windows-static** in all cases; for example: **./vcpkg install asio:x86-windows-static**):
 * asio
 * curl
+* enet
 * gtest
+* inipp
 * libvpx
 * libyuv
 * openssl
@@ -65,7 +67,6 @@ cd vcpkg4aspia
 * qtbase
 * qtsvg
 * qttools
-* sqlite3
 * zstd
 <br/>
 
