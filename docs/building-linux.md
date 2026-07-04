@@ -18,80 +18,63 @@ cd vcpkg4aspia
 ```
 <br/>
 3. Install the following packages in your package manager (**packages must be installed before installing vcpkg and its packages**):
+The first column lists the package name for Debian/Ubuntu (`apt`), the second the corresponding package for RHEL/AlmaLinux 8 (`dnf`).
+
+For RHEL/AlmaLinux, enable the **EPEL** and **PowerTools** (CRB) repositories first, since some of the packages below live there:
 ```bash
-ninja-build
-autoconf
-autoconf-archive
-autopoint
-pkg-config
-python3
-python3-jinja2
-bison
-gperf
-dpkg-dev
-libtool
-libgl1-mesa-dev
-libglu1-mesa-dev
-libharfbuzz-dev
-libfontconfig1-dev
-libfreetype6-dev
-libx11-dev
-libx11-xcb-dev
-libxext-dev
-libxfixes-dev
-libxi-dev
-libxrender-dev
-libxcb1-dev
-libxcb-glx0-dev
-libxcb-keysyms1-dev
-libxcb-image0-dev
-libxcb-shm0-dev
-libxcb-icccm4-dev
-libxcb-sync-dev
-libxcb-xfixes0-dev
-libxcb-shape0-dev
-libxcb-randr0-dev
-libxcb-render-util0-dev
-libxcb-xinerama0-dev
-libxcb-util-dev
-libxcb-cursor0
-libxcb-cursor-dev
-libxcb-xinput-dev
-libxkbcommon-dev
-libxkbcommon-x11-dev
-xorg-dev
-libxcb-ewmh-dev
-libxcb-present-dev
-libxcb-composite0-dev
-libxcb-damage0-dev
-libxcb-dpms0-dev
-libxcb-dri2-0-dev
-libxcb-dri3-dev
-libxcb-record0-dev
-libxcb-res0-dev
-libxcb-screensaver0-dev
-libxcb-xtest0-dev
-libxcb-xv0-dev
-libxcb-xf86dri0-dev
-libxcb-xvmc0-dev
-libatspi2.0-dev
-libprocps-dev
-libxdamage-dev
-libxrandr-dev
-libpulse-dev
-libltdl-dev
-flite1-dev
-libsm-dev
-libice-dev
-libspeechd-dev
-speech-dispatcher
-nasm
-gcc
-g++
-git
-cmake
-curl
-flex
+sudo dnf install -y epel-release
+sudo dnf config-manager --set-enabled powertools
+```
+
+| Debian / Ubuntu (apt)   | RHEL / AlmaLinux 8 (dnf)   |
+| ----------------------- | -------------------------- |
+| ninja-build             | ninja-build                |
+| autoconf                | autoconf                   |
+| autoconf-archive        | autoconf-archive           |
+| autopoint               | gettext-devel              |
+| pkg-config              | pkgconf-pkg-config         |
+| python3                 | python3.11                 |
+| python3-jinja2          | python3.11-jinja2          |
+| python3-venv            | python3.11 (venv bundled)  |
+| bison                   | bison                      |
+| gperf                   | gperf                      |
+| dpkg-dev                | dpkg-dev                   |
+| rpm                     | rpm-build                  |
+| libtool                 | libtool                    |
+| libgbm-dev              | mesa-libgbm-devel          |
+| libegl1-mesa-dev        | mesa-libEGL-devel          |
+| libdrm-dev              | libdrm-devel               |
+| libharfbuzz-dev         | harfbuzz-devel             |
+| libfontconfig1-dev      | fontconfig-devel           |
+| libfreetype6-dev        | freetype-devel             |
+| libatspi2.0-dev         | at-spi2-core-devel         |
+| libprocps-dev           | procps-ng-devel            |
+| xkb-data                | xkeyboard-config-devel     |
+| libpam0g-dev            | pam-devel                  |
+| libpulse-dev            | pulseaudio-libs-devel      |
+| libltdl-dev             | libtool-ltdl-devel         |
+| flite1-dev              | flite-devel                |
+| libspeechd-dev          | speech-dispatcher-devel    |
+| libsystemd-dev          | systemd-devel              |
+| libpipewire-0.3-dev     | pipewire-devel             |
+| speech-dispatcher       | speech-dispatcher          |
+| nasm                    | nasm                       |
+| gcc                     | gcc-toolset-12-gcc         |
+| g++                     | gcc-toolset-12-gcc-c++     |
+| git                     | git                        |
+| cmake                   | cmake                      |
+| curl                    | curl                       |
+| flex                    | flex                       |
+| perl                    | perl-core                  |
+
+On RHEL/AlmaLinux the compiler comes from `gcc-toolset-12`; it requires the base `gcc` package, so do not remove it. Enable the toolset in the shell you build from (or launch QtCreator from):
+```bash
+scl enable gcc-toolset-12 bash
+```
+
+Also make `python3` point to 3.11 (the build tool `meson` requires Python >= 3.7, while the platform `python3` is 3.6):
+```bash
+sudo ln -sf /usr/bin/python3.11 /usr/local/bin/python3
 ```
 <br/>
 4. Make sure that the version of CMake in your Linux is greater than or equal to 4.0.0. To do this, run the command:
@@ -106,6 +89,34 @@ git clone https://github.com/Kitware/CMake
 cd CMake
 git checkout tags/v4.0.0
 ./configure
+make -j4
+sudo make install
+```
+
+On RHEL/AlmaLinux the base `autoconf` is 2.69, but some dependencies (e.g. `gperf`) require version 2.70 or higher. Build a newer one from source (`automake` from the package manager is fine):
+```bash
+curl -fsSL https://ftp.gnu.org/gnu/autoconf/autoconf-2.71.tar.gz -o autoconf-2.71.tar.gz
+tar xzf autoconf-2.71.tar.gz
+cd autoconf-2.71
+./configure --prefix=/usr/local
+make -j4
+sudo make install
+```
+
+On RHEL/AlmaLinux the `ninja-build` package (1.8.2) is too old and fails with `multiple outputs aren't (yet?) supported by depslog`. Install a newer binary:
+```bash
+curl -fsSL https://github.com/ninja-build/ninja/releases/latest/download/ninja-linux.zip -o ninja-linux.zip
+unzip ninja-linux.zip
+sudo install -m755 ninja /usr/local/bin/ninja
+```
+
+On RHEL/AlmaLinux 8 the `bison` package (3.0.4) is too old to build libxkbcommon, which requires
+version 3.6 or higher. Build a newer one from source:
+```bash
+curl -fsSL https://ftp.gnu.org/gnu/bison/bison-3.8.2.tar.gz -o bison-3.8.2.tar.gz
+tar xzf bison-3.8.2.tar.gz
+cd bison-3.8.2
+./configure --prefix=/usr/local
 make -j4
 sudo make install
 ```
