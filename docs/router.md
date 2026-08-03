@@ -118,20 +118,29 @@ Linux
 <br/>
 Description of configuration file fields:
 
-  - **host_private_key** (hexadecimal string, REQUIRED FIELD) The private key used for connections with Hosts. This option is automatically generated when the configuration is created using command line option "--create-config". Do not change this setting unless you really need to.
-  - **relay_private_key** (hexadecimal string, REQUIRED FIELD) The private key used for connections with Relays. This option is automatically generated when the configuration is created using command line option "--create-config". Do not change this setting unless you really need to.
-  - **seed_key** (hexadecimal string of 64 bytes, REQUIRED FIELD) This option is automatically generated when the configuration is created using command line option "--create-config". Do not change this setting unless you really need to.
-  - **router_guid** (UUID string without braces) The unique identifier of the Router. It is automatically generated when the configuration is created. Do not change this setting unless you really need to.
-  - **host_port** (number from 1 to 65535, the default value is 8061) The port for Hosts of version 3.0.0 and above.
-  - **client_port** (number from 1 to 65535, the default value is 8062) The port for Clients.
-  - **relay_port** (number from 1 to 65535, the default value is 8063) The port for Relays.
-  - **legacy_host_port** (number from 1 to 65535, the default value is 8060) The port for Hosts of versions below 3.0.0.
-  - **stun** (true or false, the default value is true) Enables the built-in STUN server. It is used by Clients and Hosts to determine their external addresses when a direct connection is established.
-  - **stun_port** (number from 1 to 65535, the default value is 8065) The port of the built-in STUN server.
-  - **listen_interface** (IPv4 or IPv6 address, empty by default) Interface address on which the server will listen for incoming connections. Specify empty string if you want to listen for connections on all interfaces. Do not change this setting unless you really need to.
-  - **client_white_list** (IP addresses and subnets separated by semicolons, for example `192.168.1.10;10.0.0.0/8`) The list of clients who are allowed to connect to the Router. If the list is empty, then connections from all clients are allowed. If the list contains items, then only the clients specified in this list can connect. Entries that are neither a valid address nor a valid subnet are ignored and reported in the log.
-  - **host_white_list** (the same format as client_white_list) The list of Hosts who are allowed to connect to the Router. If the list is empty, then connections from all Hosts are allowed.
-  - **relay_white_list** (the same format as client_white_list) The list of Relays who are allowed to connect to the Router. If the list is empty, then connections from all Relays are allowed.
+| Parameter         | Values                                              | Description                                                                                                                                                              |
+|-------------------|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| host_private_key  | Hexadecimal string, required                        | The private key used for connections with Hosts. It is automatically generated when the configuration is created. Do not change this setting unless you really need to.  |
+| relay_private_key | Hexadecimal string, required                        | The private key used for connections with Relays. It is automatically generated when the configuration is created. Do not change this setting unless you really need to. |
+| seed_key          | Hexadecimal string of 64 bytes, required            | It is automatically generated when the configuration is created. Do not change this setting unless you really need to.                                                   |
+| router_guid       | UUID string without braces                          | The unique identifier of the Router. It is automatically generated when the configuration is created. Do not change this setting unless you really need to.              |
+| host_port         | Number from 1 to 65535, default 8061                | The port for Hosts of version 3.0.0 and above.                                                                                                                           |
+| client_port       | Number from 1 to 65535, default 8062                | The port for Clients.                                                                                                                                                    |
+| relay_port        | Number from 1 to 65535, default 8063                | The port for Relays.                                                                                                                                                     |
+| legacy_host_port  | Number from 1 to 65535, default 8060                | The port for Hosts of versions below 3.0.0.                                                                                                                              |
+| stun              | Boolean (`true` or `false`), default `true`         | Enables the built-in STUN server. It is used by Clients and Hosts to determine their external addresses when a direct connection is established.                         |
+| stun_port         | Number from 1 to 65535, default 8065                | The port of the built-in STUN server.                                                                                                                                    |
+| listen_interface  | IPv4 or IPv6 address, empty by default              | Interface address on which the server will listen for incoming connections. Specify empty string if you want to listen for connections on all interfaces.                |
+| client_white_list | Addresses separated by semicolons, empty by default | The list of Clients who are allowed to connect to the Router.                                                                                                            |
+| host_white_list   | Addresses separated by semicolons, empty by default | The list of Hosts who are allowed to connect to the Router.                                                                                                              |
+| relay_white_list  | Addresses separated by semicolons, empty by default | The list of Relays who are allowed to connect to the Router.                                                                                                             |
+
+<br/>
+
+**White lists.** A white list can contain IP addresses and subnets, for example `192.168.1.10;10.0.0.0/8`. If the list is
+empty, then connections from all peers of this type are allowed. If the list contains items, then only the
+peers specified in it can connect. Entries that are neither a valid address nor a valid subnet are ignored
+and reported in the log.
 
 <br/>
 
@@ -216,8 +225,9 @@ The Router supports the following command line arguments:
 | `--remove`        | Removes the Router service. Administrator rights are required to execute.                                                                                  |
 | `--start`         | Starts the Router service. Administrator rights are required to execute.                                                                                   |
 | `--stop`          | Stops the Router service. Administrator rights are required to execute.                                                                                    |
-| `--keygen`        | Generates private and public keys. The keys are displayed in the terminal. Running the command does not affect the current configuration.                  |
-| `--create-config` | Creates an initial configuration.                                                                                                                          |
+| `--keygen`        | Generates a pair of private and public keys and displays them in the terminal. Running the command does not affect the current configuration.              |
+| `--create-config` | Creates an initial configuration, the data base and the keys. Administrator rights are required to execute.                                                |
+| `--version`       | Displays the version of the application.                                                                                                                   |
 | `--help`          | Displays help about command line arguments.                                                                                                                |
 
 <br/>
