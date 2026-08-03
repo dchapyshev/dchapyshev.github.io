@@ -50,6 +50,8 @@ The change log for versions 1.x is available [here](/changelog-1.x).
 
   * The Host is now a single binary file.
   * Added a security log that records connections, disconnections and authentication failures.
+  * Added a menu item that shows the information about the system of the computer.
+  * The choice of the preferred screen capturer is now available in the settings.
   * Settings are now separated by access level: personal settings of a user, system settings that only an administrator can change, and security-sensitive data available only to SYSTEM and administrators.
 
 **Client**
