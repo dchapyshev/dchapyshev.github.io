@@ -43,7 +43,7 @@ The change log for versions 1.x is available [here](/changelog-1.x).
 
 **Relay**
 
-  * The default Router port has been changed to 8063. Check the `router_port` parameter after updating.
+  * The default Router port has been changed to 8063.
   * The Relay service now runs under a low-privilege account.
 
 **Host**
