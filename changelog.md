@@ -5,6 +5,66 @@ title: Change Log
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.0 (Sep XX, 2026)
+
+**Common**
+
+  * Ported to Qt 6.
+  * The Host is now available for Linux (X11 and Wayland), macOS and Android. Previously it was available for Windows only.
+  * Added the Client for Android.
+  * Added a new session type: Terminal.
+  * The "Desktop view" session type has been removed.
+  * Added tools and scripts that can be run on a remote computer.
+  * The clipboard now supports HTML, RTF, CSV, PNG, SVG and files. Previously only plain text was supported.
+  * Added new categories to system information: Processor, DMI, Drives and S.M.A.R.T.
+  * The chat history is now saved and is shown again when connecting to the same computer.
+  * Added switching between user sessions of a remote computer running Windows.
+  * Added the H264 video codec. It is available only if the Host supports hardware encoding, the Client does not require it.
+  * The ZSTD video codec has been removed.
+  * The video codec is now chosen automatically and can be changed during a session. The manual selection of the codec and the color depth has been removed.
+  * Added direct UDP connections between peers: directly in a local network, otherwise via UDP hole punching or port mapping (UPnP, NAT-PMP, PCP).
+  * New connections now always use AES-256 GCM.
+  * All icons are now vector, which improves their appearance on screens with high resolution.
+  * Added support for themes.
+  * Added Korean and Japanese translations.
+  * Added estimation of the available bandwidth.
+  * The minimum supported version is now 2.6.0.
+
+**Router**
+
+  * Added a built-in STUN server (port 8065 by default).
+  * The Router now listens on separate ports: 8061 for hosts, 8062 for clients and 8063 for relays. Port 8060 is kept for hosts of previous versions.
+  * Two-factor authentication (TOTP) is now mandatory for all Router users.
+  * Router users now have three types of sessions: administrators, managers and clients. Previously there were only administrators and clients.
+  * Added workspaces and access lists for users.
+  * Added approving of hosts. A host that connects for the first time receives a temporary random ID and is shown as "Unassigned". After the administrator approves it, the host is stored in the database and receives a permanent ID.
+  * White lists now support subnet masks.
+  * The Router service now runs under a low-privilege account.
+
+**Relay**
+
+  * The default Router port has been changed to 8063. Check the `router_port` parameter after updating.
+  * The Relay service now runs under a low-privilege account.
+
+**Host**
+
+  * The Host is now a single binary file.
+  * Added a security log that records connections, disconnections and authentication failures.
+  * Settings are now separated by access level: personal settings of a user, system settings that only an administrator can change, and security-sensitive data available only to SYSTEM and administrators.
+
+**Client**
+
+  * Added an option to open sessions in tabs of a single window.
+  * The address book is now stored in an encrypted database.
+  * The master password is now always enabled.
+  * Added search in the address book and on the Router.
+  * Added the preferred screen resolution option.
+  * Connection from the command line is now performed with an `aspia://` link. The other command line options have been removed.
+
+**Console**
+
+  * The Console has been removed. The address book and Router management are now part of the Client.
+
 ### Version 2.7.0 (May 20, 2024)
   * Implemented the ability to specify the user's display name (which is displayed in the notification panel and when using chat).
   * Implemented automatic reconnection to Router Manage when the connection is lost.
