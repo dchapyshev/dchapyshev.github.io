@@ -121,31 +121,65 @@ Linux
 ```
 
 <br/>
-Description of configuration file fields:
+The path can be changed by the environment variable ASPIA_ROUTER_CONFIG_FILE. The file contains the
+private keys of the Router and is created with the access rights of its owner only.
 
-| Parameter         | Values                                              | Description                                                                                                                                                              |
-|-------------------|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| host_private_key  | Hexadecimal string, required                        | The private key used for connections with Hosts. It is automatically generated when the configuration is created. Do not change this setting unless you really need to.  |
-| relay_private_key | Hexadecimal string, required                        | The private key used for connections with Relays. It is automatically generated when the configuration is created. Do not change this setting unless you really need to. |
-| seed_key          | Hexadecimal string of 64 bytes, required            | It is automatically generated when the configuration is created. Do not change this setting unless you really need to.                                                   |
-| router_guid       | UUID string without braces                          | The unique identifier of the Router. It is automatically generated when the configuration is created. Do not change this setting unless you really need to.              |
-| host_port         | Number from 1 to 65535, default 8061                | The port for Hosts of version 3.0.0 and above.                                                                                                                           |
-| client_port       | Number from 1 to 65535, default 8062                | The port for Clients.                                                                                                                                                    |
-| relay_port        | Number from 1 to 65535, default 8063                | The port for Relays.                                                                                                                                                     |
-| legacy_host_port  | Number from 1 to 65535, default 8060                | The port for Hosts of versions below 3.0.0.                                                                                                                              |
-| stun              | Boolean (`true` or `false`), default `true`         | Enables the built-in STUN server. It is used by Clients and Hosts to determine their external addresses when a direct connection is established.                         |
-| stun_port         | Number from 1 to 65535, default 8065                | The port of the built-in STUN server.                                                                                                                                    |
-| listen_interface  | IPv4 or IPv6 address, empty by default              | Interface address on which the server will listen for incoming connections. Specify empty string if you want to listen for connections on all interfaces.                |
-| client_white_list | Addresses separated by semicolons, empty by default | The list of Clients who are allowed to connect to the Router.                                                                                                            |
-| host_white_list   | Addresses separated by semicolons, empty by default | The list of Hosts who are allowed to connect to the Router.                                                                                                              |
-| relay_white_list  | Addresses separated by semicolons, empty by default | The list of Relays who are allowed to connect to the Router.                                                                                                             |
+<br/>
+The file has the ini format: the parameters are grouped into sections. The description of the
+sections and their parameters is given below.
+
+**Section [router]**
+
+| Parameter          | Values                                 | Description                                                                                                                                                                                                                     |
+|--------------------|----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `listen_interface` | IPv4 or IPv6 address, empty by default | Interface address on which the server will listen for incoming connections. Specify an empty value if you want to listen for connections on all interfaces. If the value is not a valid address, the listeners are not started. |
+| `seed_key`         | Hexadecimal string of 64 bytes         | It is automatically generated when the configuration is created. If the parameter is missing or empty, a new key is generated and written to the file at the start. Do not change this setting unless you really need to.       |
 
 <br/>
 
-**White lists.** A white list can contain IP addresses and subnets, for example `192.168.1.10;10.0.0.0/8`. If the list is
-empty, then connections from all peers of this type are allowed. If the list contains items, then only the
-peers specified in it can connect. Entries that are neither a valid address nor a valid subnet are ignored
-and reported in the log.
+**Section [host]**
+
+| Parameter     | Values                                          | Description                                                                                                                                                                                                                    |
+|---------------|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `port`        | Number from 1 to 65535, default 8061            | The port for Hosts of version 3.0.0 and above.                                                                                                                                                                                 |
+| `legacy_port` | Number from 1 to 65535, default 8060            | The port for Hosts of versions below 3.0.0.                                                                                                                                                                                    |
+| `private_key` | Hexadecimal string, required                    | The private key used for connections with Hosts. It is automatically generated when the configuration is created. Without it the listeners of the Hosts are not started. Do not change this setting unless you really need to. |
+| `white_list`  | Addresses separated by commas, empty by default | The list of Hosts who are allowed to connect to the Router.                                                                                                                                                                    |
+
+<br/>
+
+**Section [client]**
+
+| Parameter    | Values                                          | Description                                                   |
+|--------------|-------------------------------------------------|---------------------------------------------------------------|
+| `port`       | Number from 1 to 65535, default 8062            | The port for Clients.                                         |
+| `white_list` | Addresses separated by commas, empty by default | The list of Clients who are allowed to connect to the Router. |
+
+<br/>
+
+**Section [relay]**
+
+| Parameter     | Values                                          | Description                                                                                                                                                                                                                    |
+|---------------|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `port`        | Number from 1 to 65535, default 8063            | The port for Relays.                                                                                                                                                                                                           |
+| `private_key` | Hexadecimal string, required                    | The private key used for connections with Relays. It is automatically generated when the configuration is created. Without it the listener of the Relays is not started. Do not change this setting unless you really need to. |
+| `white_list`  | Addresses separated by commas, empty by default | The list of Relays who are allowed to connect to the Router.                                                                                                                                                                   |
+
+<br/>
+
+**Section [stun]**
+
+| Parameter | Values                               | Description                                                                                                                                      |
+|-----------|--------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| `enabled` | `1` or `0`, default `1`              | Enables the built-in STUN server. It is used by Clients and Hosts to determine their external addresses when a direct connection is established. |
+| `port`    | Number from 1 to 65535, default 8065 | The port of the built-in STUN server.                                                                                                            |
+
+<br/>
+
+**White lists.** A white list can contain IP addresses and subnets separated by commas, for example
+`192.168.1.10,10.0.0.0/8`. If the list is empty, then connections from all peers of this type are
+allowed. If the list contains items, then only the peers specified in it can connect. Entries that
+are neither a valid address nor a valid subnet are ignored.
 
 <br/>
 
