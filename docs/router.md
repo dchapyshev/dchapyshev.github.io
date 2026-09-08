@@ -16,9 +16,14 @@ title: Aspia Router
 10. [Notes](#notes)
 
 ## 1. Purpose <a name="purpose"></a>
-Gives IDs to hosts and allows peers (Hosts and Clients) to agree on how they will bypass NAT.
-All Hosts and Relays are permanently connected to the Router. When the Client wants to connect to the Host, it also connects to the Router.
-The Router server must have a public IP address. Router and Relay can only work together. Don't forget to install Relay.
+The Router is the central server of an installation. It gives IDs to the Hosts, stores the list of
+the computers and the accounts of the users, and allows the peers (Hosts and Clients) to find each
+other and to agree on how they will bypass NAT. The Router is managed from the
+[Client](/docs/client#router-manage).
+
+The Router server must have a public IP address. Router and Relay can only work together. Don't
+forget to install Relay.
+
 <br/>
 
 ## 2. Installing <a name="installing"></a>
@@ -154,6 +159,8 @@ The Router listens on several ports. Each type of a peer has its own listener:
 | 8062 | Clients                                 |
 | 8063 | Relays                                  |
 | 8065 | Built-in STUN server                    |
+
+<br/>
 
 The Router does not add rules to the firewall automatically.
 
