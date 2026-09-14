@@ -59,10 +59,10 @@ RHEL and compatible
 <br/>
 
 ## 3. Master password <a name="master-password"></a>
-The address book, the credentials of the computers and the parameters of the connections to Routers
-are stored in a data base that is encrypted on the disk. The key of this data base is derived from
-the master password, therefore the password is mandatory: without it the application cannot read its
-own data, and it cannot be disabled in the settings.
+The addresses of the computers, their credentials and the parameters of the connections to Routers
+are stored in the data base of the application in the encrypted form. The key of the encryption is
+derived from the master password, therefore the password is mandatory: without it the application
+cannot read its own data, and it cannot be disabled in the settings.
 
 **Setting the password at the first start**
 
@@ -71,11 +71,6 @@ password. The "Set Master Password" dialog contains the "New password" and "Conf
 fields. The password must be entered twice, because it cannot be recovered later.
 
 <p align="center"><img src="/images/client-master-password-set.png" width="400"/></p>
-
-A password is considered safe when it is at least eight characters long and contains lowercase
-letters, uppercase letters and digits. If the entered password does not meet these requirements, the
-application shows a warning and asks whether you want to enter a different password. Answer "Yes" to
-return to the dialog and type another password, or "No" to keep the one you entered.
 
 After the password is set, the data base is created and the main window of the application is opened.
 
@@ -101,8 +96,7 @@ group and press **Change...**. The "Change Master Password" dialog contains the 
 
 The current password is required, so the password can be changed only on a computer where the
 application is already unlocked. After the change the data base is re-encrypted with the new key and
-the next start requires the new password. The requirements to the new password are the same as at the
-first start.
+the next start requires the new password.
 
 **WARNING!** The master password is not stored anywhere and cannot be recovered or reset. If it is
 lost, the data base cannot be decrypted, and the only way to continue is to create it anew. This
