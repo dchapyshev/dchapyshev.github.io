@@ -28,10 +28,9 @@ title: Aspia Client
     4. [System information](#session-sysinfo)
     5. [Text chat](#session-textchat)
 9. [Settings](#settings)
-10. [Android](#android)
-11. [Command line](#command-line)
-12. [Environment variables](#env-vars)
-13. [Logs](#logs)
+10. [Command line](#command-line)
+11. [Environment variables](#env-vars)
+12. [Logs](#logs)
 
 ## 1. Purpose <a name="purpose"></a>
 Allows you to connect to and control Hosts. It also contains the address book and the management of
@@ -735,19 +734,7 @@ The settings are opened with the **Settings...** command of the **File** menu.
 
 <br/>
 
-## 10. Android <a name="android"></a>
-The Android version of the Client contains the address book, the connection to Routers and the
-desktop, file transfer and chat sessions.
-
-The features of the Android version:
-  - The application can be unlocked with biometrics instead of the master password.
-  - An on-screen keyboard and a panel of the special keys are used for the input.
-  - The connection is kept when the application goes to the background, and is restored when it
-    returns.
-
-<br/>
-
-## 11. Command line <a name="command-line"></a>
+## 10. Command line <a name="command-line"></a>
 The Client accepts a link of the form `aspia://` as the only argument. Such a link is copied in the
 address book and allows to start a session at once. If the application is already running, the link
 is opened in it.
@@ -759,13 +746,13 @@ is opened in it.
 
 <br/>
 
-## 12. Environment variables <a name="env-vars"></a>
+## 11. Environment variables <a name="env-vars"></a>
   - **ASPIA_NO_VERIFY_TLS_PEER** - If the variable is declared, then the validity of the TLS certificate is not checked when checking for updates. It is not recommended to declare this variable unnecessarily.
   - **ASPIA_SMALL_ICON_SIZE** - Sets the size of the small icons of the interface in pixels.
 
 <br/>
 
-## 13. Logs <a name="logs"></a>
+## 12. Logs <a name="logs"></a>
 By default the Client writes the log to a file on Windows and to stdout on Linux and macOS. To configure the logging parameters, use the following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 4 (0 - trace, 1 - info, 2 - warning, 3 - error, 4 - fatal). Decreasing the value increases the number of messages in the log.
   - To enable logging to a file (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_FILE with a value other than 0. If the environment variable is declared with a value of 0, then logging to file will be disabled.
