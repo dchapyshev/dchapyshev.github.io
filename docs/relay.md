@@ -6,11 +6,12 @@ title: Aspia Relay
 ## Table of contents
 1. [Purpose](#purpose)
 2. [Installing](#installing)
-3. [Creating a default configuration](#create-config)
-4. [Configuration file](#config-file)
-5. [Logs](#logs)
-6. [Command line](#command-line)
-7. [Notes](#notes)
+3. [Creating a configuration](#create-config)
+4. [Service](#service)
+5. [Configuration file](#config-file)
+6. [Logs](#logs)
+7. [Command line](#command-line)
+8. [Notes](#notes)
 
 ## 1. Purpose <a name="purpose"></a>
 Passes traffic between peers (Hosts and Clients) through itself. The Relay server must have a public IP address.
@@ -18,6 +19,7 @@ There can be a lot of Relay and they can be placed on separate machines from Rou
 You must install at least one Relay server. Router and Relay can only work together.
 
 ## 2. Installing <a name="installing"></a>
+
 ```bash
 Windows x86
   Run aspia-relay-3.0.0-x86.msi and follow the instructions on the screen.
@@ -33,43 +35,15 @@ RHEL and compatible
 ```
 
 <br/>
-Installing the package does not register the service yet: there is no configuration on a clean
-system. Create the configuration as described below and then install the service:
-
-```bash
-Windows
-  aspia_relay --install
-
-Linux
-  sudo aspia_relay --install
-```
-
-<br/>
-The service is registered and enabled at the system startup. On an upgrade the package refreshes the
-already registered service itself.
-
-<br/>
-To start and stop the service, use the following commands:
-
-```bash
-Windows
-  net start aspia-relay
-  net stop aspia-relay
-
-Linux
-  sudo service aspia-relay start
-  sudo service aspia-relay stop
-```
-
-<br/>
-The service runs under a low-privilege account that is created during the installation. It has
-access only to the directories of the Relay.
+The package installs the files of the Relay. To make the Relay ready for work, create the
+configuration and register the service as described below.
 
 <br/>
 
-## 3. Creating a default configuration <a name="create-config"></a>
-**WARNING!** There must be no existing configuration file in the destination directory.
-The Relay never overwrites the current configurations and creating a new configuration is possible only if the previous one does not exist.
+## 3. Creating a configuration <a name="create-config"></a>
+**WARNING!** There must be no existing configuration file in the destination directory. The Relay
+never overwrites the current configuration and creating a new configuration is possible only if the
+previous one does not exist.
 
 **WARNING!** Administrator rights are required to create a configuration.
 
@@ -92,7 +66,42 @@ specify the address of the Router, its public key and the address of the Relay f
 
 <br/>
 
-## 4. Configuration file <a name="config-file"></a>
+## 4. Service <a name="service"></a>
+The service is registered after the configuration has been created. Administrator rights are
+required to execute the commands below.
+
+```bash
+Windows
+  aspia_relay --install
+
+Linux
+  sudo aspia_relay --install
+```
+
+<br/>
+The service is registered and enabled at the system startup. On an upgrade the package refreshes the
+already registered service itself.
+
+<br/>
+To start and stop the service, use the following commands:
+
+```bash
+Windows
+  aspia_relay --start
+  aspia_relay --stop
+
+Linux
+  sudo aspia_relay --start
+  sudo aspia_relay --stop
+```
+
+<br/>
+The service runs under a low-privilege account that is created during the installation. It has
+access only to the directories of the Relay.
+
+<br/>
+
+## 5. Configuration file <a name="config-file"></a>
 The Relay configuration file is located in the following paths:
 
 ```bash
@@ -130,7 +139,7 @@ information on how to do this.
 
 <br/>
 
-## 5. Logs <a name="logs"></a>
+## 6. Logs <a name="logs"></a>
 By default the Relay writes the log to a file on Windows and to stdout on Linux, where the messages are collected by systemd. To configure the Relay logging parameters, use the following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 4 (0 - trace, 1 - info, 2 - warning, 3 - error, 4 - fatal). Decreasing the value increases the number of messages in the log.
   - To enable logging to a file (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_FILE with a value other than 0. If the environment variable is declared with a value of 0, then logging to file will be disabled.
@@ -152,7 +161,7 @@ sudo journalctl -u aspia-relay
 
 <br/>
 
-## 6. Command line <a name="command-line"></a>
+## 7. Command line <a name="command-line"></a>
 The Relay supports the following command line arguments:
 
 | Argument          | Description                                                                                                                                               |
@@ -167,7 +176,7 @@ The Relay supports the following command line arguments:
 
 <br/>
 
-## 7. Notes <a name="notes"></a>
+## 8. Notes <a name="notes"></a>
   - Don't forget to add rules in your firewall to access the Relay. The Relay does not add rules automatically.
   - When uninstalling, the Relay does not delete its configuration files.
   - After changing the configuration files, you must restart the Relay service. The Relay reads the configuration at startup!

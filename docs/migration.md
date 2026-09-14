@@ -40,6 +40,8 @@ previous versions, and the new listeners get their default ports:
 | 8063 | Relays |
 | 8065 | STUN server |
 
+<br/>
+
 Do not forget to allow the new ports in the firewall.
 
 **Keys**

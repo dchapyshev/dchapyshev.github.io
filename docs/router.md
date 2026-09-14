@@ -6,14 +6,15 @@ title: Aspia Router
 ## Table of contents
 1. [Purpose](#purpose)
 2. [Installing](#installing)
-3. [Creating a default configuration](#create-config)
-4. [Configuration file](#config-file)
-5. [Ports](#ports)
-6. [Data base](#db-file)
-7. [Public key](#public-key)
-8. [Logs](#logs)
-9. [Command line](#command-line)
-10. [Notes](#notes)
+3. [Creating a configuration](#create-config)
+4. [Service](#service)
+5. [Configuration file](#config-file)
+6. [Ports](#ports)
+7. [Data base](#db-file)
+8. [Public key](#public-key)
+9. [Logs](#logs)
+10. [Command line](#command-line)
+11. [Notes](#notes)
 
 ## 1. Purpose <a name="purpose"></a>
 The Router is the central server of an installation. It gives IDs to the Hosts, stores the list of
@@ -43,8 +44,39 @@ RHEL and compatible
 ```
 
 <br/>
-Installing the package does not register the service yet: there is no configuration on a clean
-system. Create the configuration as described below and then install the service:
+The package installs the files of the Router. To make the Router ready for work, create the
+configuration and register the service as described below.
+
+<br/>
+
+## 3. Creating a configuration <a name="create-config"></a>
+**WARNING!** There must be no existing configuration file or database in the destination directory.
+The Router never overwrites the current configuration and creating a new configuration is possible
+only if the previous one does not exist.
+
+**WARNING!** Administrator rights are required to create a configuration.
+
+**WARNING!** Default username and password: admin/admin. Don't forget to change this after
+installation! To manage users, use the Router management in the [Client](/docs/client#router-manage).
+
+```bash
+Windows x86
+  cd /d "C:\Program Files (x86)\Aspia\Router"
+  aspia_router --create-config
+
+Windows x64
+  cd /d "C:\Program Files\Aspia\Router"
+  aspia_router --create-config
+
+Linux
+  sudo aspia_router --create-config
+```
+
+<br/>
+
+## 4. Service <a name="service"></a>
+The service is registered after the configuration has been created. Administrator rights are
+required to execute the commands below.
 
 ```bash
 Windows
@@ -63,12 +95,12 @@ To start and stop the service, use the following commands:
 
 ```bash
 Windows
-  net start aspia-router
-  net stop aspia-router
+  aspia_router --start
+  aspia_router --stop
 
 Linux
-  sudo service aspia-router start
-  sudo service aspia-router stop
+  sudo aspia_router --start
+  sudo aspia_router --stop
 ```
 
 <br/>
@@ -77,35 +109,7 @@ access only to the directories of the Router.
 
 <br/>
 
-## 3. Creating a default configuration <a name="create-config"></a>
-**WARNING!** There must be no existing configuration file or database in the destination directory.
-The router never overwrites the current configurations and creating a new configuration is possible only if the previous one does not exist.
-
-**WARNING!** Administrator rights are required to create a configuration.
-
-**WARNING!** Default username and password: admin/admin. Don't forget to change this after installation! To manage users, use the Router management in the [Client](/docs/client#router-manage).
-
-```bash
-Windows x86
-  cd /d "C:\Program Files (x86)\Aspia\Router"
-  aspia_router --create-config
-
-Windows x64
-  cd /d "C:\Program Files\Aspia\Router"
-  aspia_router --create-config
-
-Linux
-  sudo aspia_router --create-config
-```
-
-<br/>
-The command creates the configuration file, the data base with the "admin" user, two pairs of keys
-(one for Hosts and one for Relays) and writes the public keys to files. The paths of the created
-files are displayed in the terminal.
-
-<br/>
-
-## 4. Configuration file <a name="config-file"></a>
+## 5. Configuration file <a name="config-file"></a>
 The configuration file contains parameters that do not change while the application is running.
 
 **Important!** Perform regular configuration file backups to avoid the risk of data loss.
@@ -183,7 +187,7 @@ are neither a valid address nor a valid subnet are ignored.
 
 <br/>
 
-## 5. Ports <a name="ports"></a>
+## 6. Ports <a name="ports"></a>
 The Router listens on several ports. Each type of a peer has its own listener:
 
 | Port | Purpose                                 |
@@ -200,7 +204,7 @@ The Router does not add rules to the firewall automatically.
 
 <br/>
 
-## 6. Data base <a name="db-file"></a>
+## 7. Data base <a name="db-file"></a>
 The database file contains information about users, workspaces and issued IDs for Hosts. Currently the **sqlite** database is used.
 
 **Important!** Perform regular database file backups to avoid the risk of data loss.
@@ -217,7 +221,7 @@ Linux
 
 <br/>
 
-## 7. Public key <a name="public-key"></a>
+## 8. Public key <a name="public-key"></a>
 The Router uses two pairs of keys: one for Hosts and one for Relays. The contents of the public key
 files are needed to configure Hosts and Relays.
 
@@ -235,7 +239,7 @@ Linux
 
 <br/>
 
-## 8. Logs <a name="logs"></a>
+## 9. Logs <a name="logs"></a>
 By default the Router writes the log to a file on Windows and to stdout on Linux, where the messages are collected by systemd. To configure the Router logging parameters, use the following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 4 (0 - trace, 1 - info, 2 - warning, 3 - error, 4 - fatal). Decreasing the value increases the number of messages in the log.
   - To enable logging to a file (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_FILE with a value other than 0. If the environment variable is declared with a value of 0, then logging to file will be disabled.
@@ -257,7 +261,7 @@ sudo journalctl -u aspia-router
 
 <br/>
 
-## 9. Command line <a name="command-line"></a>
+## 10. Command line <a name="command-line"></a>
 The Router supports the following command line arguments:
 
 | Argument             | Description                                                                                                                                                            |
@@ -274,7 +278,7 @@ The Router supports the following command line arguments:
 
 <br/>
 
-## 10. Notes <a name="notes"></a>
+## 11. Notes <a name="notes"></a>
   - Hosts and Relays connect to the Router using a public key. Hosts use the key from `host.pub`, Relays use the key from `relay.pub`.
   - Clients connect using a username, a password and a code of two-factor authentication.
   - It is recommended that you set up regular backups of your configuration files and database.
