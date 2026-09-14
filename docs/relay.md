@@ -102,6 +102,8 @@ access only to the directories of the Relay.
 <br/>
 
 ## 5. Configuration file <a name="config-file"></a>
+**Important!** Perform regular configuration file backups to avoid the risk of data loss.
+
 The Relay configuration file is located in the following paths:
 
 ```bash
@@ -113,24 +115,36 @@ Linux
 ```
 
 <br/>
-Description of configuration file fields:
+The path can be changed by the environment variable ASPIA_RELAY_CONFIG_FILE. The file is created
+with the access rights of its owner only.
 
-| Parameter           | Values                                       | Description                                                                                                                                                           |
-|---------------------|----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| router_address      | Host name or IP address, required            | Router address. At this address the Relay server connects to the Router. It can be equal to localhost (or 127.0.0.1) if the Router is installed on the same computer. |
-| router_port         | Number from 1 to 65535, default 8063         | The port of the Router for Relays. If you did not change the port in the Router configuration file, then the field must be left with the default value.               |
-| router_public_key   | Hexadecimal string, required                 | The public key of the Router. Enter here the key that is contained in the file relay.pub, which created by the Router.                                                |
-| listen_interface    | IPv4 or IPv6 address, empty by default       | Interface address on which the server will listen for incoming connections. Specify empty string if you want to listen for connections on all interfaces.             |
-| peer_address        | Host name or IP address, required            | The address that peers will receive to connect to the Relay server. See the warning below.                                                                            |
-| peer_port           | Number from 1 to 65535, default 8070         | The port through which peers will connect to the Relay server.                                                                                                        |
-| peer_idle_timeout   | Number of minutes from 1 to 60, default 5    | If during this time no data comes from the peers, the connection is terminated. A value outside of this range stops the Relay from serving peers.                     |
-| max_peer_count      | Number, default 100                          | The maximum number of simultaneous connections established between peers.                                                                                             |
-| statistics_enabled  | Boolean (`true` or `false`), default `false` | Enable or disable automatic sending of statistics to the Router.                                                                                                      |
-| statistics_interval | Number of seconds from 1 to 3600, default 5  | Interval for automatically sending statistics to the Router. A value outside of this range stops the Relay from serving peers when the statistics are enabled.        |
+<br/>
+The file has the ini format: the parameters are grouped into sections. The description of the
+sections and their parameters is given below.
+
+**Section [router]**
+
+| Parameter    | Values                                        | Description                                                                                                                                                                                      |
+|--------------|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `address`    | Host name or IP address, 127.0.0.1 by default | The address at which the Relay connects to the Router. It can be equal to localhost (or 127.0.0.1) if the Router is installed on the same computer. The Relay does not work with an empty value. |
+| `port`       | Number from 1 to 65535, default 8063          | The port of the Router for Relays. If you did not change the port in the Router configuration file, then the parameter must be left with the default value.                                      |
+| `public_key` | Hexadecimal string, required                  | The public key of the Router. Enter here the key that is contained in the file relay.pub, which is created by the Router.                                                                        |
 
 <br/>
 
-**WARNING!** The address specified in `peer_address` must be accessible to all participants in the
+**Section [peer]**
+
+| Parameter          | Values                                    | Description                                                                                                                                                 |
+|--------------------|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `listen_interface` | IPv4 or IPv6 address, empty by default    | Interface address on which the server will listen for incoming connections. Specify an empty value if you want to listen for connections on all interfaces. |
+| `public_address`   | Host name or IP address, required         | The address that peers will receive to connect to the Relay. See the warning below.                                                                         |
+| `port`             | Number from 1 to 65535, default 8070      | The port through which peers will connect to the Relay.                                                                                                     |
+| `idle_timeout`     | Number of minutes from 1 to 60, default 5 | If during this time no data comes from the peers, the connection is terminated. A value outside of this range stops the Relay from serving peers.           |
+| `max_count`        | Number from 1 to 1000, default 100        | The maximum number of simultaneous connections established between peers. A greater value is reduced to 1000.                                               |
+
+<br/>
+
+**WARNING!** The address specified in `public_address` must be accessible to all participants in the
 connection (Client and Host). You should keep in mind that both peers must be able to connect to this
 address. Consider this when setting up your network hardware if you are setting up port forwarding on
 your network router. If your network router is behind NAT, then you must provide access to this address
@@ -164,15 +178,15 @@ sudo journalctl -u aspia-relay
 ## 7. Command line <a name="command-line"></a>
 The Relay supports the following command line arguments:
 
-| Argument          | Description                                                                                                                                               |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--install`       | Installs the Relay service and enables its start at the system startup. Requires an existing configuration. Administrator rights are required to execute. |
-| `--remove`        | Removes the Relay service. Administrator rights are required to execute.                                                                                  |
-| `--start`         | Starts the Relay service. Administrator rights are required to execute.                                                                                   |
-| `--stop`          | Stops the Relay service. Administrator rights are required to execute.                                                                                    |
-| `--create-config` | Creates an initial configuration. Administrator rights are required to execute.                                                                           |
-| `--version`       | Displays the version of the application.                                                                                                                  |
-| `--help`          | Displays help about command line arguments.                                                                                                               |
+| Argument          | Description                                                                                                                                                                                  |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--install`       | Installs the Relay service and enables its start at the system startup. If the configuration does not exist yet, the service is not installed. Administrator rights are required to execute. |
+| `--remove`        | Removes the Relay service. A running service is stopped before the removal. Administrator rights are required to execute.                                                                    |
+| `--start`         | Starts the Relay service. Administrator rights are required to execute.                                                                                                                      |
+| `--stop`          | Stops the Relay service. Administrator rights are required to execute.                                                                                                                       |
+| `--create-config` | Creates an initial configuration. Administrator rights are required to execute.                                                                                                              |
+| `--version`       | Displays the version of the application.                                                                                                                                                     |
+| `--help`          | Displays help about command line arguments.                                                                                                                                                  |
 
 <br/>
 
