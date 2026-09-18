@@ -1,0 +1,4 @@
+# The signature of an update file covers its exact bytes, and the bytes the server
+# answers are the ones git stores. Keep the working tree the same, or every
+# signature made here is checked against something else.
+updates/** text eol=lf
