@@ -1,0 +1,114 @@
+{
+  "format": 1,
+  "version": "3.0.3",
+  "description": "Credential manager, reworked management tab and host dialogs, fixes in the online check and in backup import and export.",
+  "packages": {
+    "host": {
+      "windows": {
+        "x86_64": [
+          {
+            "format": "msi",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-host-3.0.3-x86_64.msi",
+            "sha256": "4be73e2b221627b4ef6331d2b75e9839dfb0ebf038733cff2253df8f963f29a0"
+          }
+        ],
+        "x86": [
+          {
+            "format": "msi",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-host-3.0.3-x86.msi",
+            "sha256": "f0fefb3aecdc1d43ea54c2d7b2e27311e826e7e11f2a839e05006c9c07685265"
+          }
+        ]
+      },
+      "linux": {
+        "x86_64": [
+          {
+            "format": "deb",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-host-3.0.3-x86_64.deb",
+            "sha256": "4edff6f0bc23c62c792c679d5b774641b10f04ea567e9c355e23a7d734adb067"
+          },
+          {
+            "format": "rpm",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-host-3.0.3-x86_64.rpm",
+            "sha256": "a0586ceb3d63799b78409446b1d3ee06d21d796b65644c3ed485ab70ade1d7fb"
+          }
+        ]
+      },
+      "macosx": {
+        "x86_64": [
+          {
+            "format": "pkg",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-host-3.0.3-universal.pkg",
+            "sha256": "302565a0a05719fe22386f8c276c695105cc07cbcf7486eb994daee2e7e3e415"
+          }
+        ],
+        "arm64": [
+          {
+            "format": "pkg",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-host-3.0.3-universal.pkg",
+            "sha256": "302565a0a05719fe22386f8c276c695105cc07cbcf7486eb994daee2e7e3e415"
+          }
+        ]
+      },
+      "android": {
+        "arm64": [
+          {
+            "format": "apk",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-host-3.0.3-arm64-v8a.apk",
+            "sha256": "b8d1df5c51bf0b51720be2b1b3a201a80d9e362de58fb7e6e9e827b1a714d784"
+          }
+        ]
+      }
+    },
+    "client": {
+      "windows": {
+        "x86_64": [
+          {
+            "format": "msi",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-client-3.0.3-x86_64.msi",
+            "sha256": "3e8b853ef7a5386924d7958d13f598448c599f5684c0ec4e1ae3370c8392d277"
+          }
+        ]
+      },
+      "linux": {
+        "x86_64": [
+          {
+            "format": "deb",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-client-3.0.3-x86_64.deb",
+            "sha256": "56187e982461ddfdcc69a9360b48ced029784d03ae22e83d146ca55766038794"
+          },
+          {
+            "format": "rpm",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-client-3.0.3-x86_64.rpm",
+            "sha256": "a83c04c15c7aa8891610b8437aa4c97897ef43bd85bcc00c258fb6dc6659e2b7"
+          }
+        ]
+      },
+      "macosx": {
+        "x86_64": [
+          {
+            "format": "dmg",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-client-3.0.3-universal.dmg",
+            "sha256": "8ba34df4316d161841fb4313e1adc060fe975bd3f036095d667cd88e558d18a1"
+          }
+        ],
+        "arm64": [
+          {
+            "format": "dmg",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-client-3.0.3-universal.dmg",
+            "sha256": "8ba34df4316d161841fb4313e1adc060fe975bd3f036095d667cd88e558d18a1"
+          }
+        ]
+      },
+      "android": {
+        "arm64": [
+          {
+            "format": "apk",
+            "url": "https://files.aspia.net/beta/3.0.3/aspia-client-3.0.3-arm64-v8a.apk",
+            "sha256": "29f25b2b808021d17604b42de4e51304cedfcfa2ed0a9997b8423331158b8dd5"
+          }
+        ]
+      }
+    }
+  }
+}
