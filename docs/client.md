@@ -127,7 +127,10 @@ local address book these are the commands of the groups and of the computers, fo
 users of a Router these are the commands of the users. The **Edit**, **Session Type** and **Actions**
 menus are filled the same way and are not displayed when the active tab has nothing to put in them.
 
-The search field of the tool bar looks for computers by name and by address in the selected item.
+The search field of the tool bar looks for computers in the local address book and on all the
+connected Routers at once, whatever is selected in the tree. In the address book the name and the
+address are compared with the request, on a Router the name of the computer and its Host ID. The
+results replace the list in the right part of the tab and are displayed by pages.
 
 The **File** menu contains the **Settings...** and **Exit** commands, the **Help** menu contains the
 online help and the information about the application. The **View** menu changes the appearance of
