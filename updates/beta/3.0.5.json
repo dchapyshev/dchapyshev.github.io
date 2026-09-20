@@ -10,14 +10,14 @@
           {
             "format": "msi",
             "file": "aspia-host-3.0.5-x86_64.msi",
-            "sha256": "7beef951d1c70ed105fdd5bf353639e4f2983445e2e4272caa315fa55862085c"
+            "sha256": "eac9bf6fd2163bff21ea1f1cc3b9ff34f93abbe736ec7b3eae3e7882289bbcac"
           }
         ],
         "x86": [
           {
             "format": "msi",
             "file": "aspia-host-3.0.5-x86.msi",
-            "sha256": "e21b30fdd589628e0fb72c9affb110f04c0ad992bdcc1e9bec3ac0076b3f0c72"
+            "sha256": "09244dd46511c74db3b7a69fa137b403fd7e21a65848928c95c861566b3ca4bf"
           }
         ]
       },
@@ -26,12 +26,12 @@
           {
             "format": "deb",
             "file": "aspia-host-3.0.5-x86_64.deb",
-            "sha256": "cd0a8a2b3ef53d9de09768e9d233b6ebd5b0c616e8fe72bcb2e95fb7dd3d5f63"
+            "sha256": "79de2537f0677354ca1f9d0f34b89ee0e8cc93d1b65953764dfe88c93a329cb3"
           },
           {
             "format": "rpm",
             "file": "aspia-host-3.0.5-x86_64.rpm",
-            "sha256": "273de0c52acb2370a87596924cd3f5ac756da0ac17c088dc17780f5a34228e21"
+            "sha256": "8ee024a5bd054b5ed7a42351c8f997ce144603b176091a7096caabf80eeb721c"
           }
         ]
       },
@@ -40,14 +40,14 @@
           {
             "format": "pkg",
             "file": "aspia-host-3.0.5-universal.pkg",
-            "sha256": "0edd47db534cacb014799b84688a3ebec21e7e40b70c52baf10cb294d4130731"
+            "sha256": "cf4c6fcd5f92447f565c16113199cf9729fe10984df8ddc8ecdb541b2dba7ad7"
           }
         ],
         "arm64": [
           {
             "format": "pkg",
             "file": "aspia-host-3.0.5-universal.pkg",
-            "sha256": "0edd47db534cacb014799b84688a3ebec21e7e40b70c52baf10cb294d4130731"
+            "sha256": "cf4c6fcd5f92447f565c16113199cf9729fe10984df8ddc8ecdb541b2dba7ad7"
           }
         ]
       },
@@ -56,7 +56,7 @@
           {
             "format": "apk",
             "file": "aspia-host-3.0.5-arm64.apk",
-            "sha256": "beae2a40130b370435f5bf9355116aa1f759d6a21ba027c370435e78c4ecbc44"
+            "sha256": "e1b65b36cae8a7554250823080c957b64f6d180a68f83042d8c43faf3f6a4fe0"
           }
         ]
       }
@@ -67,7 +67,7 @@
           {
             "format": "msi",
             "file": "aspia-client-3.0.5-x86_64.msi",
-            "sha256": "091ada3ba4a5b39392dad4af8b6c8da371a73ecf29fa42da9fe56d6603c2700e"
+            "sha256": "74a3aef64f4be355d30a92db5b1f54f0fbfe8d125eb662e2f0ba9b143b9cb116"
           }
         ]
       },
@@ -76,12 +76,12 @@
           {
             "format": "deb",
             "file": "aspia-client-3.0.5-x86_64.deb",
-            "sha256": "95a9e054a1eb355fe2623d0a90b0325a0d8778f6abb486820b89734364025d76"
+            "sha256": "f63d98416f900085e9a9ad5f95049cfc5a6efff96ee859228042bb47b9008862"
           },
           {
             "format": "rpm",
             "file": "aspia-client-3.0.5-x86_64.rpm",
-            "sha256": "f8f222b83ac4f3a7a36e25eb1a5b642f99c9e414bfe6d5ec4fa3f38d2b2953cd"
+            "sha256": "faf3ebbfd844e3598b502dbe332566bd8735b95f2bd11568e89860744f53bb90"
           }
         ]
       },
@@ -90,14 +90,14 @@
           {
             "format": "pkg",
             "file": "aspia-client-3.0.5-universal.pkg",
-            "sha256": "946d246ee231600fcc735d8c0b51765f7e30fd0287ce3fd5708c0b8eb81f65d0"
+            "sha256": "7f34b0ac9da7de32050fb201a18ac6a10dda97c4fbfcc696cbe6c3623e53b7f8"
           }
         ],
         "arm64": [
           {
             "format": "pkg",
             "file": "aspia-client-3.0.5-universal.pkg",
-            "sha256": "946d246ee231600fcc735d8c0b51765f7e30fd0287ce3fd5708c0b8eb81f65d0"
+            "sha256": "7f34b0ac9da7de32050fb201a18ac6a10dda97c4fbfcc696cbe6c3623e53b7f8"
           }
         ]
       },
@@ -106,7 +106,7 @@
           {
             "format": "apk",
             "file": "aspia-client-3.0.5-arm64.apk",
-            "sha256": "d7dcdc32984409ad2d7b1261608fde5113d3d0392ae8ffdf7592bc5296904f57"
+            "sha256": "86adeb4bb08838253935f75544246e927874cbfb42a3850d9a1513fe46d9ca07"
           }
         ]
       }
@@ -117,7 +117,7 @@
           {
             "format": "msi",
             "file": "aspia-router-3.0.5-x86_64.msi",
-            "sha256": "d8e8643ea54a11d7b4d8c129ea9a0b9d911af021d65b66fd8d05fb3508a8422d"
+            "sha256": "8e6cdb325f3d7031c55170ed669e37e88e8ee493c4889f09e6b4c803f86bf1e6"
           }
         ]
       },
@@ -126,12 +126,12 @@
           {
             "format": "deb",
             "file": "aspia-router-3.0.5-x86_64.deb",
-            "sha256": "88d0d0ebbe4214934de792063f91244d4f7dd1517f80a45ad9ba8d9b8af25661"
+            "sha256": "ad4be0b556d3e086e227eb7a86d80774ea676e8c39e81110a4e85f4e2bd52c4c"
           },
           {
             "format": "rpm",
             "file": "aspia-router-3.0.5-x86_64.rpm",
-            "sha256": "cf8b9886a8e0eda2382d9f918e6a89d792d48b67469ae02929bac7399ff50b2f"
+            "sha256": "fe9f41a578366b09685818431f23db8c113f295a38829a00440ab0b1aabf14a5"
           }
         ]
       }
@@ -142,7 +142,7 @@
           {
             "format": "msi",
             "file": "aspia-relay-3.0.5-x86_64.msi",
-            "sha256": "bfe7be16218cda7d8dddb3c8c5dc911826e4e8ecaa55c08d0396c6df7b158492"
+            "sha256": "bbd44079e398b42625ce293390090719ca868c3ffcc4a01bfe2c63fe6408d653"
           }
         ]
       },
@@ -151,12 +151,12 @@
           {
             "format": "deb",
             "file": "aspia-relay-3.0.5-x86_64.deb",
-            "sha256": "c2e3bdcf01016a082b360c5beceb9da8c29e0a5fc6677d87ad83fc9acb558c85"
+            "sha256": "c4a33102973fa1701455db35e8b7e2bcca42370b70b42432ccca5aff64238018"
           },
           {
             "format": "rpm",
             "file": "aspia-relay-3.0.5-x86_64.rpm",
-            "sha256": "13c76eb0d4cdfff53fb8257e8f39c7e83299a314625ec16bfb723e085fe6cf33"
+            "sha256": "f0620c3fba8322916f0f7e5090b456066e5acfea1d71ad90511ea906131f8979"
           }
         ]
       }
