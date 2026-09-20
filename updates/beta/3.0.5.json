@@ -1,7 +1,7 @@
 {
   "format": 1,
   "version": "3.0.5",
-  "description": "Maintenance release, no functional changes since 3.0.4.",
+  "description": "The installer now ends the running version before it replaces its files, and the application closes as soon as the update is handed over to the system.",
   "path": "https://files.aspia.net/beta/3.0.5",
   "packages": {
     "host": {
@@ -10,14 +10,14 @@
           {
             "format": "msi",
             "file": "aspia-host-3.0.5-x86_64.msi",
-            "sha256": "d431f55c51d4e6163650d19de38dfba59465f798bcb16a6ddac6b0e1db820a29"
+            "sha256": "7beef951d1c70ed105fdd5bf353639e4f2983445e2e4272caa315fa55862085c"
           }
         ],
         "x86": [
           {
             "format": "msi",
             "file": "aspia-host-3.0.5-x86.msi",
-            "sha256": "594fc365b7bf4d6fb921b4413021f385ba2f2cf5d52a65058459722bbc12d29f"
+            "sha256": "e21b30fdd589628e0fb72c9affb110f04c0ad992bdcc1e9bec3ac0076b3f0c72"
           }
         ]
       },
@@ -26,12 +26,12 @@
           {
             "format": "deb",
             "file": "aspia-host-3.0.5-x86_64.deb",
-            "sha256": "6618bc7aea85c54d9b421229ccbec78c969c659872484a8c6925c77061362658"
+            "sha256": "cd0a8a2b3ef53d9de09768e9d233b6ebd5b0c616e8fe72bcb2e95fb7dd3d5f63"
           },
           {
             "format": "rpm",
             "file": "aspia-host-3.0.5-x86_64.rpm",
-            "sha256": "7e81e0d66f28d63a730d9fd15b29fd53eb481424cb5d9bc06e93e627be56d029"
+            "sha256": "273de0c52acb2370a87596924cd3f5ac756da0ac17c088dc17780f5a34228e21"
           }
         ]
       },
@@ -40,14 +40,14 @@
           {
             "format": "pkg",
             "file": "aspia-host-3.0.5-universal.pkg",
-            "sha256": "d5cb7bb1aa9954bb547ba844c7c99b1bed4ac81dabb92354d165d1667f6ab900"
+            "sha256": "0edd47db534cacb014799b84688a3ebec21e7e40b70c52baf10cb294d4130731"
           }
         ],
         "arm64": [
           {
             "format": "pkg",
             "file": "aspia-host-3.0.5-universal.pkg",
-            "sha256": "d5cb7bb1aa9954bb547ba844c7c99b1bed4ac81dabb92354d165d1667f6ab900"
+            "sha256": "0edd47db534cacb014799b84688a3ebec21e7e40b70c52baf10cb294d4130731"
           }
         ]
       },
@@ -56,7 +56,7 @@
           {
             "format": "apk",
             "file": "aspia-host-3.0.5-arm64.apk",
-            "sha256": "9bad673275ee52dc3f5370279453dd3528896a99829ebf16fe37b54a9459e3c0"
+            "sha256": "beae2a40130b370435f5bf9355116aa1f759d6a21ba027c370435e78c4ecbc44"
           }
         ]
       }
@@ -67,7 +67,7 @@
           {
             "format": "msi",
             "file": "aspia-client-3.0.5-x86_64.msi",
-            "sha256": "0b577df0f3c107dd9692b9659e32b4937aa081000bc3c7be4fad03a4ac557194"
+            "sha256": "091ada3ba4a5b39392dad4af8b6c8da371a73ecf29fa42da9fe56d6603c2700e"
           }
         ]
       },
@@ -76,12 +76,12 @@
           {
             "format": "deb",
             "file": "aspia-client-3.0.5-x86_64.deb",
-            "sha256": "7e779f32e4f39d80abf8b39a1a985780be7e3188cc5317ad0edc40201bb52a95"
+            "sha256": "95a9e054a1eb355fe2623d0a90b0325a0d8778f6abb486820b89734364025d76"
           },
           {
             "format": "rpm",
             "file": "aspia-client-3.0.5-x86_64.rpm",
-            "sha256": "b60f7730e87bcb2e70ba3ac59c50ee1a1708766e8b249613e653f7868a661332"
+            "sha256": "f8f222b83ac4f3a7a36e25eb1a5b642f99c9e414bfe6d5ec4fa3f38d2b2953cd"
           }
         ]
       },
@@ -90,14 +90,14 @@
           {
             "format": "pkg",
             "file": "aspia-client-3.0.5-universal.pkg",
-            "sha256": "ee22c0baa3d3892077a05e5fc73461171a2a6b76ea941b42807860b009ce9cde"
+            "sha256": "946d246ee231600fcc735d8c0b51765f7e30fd0287ce3fd5708c0b8eb81f65d0"
           }
         ],
         "arm64": [
           {
             "format": "pkg",
             "file": "aspia-client-3.0.5-universal.pkg",
-            "sha256": "ee22c0baa3d3892077a05e5fc73461171a2a6b76ea941b42807860b009ce9cde"
+            "sha256": "946d246ee231600fcc735d8c0b51765f7e30fd0287ce3fd5708c0b8eb81f65d0"
           }
         ]
       },
@@ -106,7 +106,7 @@
           {
             "format": "apk",
             "file": "aspia-client-3.0.5-arm64.apk",
-            "sha256": "74a176107c0e849e4a7a095d5adcdb045ba9c585e9b55f98334869544faf0422"
+            "sha256": "d7dcdc32984409ad2d7b1261608fde5113d3d0392ae8ffdf7592bc5296904f57"
           }
         ]
       }
@@ -117,7 +117,7 @@
           {
             "format": "msi",
             "file": "aspia-router-3.0.5-x86_64.msi",
-            "sha256": "d11220582a827f51acfd97f503592912af8af6657d57eea617bf24eea1b21ab1"
+            "sha256": "d8e8643ea54a11d7b4d8c129ea9a0b9d911af021d65b66fd8d05fb3508a8422d"
           }
         ]
       },
@@ -126,12 +126,12 @@
           {
             "format": "deb",
             "file": "aspia-router-3.0.5-x86_64.deb",
-            "sha256": "4d8cf136e5c2b385a259926161fae89ab397757434b74015492007b1efc55895"
+            "sha256": "88d0d0ebbe4214934de792063f91244d4f7dd1517f80a45ad9ba8d9b8af25661"
           },
           {
             "format": "rpm",
             "file": "aspia-router-3.0.5-x86_64.rpm",
-            "sha256": "8d6ae150a0fc1152c7f9d82a046892be57fcaac4ba2446937b8435c943cc036e"
+            "sha256": "cf8b9886a8e0eda2382d9f918e6a89d792d48b67469ae02929bac7399ff50b2f"
           }
         ]
       }
@@ -142,7 +142,7 @@
           {
             "format": "msi",
             "file": "aspia-relay-3.0.5-x86_64.msi",
-            "sha256": "457f6ee9a54825258ab91b40378439ae9b3cc1bfc0fba7439614b53a16921414"
+            "sha256": "bfe7be16218cda7d8dddb3c8c5dc911826e4e8ecaa55c08d0396c6df7b158492"
           }
         ]
       },
@@ -151,12 +151,12 @@
           {
             "format": "deb",
             "file": "aspia-relay-3.0.5-x86_64.deb",
-            "sha256": "ea7c2d1329d8c1da2c3325cad941e130fc79b46c217cf782e5027bef8c863158"
+            "sha256": "c2e3bdcf01016a082b360c5beceb9da8c29e0a5fc6677d87ad83fc9acb558c85"
           },
           {
             "format": "rpm",
             "file": "aspia-relay-3.0.5-x86_64.rpm",
-            "sha256": "9b4b02386f7bd8e47ae3e3344e7ced377ffb014289d673232adeb808a17dadbd"
+            "sha256": "13c76eb0d4cdfff53fb8257e8f39c7e83299a314625ec16bfb723e085fe6cf33"
           }
         ]
       }
