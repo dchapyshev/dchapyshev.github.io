@@ -66,8 +66,11 @@ Current Version: <b>3.0.15</b> (September 25, 2026)
 <tr>
   <td style="padding:7px;">
     <ul>
-      <li>x86 or x86_64 CPU with SSE2</li>
-      <li>Windows 7/2008 R2 or higher, Debian 11/Ubuntu 20.04, MacOS X</li>
+      <li>Windows 7 or higher (x86, x86_64)</li>
+      <li>Ubuntu 22.04 or higher (x86_64)</li>
+      <li>RHEL 8.10 or compatible, or higher (x86_64)</li>
+      <li>macOS 13 or higher (arm64, x86_64)</li>
+      <li>Android 12 or higher (arm64)</li>
     </ul>
   </td>
 </tr>

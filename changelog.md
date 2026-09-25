@@ -5,7 +5,7 @@ title: Change Log
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
-### Version 3.0.0 (Sep XX, 2026)
+### Version 3.0.15 (Sep 25, 2026)
 
 **Common**
 
