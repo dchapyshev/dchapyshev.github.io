@@ -1,5 +1,20 @@
 {
   "format": 1,
-  "targets": {},
-  "updates": []
+  "targets": {
+    "latest": "3.0.15"
+  },
+  "updates": [
+    {
+      "source": "3.0.12",
+      "target": "@latest"
+    },
+    {
+      "source": "3.0.13",
+      "target": "@latest"
+    },
+    {
+      "source": "3.0.15",
+      "target": "@latest"
+    }
+  ]
 }
