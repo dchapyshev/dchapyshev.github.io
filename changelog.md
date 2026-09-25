@@ -5,6 +5,21 @@ title: Change Log
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.16 (Sep 25, 2026)
+
+**Host**
+
+  * Fixed a host crash when scaling the screen image.
+  * Settings and the security log now open only with administrator privileges.
+  * Fixed hardware H.264 encoding for screens with odd dimensions (for example, Windows running in a virtual machine window).
+  * Linux: client and host shortcuts now display correctly and can be pinned to the GNOME dock.
+
+**Client**
+
+  * Operators can now change saved user names and passwords for router hosts.
+  * Router hosts can now be edited from search results.
+  * Android: fixed letter case switching on the keyboard in landscape orientation.
+
 ### Version 3.0.15 (Sep 25, 2026)
 
 **Common**
