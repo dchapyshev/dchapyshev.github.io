@@ -23,22 +23,20 @@ If you do not follow any of the points of these instructions and the project is 
 ```
     MSVC v143 - VS 2022 C++ x64/x86 build tools (Latest)
     MSVC v143 - VS 2022 C++ x64/x86 Spectre-mitigation libs (Latest)
-    C++ Clang Compiller for Windows (17.0.3)
+    C++ Clang Compiller for Windows (19.1.5)
     MSBuild support for LLVM (clang-cl) toolset
     С++ CMake tools for Windows
     C++ MFC for latest v143 build tools (x86 & x64)
     C++ ATL for latest v143 build tools (x86 & x64)
     C++ ATL for latest v143 build tools with Spectre Mitigations (x86 & x64)
     C++ MFC for latest v143 build tools with Spectre Mitigations (x86 & x64)
-    Windows 10 SDK (10.0.18362)
-    Windows 10 SDK (10.0.19041)
-    Windows Driver Kit
-```	  
+    Windows 11 SDK (10.0.26100)
+```
 <br/>
 
-3. Download and install [WDK for Windows 10 1903 (19H1, build 18362)](https://learn.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads).
+3. Download and install [WDK for Windows 11 25H2 (build 26100)](https://learn.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads).
 
-4. Download and install [CMake](https://cmake.org/download) (version >= 3.21.0).
+4. Download and install [CMake](https://cmake.org/download) (version >= 4.0.0).
 
 5. Download and install [Git](https://git-scm.com/downloads).
 
@@ -58,19 +56,17 @@ cd vcpkg4aspia
 8. In vcpkg, you need to install the following libraries (use triplet **x86-windows-static** or **x64-windows-static** in all cases; for example: **./vcpkg install asio:x86-windows-static**):
 * asio
 * curl
-* fmt
+* enet
 * gtest
+* inipp
 * libvpx
 * libyuv
 * openssl
 * opus
 * protobuf
-* qt5-base
-* qt5-translations
-* qt5-winextras
-* rapidjson
-* sqlite3
-* wtl
+* qtbase
+* qtsvg
+* qttools
 * zstd
 <br/>
 
@@ -81,7 +77,7 @@ cd vcpkg4aspia
     10.1. Go to menu **Edit** -> **Preferences...**
 
     10.2. Go to **Kits** -> **Qt Versions**. Click the "Add" button and specify the path to file **qmake**
-    (for x64: **vcpkg4aspia\installed\x64-windows-static\tools\qt5\bin\qmake.exe**; for x86: **vcpkg4aspia\installed\x86-windows-static\tools\qt5\bin\qmake.exe**).
+    (for x64: **vcpkg4aspia\installed\x64-windows-static\tools\qt6\bin\qmake.exe**; for x86: **vcpkg4aspia\installed\x86-windows-static\tools\qt5\bin\qmake.exe**).
 
     10.3. Go to **Kits** -> **Kits**. Click the "Add" button.
 
