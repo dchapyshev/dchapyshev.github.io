@@ -5,6 +5,28 @@ title: Change Log
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.17 (Sep 26, 2026)
+
+**Common**
+
+  * Windows: the installation folder can no longer be changed. The applications are always installed to the default protected location.
+  * The log level can now be changed with the ASPIA_LOG_LEVEL environment variable, previously it was ignored. The logs no longer contain the values of environment variables that are not needed for diagnostics.
+  * Linux: services write their logs to /var/log/aspia, user applications to ~/.local/state/aspia/logs.
+
+**Host**
+
+  * Fixed a host crash in the Intel graphics driver during hardware H.264 encoding on some older Intel GPUs.
+  * Added the "Allow hardware video encoding" option to the host settings (Windows).
+  * The mouse and keyboard lock and the pause set in the host notifier are now reset when the last client disconnects.
+  * Linux: fixed a black screen and a host crash when connecting to GNOME on Wayland on some systems (for example, Ximper Linux).
+  * Linux: added support for the GNOME Console and Ptyxis terminals.
+
+**Client**
+
+  * Added the "Allow hardware video encoding" and "Allow hardware video decoding" options to the Desktop settings.
+  * Local groups, routers and saved credentials are now sorted alphabetically. Numbers in the names of groups and workspaces in the sidebar are sorted by value.
+  * Android: local hosts are now sorted alphabetically.
+
 ### Version 3.0.16 (Sep 25, 2026)
 
 **Host**
