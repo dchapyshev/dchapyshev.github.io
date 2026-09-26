@@ -2,7 +2,7 @@
   "format": 1,
   "version": "3.0.17",
   "description": "Aspia 3.0.17 stable release.",
-  "path": "https://files.aspia.net/3.0.17",
+  "path": "https://github.com/dchapyshev/aspia/releases/download/v3.0.17",
   "packages": {
     "host": {
       "windows": {
