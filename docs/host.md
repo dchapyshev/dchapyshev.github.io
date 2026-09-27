@@ -43,15 +43,16 @@ Android
 <br/>
 
 ## 3. Automation of installation <a name="automation"></a>
-Aspia Host has the ability to automate the installation and configuration of parameters.
-To do this, you must do the following:
-  - Install Aspia Host on one of your computers
-  - Configure all the necessary parameters and add users in the Host GUI
-  - Export configuration to file **aspia-host-config.json**
-  - Place the **aspia-host-config.json** (this file name and extension is required) file in the same directory as the installer
+On Windows the parameters of the Host and its users can be applied automatically during the
+installation. To do this:
+  - Install the Host on one of the computers, configure the parameters and add the users.
+  - Export the configuration with the **Export settings** button on the **General** tab of the
+    settings, or with the `aspia_host --export <file>` command.
+  - Name the file **aspia-host.json** and place it in the same directory as the MSI package.
 
-If you place this file in the same directory as installation MSI package, the configuration will be automatically imported during installation.
-Installation must be done from a local location (any of the local disks or a flash drive). This may not work when installing from network locations or when deploying using AD.
+During the installation the configuration is imported from this file automatically. The
+installation must be started from a local location (a local disk or a flash drive); it may not work
+when installing from network locations or when deploying with AD.
 
 ## 4. Settings <a name="settings"></a>
 To change Host parameters, the application has a Settings dialog. Below is an overview of the possible options.
