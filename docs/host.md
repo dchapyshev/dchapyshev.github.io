@@ -134,30 +134,20 @@ The dialog for adding or editing a user is as follows:
 
 ## 5. Command Line <a name="command-line"></a>
 
-**aspia_host_service**
-
-| Argument     | Description                                                                         |
-|--------------|-------------------------------------------------------------------------------------|
-| `--host-id`  | Displays the current Host ID. Note that the console and RDP sessions have separate IDs and the output of the command will depend on which session the process is running in. Displays the last received ID (cached ID). This means that the ID must be obtained at least once for the command to work. |
-| `--version`  | Displays the current version of the application.                                    |
-| `--install`  | Performs a Host service installation. Administrator rights are required to execute. |
-| `--remove`   | Performs removal of the Host service. Administrator rights are required to execute. |
-| `--start`    | Starts the Host service. Administrator rights are required to execute.              |
-| `--stop`     | Stops the Host service. Administrator rights are required to execute.               |
-| `--help`     | Displays help about command line arguments.                                         |
-
-<br/>
-
-**aspia_host**
-
-| Argument                           | Description                                      |
-|------------------------------------|--------------------------------------------------|
-| `--import=<config_file_path.json>` | Imports a configuration file.                    |
-| `--export=<config_file_path.json>` | Exports a configuration file.                    |
-| `--silent`                         | Enables silent mode for importing or exporting a configuration file. When this option is enabled, no messages are displayed. |
-| `--version`                        | Displays the current version of the application. |
-| `--update`                         | Displays an update check dialog.                 |
-| `--config`                         | Displays the host configuration dialog.          |
+| Argument          | Description                                                              |
+|-------------------|--------------------------------------------------------------------------|
+| `--install`       | Installs the Host service. Administrator rights are required to execute. |
+| `--remove`        | Removes the Host service. Administrator rights are required to execute.  |
+| `--start`         | Starts the Host service. Administrator rights are required to execute.   |
+| `--stop`          | Stops the Host service. Administrator rights are required to execute.    |
+| `--import <file>` | Imports the configuration from a JSON file.                              |
+| `--export <file>` | Exports the configuration to a JSON file.                                |
+| `--silent`        | Imports or exports the configuration without displaying any messages.    |
+| `--config`        | Opens the settings of the Host.                                          |
+| `--security-log`  | Opens the security log.                                                  |
+| `--hidden`        | Starts the application without displaying its window.                    |
+| `--version`       | Displays the version of the application.                                 |
+| `--help`          | Displays help about command line arguments.                              |
 
 <br/>
 
