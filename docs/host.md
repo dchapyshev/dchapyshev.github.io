@@ -14,8 +14,9 @@ title: Aspia Host
     4. [Users tab](#settings-users)
 5. [Command line](#command-line)
 6. [Environment variables](#env-vars)
-7. [Logs](#logs)
-8. [Notes](#notes)
+7. [Files](#files)
+8. [Logs](#logs)
+9. [Notes](#notes)
 
 ## 1. Purpose <a name="purpose"></a>
 Accepts incoming connections from Clients to manage the computer on which it is installed.
@@ -160,7 +161,53 @@ The dialog for adding or editing a user is as follows:
   - **ASPIA_NO_VERIFY_TLS_PEER** - If the variable is declared, then the validity of the TLS certificate is not checked when checking for updates and downloading them. It is not recommended to declare this variable unnecessarily. Declaring this variable can help solve the problem with checking for updates in Windows 7/2008R2, where root certificates are not updated.
   - **ASPIA_SMALL_ICON_SIZE** - Sets the size of the small icons of the interface in pixels, from 16 to 48, default 24.
 
-## 7. Logs <a name="logs"></a>
+## 7. Files <a name="files"></a>
+**Data base** `host.db3` contains all the important data of the Host: the users, the connection to
+the Router and the key of the computer. Only administrators can read and change it.
+
+```text
+Windows
+  C:\ProgramData\aspia\secure\host.db3
+
+Linux
+  /etc/aspia/secure/host.db3
+
+macOS
+  /Library/Application Support/aspia/secure/host.db3
+
+Android
+  /data/data/org.aspia.host/files/settings/aspia/secure/host.db3
+```
+
+<br/>
+**Parameters files** `host.ini` and `host_storage.ini` contain the parameters of the service and its
+state, for example the last received Host ID.
+
+```text
+Windows
+  C:\ProgramData\aspia\host.ini
+  C:\ProgramData\aspia\host_storage.ini
+
+Linux
+  /etc/xdg/aspia/host.ini
+  /etc/xdg/aspia/host_storage.ini
+
+macOS
+  /Library/Preferences/Qt/aspia/host.ini
+  /Library/Preferences/Qt/aspia/host_storage.ini
+
+Android
+  /data/data/org.aspia.host/files/settings/aspia/host.ini
+  /data/data/org.aspia.host/files/settings/aspia/host_storage.ini
+```
+
+<br/>
+The parameters of the appearance of the window of the Host are stored in the profile of the user:
+`%APPDATA%\aspia\host.ini` on Windows and `~/.config/aspia/host.ini` on Linux and macOS.
+
+<br/>
+
+## 8. Logs <a name="logs"></a>
 By default the Host writes the log to files. To configure the logging parameters, use the
 following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 4 (0 - trace, 1 - info, 2 - warning, 3 - error, 4 - fatal). Decreasing the value increases the number of messages in the log.
@@ -188,7 +235,7 @@ Android
 
 <br/>
 
-## 8. Notes <a name="notes"></a>
+## 9. Notes <a name="notes"></a>
   - The ID of the computer is linked to the key stored in the data base of the Host,
     `C:\ProgramData\aspia\secure\host.db3`. The key does not contain the ID, but it allows to obtain
     the ID when connecting to the Router; the ID is assigned at the first connection. The data base

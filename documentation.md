@@ -78,8 +78,9 @@ title: Documentation
        6. [Android](/docs/host#android)
        7. [Command line](/docs/host#command-line)
        8. [Environment variables](/docs/host#env-vars)
-       9. [Logs](/docs/host#logs)
-       10. [Notes](/docs/host#notes)
+       9. [Files](/docs/host#files)
+       10. [Logs](/docs/host#logs)
+       11. [Notes](/docs/host#notes)
 5. Examples
     1. [Installation of Router and Relay](docs/install-router-and-relay)
     2. [Backuping Router and Relay](docs/backup-router-and-relay)
