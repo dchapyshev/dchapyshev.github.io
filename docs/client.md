@@ -294,9 +294,10 @@ Host to find each other. A connection to a Router gives the following:
     peers agree on the way they will reach each other: directly when it is possible, or through a
     Relay when the direct connection cannot be established. Neither the Host nor the Client needs a
     public address or a forwarded port.
-  - **A common list of computers.** The hosts, the groups and the credentials are stored on the
-    Router, so the same list is available from any computer where you connect with your account, and
-    a change made by one user is seen by the others.
+  - **A common list of computers.** The hosts and the groups are stored on the Router, so the same
+    list is available from any computer where you connect with your account, and a change made by
+    one user is seen by the others. The credentials of the hosts are not sent to the Router: they
+    are stored on the computer where they were entered.
   - **Access control.** The hosts are distributed among workspaces, and every user gets access only
     to the workspaces that are granted to them.
   - **Management of the Router**, if the account has the rights of an administrator: the users, the
@@ -507,23 +508,21 @@ workspace.
 A host is not required to belong to a workspace. Right after the approval a host belongs to no
 workspace and is displayed only in the **Approved Hosts** section, which is available to an
 administrator. Hosts are added to a workspace and removed from it in the properties of the
-workspace, by the **Edit Workspace** command. A host belongs to one workspace at a time, and only a
-host without a workspace can be added, so a host is moved to another workspace by removing it from
-the current one first.
+workspace, by the **Edit Workspace** command. A host belongs to one workspace at a time. In the
+properties of a workspace only a host without a workspace can be added; an administrator can also
+move a host to another workspace by dragging it with the mouse onto that workspace or onto one of
+its groups.
 
-The comments and the credentials of the hosts are encrypted with the key of the workspace, so the
-Router itself has no access to their contents. The names of the hosts are stored as they are: the
-Router uses them for the search. When a host is removed from a workspace and when a workspace is
-deleted, the hosts themselves are not deleted, but their comments and credentials are cleared.
+The credentials of the hosts are not sent to the Router: they are stored on the computer where they
+were entered and are available only there. When a host is removed from a workspace and when a
+workspace is deleted, the hosts themselves are not deleted.
 
 **Rights of the users**
 
-When a workspace is created, all the administrators of the Router are included in the list of its
-users automatically, so the administrators see all the workspaces. The managers and the operators
-see only the workspaces to which they are given access in the properties of a workspace.
-
-An administrator cannot exclude themselves from the list of the users of a workspace: without access
-the key of the workspace is not available and the workspace cannot be managed any more.
+An administrator sees and manages all the workspaces of the Router, whether or not they are in the
+list of the users of a workspace. The managers and the operators see only the workspaces to which
+they are given access in the properties of a workspace. This also applies to an administrator who
+connects with the Manager or Operator access level.
 
 | Operation                                             | Administrator | Manager | Operator |
 |-------------------------------------------------------|---------------|---------|----------|
