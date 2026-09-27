@@ -59,15 +59,29 @@ To change Host parameters, the application has a Settings dialog. Below is an ov
 
 ### 4.1. General tab <a name="settings-general"></a>
 On the "General" tab, you can configure basic application settings, as well as import and export settings.
-<p align="center"><img src="/images/settings-general.png"/></p>
+<p align="center"><img src="/images/host-settings-general.png" width="400"/></p>
 
-**Incoming port** TCP port on which the Host accepts incoming connections.
+**Incoming port**
 
-**Update Server** Update options. You can enable automatic updates at specified intervals, specify your update server (if you have one), or check for updates directly from the Settings dialog.
+TCP port on which the Host accepts incoming connections, 8050 by default.
 
-**Import/Export** Import and export settings allow you to save the current configuration to an JSON file for later recovery (for backup purposes) or automatic deployment.
+**Preferred video capturer**
+
+The method of capturing the screen. With "Default" the Host chooses it itself. Not displayed on Linux.
+
+**Allow hardware video encoding**
+
+Allows to encode the video with the graphics adapter. Not displayed on Linux.
+
+**Updates**
+
+The automatic checking and installation of updates with the selected frequency, the update channel and the button to check for updates immediately.
+
+**Import/Export**
+
+Import and export settings allow you to save the current configuration to an JSON file for later recovery (for backup purposes) or automatic deployment.
 Import and export of parameters can be done through a graphical user interface and from the command line.
-To perform import and export via a graphical interface, the “Export” and “Import” buttons in the Settings tab in the “General” tab.
+To perform import and export via a graphical interface, use the **Import settings** and **Export settings** buttons in the **Settings** group.
 To perform import and export via the command line, use the following commands (for "silent" import and export without displaying messages or dialogs, add argument ```--silent```):
 ```bash
 aspia_host --import <file>
