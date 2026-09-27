@@ -92,19 +92,28 @@ aspia_host --export <file>
 ### 4.2. Security tab <a name="settings-security"></a>
 On the "Security" tab, you can configure settings for additional protection of the application.
 
-<p align="center"><img src="/images/settings-security.png"/></p>
+<p align="center"><img src="/images/host-settings-security.png" width="400"/></p>
 
-**Password Protection of Settings** This option allows you to set a password that will be requested when you try to open the Host Settings dialog.
-This password does not protect against replacing the configuration file or manual modification of the configuration file, but administrator rights are required to replace or edit the configuration file.
-Also, when manually editing a configuration file, it is extremely difficult to create or change users, because this is a very complex mathematical problem.
+**Password Protection of Settings**
 
-**One-time Password** When this option is enabled, the Host interface will display a one-time password, which the user can dictate to the connector for a one-time connection.
+This option allows you to set a password that will be requested when you try to open the Host Settings dialog.
+The password is stored in the secure data base of the Host, which only administrators can read and change.
+
+**One-time Password**
+
+When this option is enabled, the Host interface will display a one-time password, which the user can dictate to the connector for a one-time connection.
 You can also configure the frequency of automatic change of this password (or disable automatic change, then the password will change only when the service is restarted),
 specify the characters that the password can contain and the length of the password.
 
-**Connection Confirmation** When this option is enabled, a connection confirmation dialog will be displayed to allow the user to accept or reject the incoming connection.
-You can also configure the time interval after which the incoming connection will be automatically confirmed and the action that will be performed if there is no active user in the computer’s
+**Connection Confirmation**
+
+When this option is enabled, a connection confirmation dialog will be displayed to allow the user to accept or reject the incoming connection.
+You can also configure the time interval after which the incoming connection will be automatically confirmed and the action that will be performed if there is no active user in the computer's
 operating system when connecting (the connection can be automatically accepted or rejected).
+
+**Other**
+
+The **Disable Aspia shutdown** option blocks the exit command in the window of the Host, so the user cannot close the application.
 
 ### 4.3. Router tab <a name="settings-router"></a>
 On the "Router" tab you can specify parameters for connecting to the [Aspia Router](/docs/router). Enter the server address and public key and apply the settings.
