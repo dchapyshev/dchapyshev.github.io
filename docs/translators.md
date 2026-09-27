@@ -5,7 +5,7 @@ title: Instructions for translators
 
 You need to translate the application and installer.
 
-To translate the application interface you need to download [Qt Linguist](https://files.aspia.org/dev/linguist.7z).
+To translate the application interface you need to download [Qt Linguist](https://download.qt.io/linguist_releases/).
 
 To translate the installer interface you need to download a text editor. For example, [Notepad++](https://notepad-plus-plus.org/download).
 
@@ -13,30 +13,24 @@ For translation, it is recommended to download the source code from the [git rep
 
 Translation of the application interface
 ----------------------------------------
-The application is divided into modules. Each module has its own files for translation.
+All translation files of the application are located in the directory "[source/translations](https://github.com/dchapyshev/aspia/tree/master/source/translations)".
+Each language has its own file: ```translations_<language_code>.ts```.
 
-You need to translate the following modules:
-- [client](https://github.com/dchapyshev/aspia/tree/master/source/client)
-- [common](https://github.com/dchapyshev/aspia/tree/master/source/common)
-- [console](https://github.com/dchapyshev/aspia/tree/master/source/console)
-- [host](https://github.com/dchapyshev/aspia/tree/master/source/host)
-
-These modules contain directory "translations".
-Open your language file from this directory in Qt Linguist and perform the translation.
+Open your language file in Qt Linguist and perform the translation.
 
 <b>ATTENTION! It is important to use Qt Linguist to complete the translation. Do not try to edit translation files in a text editor. The download link is provided above.</b>
 
-For assistance with Qt Linguist, refer to the [documentation](http://doc.qt.io/qt-5/qtlinguist-index.html).
+For assistance with Qt Linguist, refer to the [documentation](https://doc.qt.io/qt-6/qtlinguist-index.html).
 
 If there is no translation file for your language, create a [issue](https://github.com/dchapyshev/aspia/issues) on GitHub.
 
 Translation of the installer interface
 --------------------------------------
-Change directory to "[installer/translations](https://github.com/dchapyshev/aspia/tree/master/installer/translations)".
+Change directory to "[installer/windows/translations](https://github.com/dchapyshev/aspia/tree/master/installer/windows/translations)".
 
-This directory contains installer translations for Aspia Console and Aspia Host.
+This directory contains installer translations for Aspia Client and Aspia Host.
 
-File to translate Aspia Console: ```console.<language_code>.wxl```
+File to translate Aspia Client: ```client.<language_code>.wxl```
 
 File to translate Aspia Host: ```host.<language_code>.wxl```
 
