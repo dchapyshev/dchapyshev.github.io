@@ -117,7 +117,7 @@ The **Disable Aspia shutdown** option blocks the exit command in the window of t
 
 ### 4.3. Router tab <a name="settings-router"></a>
 On the "Router" tab you can specify parameters for connecting to the [Aspia Router](/docs/router). Enter the server address and public key and apply the settings.
-<p align="center"><img src="/images/settings-router.png"/></p>
+<p align="center"><img src="/images/host-settings-router.png" width="400"/></p>
 
 ### 4.4. Users tab <a name="settings-users"></a>
 To manage users, you need to run the Aspia Host Settings and go to the “Users” tab.
