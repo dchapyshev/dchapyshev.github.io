@@ -26,7 +26,7 @@ title: Aspia Client
     2. [Terminal](#session-terminal)
     3. [File transfer](#session-filetransfer)
     4. [System information](#session-sysinfo)
-    5. [Text chat](#session-textchat)
+    5. [Chat](#session-chat)
 9. [Credentials](#credentials)
 10. [Settings](#settings)
 11. [Command line](#command-line)
@@ -610,7 +610,7 @@ It appears when you hover the mouse cursor and hides when the cursor leaves the 
 | <img src="/images/icons/terminal.svg" width="24" height="24" alt="terminal"/> Terminal                               | Starts a terminal session with the same computer.                                   |
 | <img src="/images/icons/file-explorer.svg" width="24" height="24" alt="file-explorer"/> File transfer                | Starts a file transfer session with the same computer.                              |
 | <img src="/images/icons/system-information.svg" width="24" height="24" alt="system-information"/> System Information | Starts a system information session with the same computer.                         |
-| <img src="/images/icons/chat.svg" width="24" height="24" alt="chat"/> Text Chat                                      | Starts a text chat with the user of the remote computer.                            |
+| <img src="/images/icons/chat.svg" width="24" height="24" alt="chat"/> Chat                                           | Starts a text chat with the user of the remote computer.                            |
 | <img src="/images/icons/system-task.svg" width="24" height="24" alt="system-task"/> Task Manager                     | Opens the task manager of the remote computer.                                      |
 | <img src="/images/icons/tools.svg" width="24" height="24" alt="tools"/> Tools                                        | Runs a tool or a script on the remote computer.                                     |
 | <img src="/images/icons/paste.svg" width="24" height="24" alt="paste"/> Paste clipboard as keystrokes                | Pastes the contents of the clipboard as keyboard key presses.                       |
@@ -695,7 +695,7 @@ parameter, its value or the whole line.
 
 <br/>
 
-### 8.5. Text chat <a name="session-textchat"></a>
+### 8.5. Chat <a name="session-chat"></a>
 Allows to exchange text messages with the user of the remote computer. The history of the
 correspondence is saved and is displayed again at the next connection to the same computer.
 
@@ -852,7 +852,7 @@ Android
 ## 15. Android <a name="android"></a>
 The Client for Android has the same local address book, connections to Routers and credentials as
 the desktop version. The data base is protected with the master password; on devices that support it
-the application can also be unlocked with the fingerprint. The Desktop, File Transfer and Text Chat
+the application can also be unlocked with the fingerprint. The Desktop, File Transfer and Chat
 sessions are available. A Router is always connected with the Operator access level, so the
 management of the Router is not available.
 

@@ -57,7 +57,7 @@ title: Documentation
             2. [Terminal](/docs/client#session-terminal)
             3. [File transfer](/docs/client#session-filetransfer)
             4. [System information](/docs/client#session-sysinfo)
-            5. [Text chat](/docs/client#session-textchat)
+            5. [Chat](/docs/client#session-chat)
        9. [Credentials](/docs/client#credentials)
        10. [Settings](/docs/client#settings)
        11. [Command line](/docs/client#command-line)
