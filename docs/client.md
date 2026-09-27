@@ -11,7 +11,7 @@ title: Aspia Client
 5. [Local address book](#address-book)
     1. [Computer groups](#computer-groups)
     2. [Computers](#computers)
-    3. [Import and export](#import-and-export)
+    3. [Backup and restore](#backup-and-restore)
     4. [Online check](#online-check)
 6. [Connection to a Router](#router-connect)
 7. [Sections of a Router](#router-manage)
@@ -244,25 +244,28 @@ established through it.
 **Copy Host** is convenient when several computers differ only in the address: create one entry, fill
 in the credentials and then copy it the required number of times.
 
-### 5.3. Import and export <a name="import-and-export"></a>
-The address book is one of the parts of the data base of the application, and the data base is
-encrypted, so it cannot be copied to another computer as a file. Use the export and the import to
-transfer the address book between computers and to make backups of it.
+### 5.3. Backup and restore <a name="backup-and-restore"></a>
+The data base of the application is encrypted, so it cannot be copied to another computer as a
+file. To transfer the address book between computers or to keep a copy of it, use a backup. A
+backup holds the whole address book: the Routers and the saved passwords of their hosts, the local
+groups and computers and the saved credentials.
 
-**Commands**
+**Commands** (the **File** menu)
 
 | Command                                                                                              | Description                                                        |
 |------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| <img src="/images/icons/export.svg" width="24" height="24" alt="export"/> Export Address Book...     | Saves the address book to a JSON file.                             |
-| <img src="/images/icons/import.svg" width="24" height="24" alt="import"/> Import Address Book...     | Restores the address book from a JSON file.                        |
+| <img src="/images/icons/export.svg" width="24" height="24" alt="export"/> Create Backup...           | Saves the address book to an `.aspia-backup` file.                 |
+| <img src="/images/icons/import.svg" width="24" height="24" alt="import"/> Restore from Backup...     | Replaces the address book with the contents of a backup.           |
 | <img src="/images/icons/import.svg" width="24" height="24" alt="import"/> Import Old Address Book... | Imports an address book of a previous version from an `.aab` file. |
 
 <br/>
+The backup is encrypted with the master password. A backup made on this computer is restored
+without questions; for a backup made on another computer the application asks for the master
+password used there. Restoring deletes everything stored now and replaces it with the contents of
+the backup, so the application asks for a confirmation.
 
-At the export the application asks for a password and encrypts the file with it. This password is
-not the master password: it is entered every time and is asked again at the import of the file, so
-remember it or store it separately. A file exported on one computer can be imported on another one,
-where the master password is a different one.
+Backups can also be created automatically at every start of the application, see the **Backup**
+group in the [Settings](#settings).
 
 If you are updating from version 2.7, use **Import Old Address Book...** after the first start: the
 `.aab` files of the previous versions are not converted automatically. The file remains untouched, so

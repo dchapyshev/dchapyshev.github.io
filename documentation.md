@@ -42,7 +42,7 @@ title: Documentation
        5. [Local address book](/docs/client#address-book)
             1. [Computer groups](/docs/client#computer-groups)
             2. [Computers](/docs/client#computers)
-            3. [Import and export](/docs/client#import-and-export)
+            3. [Backup and restore](/docs/client#backup-and-restore)
             4. [Online check](/docs/client#online-check)
        6. [Connection to a Router](/docs/client#router-connect)
        7. [Sections of a Router](/docs/client#router-manage)
