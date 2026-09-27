@@ -732,13 +732,14 @@ is opened in it.
 <br/>
 
 ## 11. Environment variables <a name="env-vars"></a>
-  - **ASPIA_NO_VERIFY_TLS_PEER** - If the variable is declared, then the validity of the TLS certificate is not checked when checking for updates. It is not recommended to declare this variable unnecessarily.
-  - **ASPIA_SMALL_ICON_SIZE** - Sets the size of the small icons of the interface in pixels.
+  - **ASPIA_NO_VERIFY_TLS_PEER** - If the variable is declared, then the validity of the TLS certificate is not checked when checking for updates and downloading them. It is not recommended to declare this variable unnecessarily.
+  - **ASPIA_SMALL_ICON_SIZE** - Sets the size of the small icons of the interface in pixels, from 16 to 48, default 24.
 
 <br/>
 
 ## 12. Logs <a name="logs"></a>
-By default the Client writes the log to a file on Windows and to stdout on Linux and macOS. To configure the logging parameters, use the following recommendations:
+By default the Client writes the log to files. To configure the logging parameters, use the
+following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 4 (0 - trace, 1 - info, 2 - warning, 3 - error, 4 - fatal). Decreasing the value increases the number of messages in the log.
   - To enable logging to a file (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_FILE with a value other than 0. If the environment variable is declared with a value of 0, then logging to file will be disabled.
   - To enable logging to stdout (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_STDOUT with a value other than 0. If the environment variable is declared with a value of 0, then logging to stdout will be disabled.
@@ -750,6 +751,13 @@ The log files are located in the following paths:
 Windows
   %TEMP%\aspia\aspia_client-*.log
 
-Linux and macOS
+Linux
+  ~/.local/state/aspia/logs/aspia_client-*.log
+  ($XDG_STATE_HOME/aspia/logs if the variable is set)
+
+macOS
   $TMPDIR/aspia/aspia_client-*.log
+
+Android
+  /sdcard/Android/data/org.aspia.client/files/log/
 ```
