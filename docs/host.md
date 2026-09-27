@@ -189,7 +189,17 @@ Android
 <br/>
 
 ## 8. Notes <a name="notes"></a>
-  - The ID is linked to a computer using file C:\ProgramData\aspia\host_key.json. This file does not contain the computer ID, but it allows you to obtain the ID when connecting to the Router. The computer ID is assigned upon first connection. If you delete this file, the computer ID will change. This can be used to restore the computer ID after reinstalling the operating system (make a backup copy of this file before reinstalling the operating system).
-  - Important! If you are cloning an operating system to other computers, make sure that file C:\ProgramData\aspia\host_key.json is removed from the image of the operating system being cloned. If you do not do this, then computers containing the same key file will one by one receive the same ID, pushing each other out of the server.
-  - The Host configuration is contained in file C:\ProgramData\aspia\host.json. If you need to transfer the configuration, use command line parameters (or similar options in the GUI) to import and export. Do not copy this file as is. This may work "now", but may break your Host later.
+  - The ID of the computer is linked to the key stored in the data base of the Host,
+    `C:\ProgramData\aspia\secure\host.db3`. The key does not contain the ID, but it allows to obtain
+    the ID when connecting to the Router; the ID is assigned at the first connection. The data base
+    also holds the users and the settings of the Host. To keep the ID after reinstalling the
+    operating system, make a backup copy of this file and restore it after the installation of the
+    Host.
+  - Important! If you are cloning an operating system to other computers, make sure that the data
+    base of the Host is removed from the image. Otherwise the computers with the same key will
+    receive the same ID one by one, pushing each other out of the Router. The users and the settings
+    can then be applied with the [automatic import](#automation).
+  - The configuration of the Host is stored in its data base and in the file
+    `C:\ProgramData\aspia\host.ini`. To transfer the configuration, use the import and the export.
+    Do not copy these files as they are.
   - It is recommended to disable HDR mode for correct color rendering.
