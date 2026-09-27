@@ -403,26 +403,28 @@ receives a permanent Host ID and can be edited like any other host.
 
 <br/>
 
-<p align="center"><img src="/images/client-router-unapproved.png" width="700"/></p>
-
-<br/>
-
 ### 7.2. Approved hosts <a name="router-hosts"></a>
 The **Approved Hosts** section contains all the hosts stored in the data base of the Router and is
 available to an administrator. For every host the list displays its Host ID, the display name, the
-name of the computer, the address, the user name, the comment, the workspace, the operating system,
-the version, the architecture, the time of the last connection and of the last modification.
+name of the computer, the address, the comment, the workspace, the operating system, the version,
+the architecture, the time of the last connection and of the last modification and the status.
 
 **Commands**
 
-| Command                                                                                                       | Description                                                                                                                                                |
-|---------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <img src="/images/icons/change-computer.svg" width="24" height="24" alt="change-computer"/> Edit Host         | Changes the group inside the workspace, the display name, the credentials and the comment of the host. Available for the hosts that belong to a workspace. |
-| <img src="/images/icons/computer-update.svg" width="24" height="24" alt="computer-update"/> Check for Updates | Makes the host check for updates immediately. The host must be online.                                                                                     |
-| <img src="/images/icons/remove-computer.svg" width="24" height="24" alt="remove-computer"/> Remove            | Uninstalls the Host on the remote computer and deletes its entry from the data base.                                                                       |
-| <img src="/images/icons/save.svg" width="24" height="24" alt="save"/> Save...                                 | Saves the list displayed in the section to a JSON file.                                                                                                    |
+| Command                                                                                                       | Description                                                                                                                                                          |
+|---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="/images/icons/change-computer.svg" width="24" height="24" alt="change-computer"/> Edit Host         | Changes the group inside the workspace, the display name, the comment and the credentials of the host. The credentials are stored on this computer only.             |
+| <img src="/images/icons/computer-update.svg" width="24" height="24" alt="computer-update"/> Check for Updates | Makes the host check for updates immediately. The host must be online.                                                                                               |
+| <img src="/images/icons/disconnect-one.svg" width="24" height="24" alt="disconnect-one"/> Disconnect          | Disconnects the host from the Router. The host must be online.                                                                                                       |
+| <img src="/images/icons/disconnect-all.svg" width="24" height="24" alt="disconnect-all"/> Disconnect All      | Disconnects all the hosts from the Router.                                                                                                                           |
+| <img src="/images/icons/computer-telemetry.svg" width="24" height="24" alt="computer-telemetry"/> Telemetry   | Displays the statistics reported by the host: the start of the service, the logins, the connections to the Router, the updates, the users and the security settings. |
+| <img src="/images/icons/remove-computer.svg" width="24" height="24" alt="remove-computer"/> Remove            | Uninstalls the Host on the remote computer and deletes its entry from the data base.                                                                                 |
+| <img src="/images/icons/save.svg" width="24" height="24" alt="save"/> Save...                                 | Saves the list displayed in the section to a JSON file.                                                                                                              |
 
 <br/>
+The context menu of an online host also contains the types of the sessions to connect to it. The
+**Copy Link** submenu copies a link to the connection with the selected type of the session, and
+**Copy Row** and **Copy Value** copy the data of the host.
 
 **WARNING!** **Remove** is not just a deletion of a record. The Router sends the command to the Host,
 and the Host disables the use of the Router, erases the address and the public key of the Router, its
@@ -432,10 +434,6 @@ it.
 
 If the host is offline at the moment of the command, the removal is scheduled and is performed when
 the host connects to the Router the next time.
-
-<br/>
-
-<p align="center"><img src="/images/client-router-hosts.png" width="700"/></p>
 
 <br/>
 
