@@ -15,11 +15,15 @@ title: Aspia Host
 5. [Command line](#command-line)
 6. [Environment variables](#env-vars)
 7. [Files](#files)
-8. [Logs](#logs)
-9. [Notes](#notes)
+8. [Security log](#security-log)
+9. [Logs](#logs)
+10. [Notes](#notes)
+11. [Android](#android)
 
 ## 1. Purpose <a name="purpose"></a>
 Accepts incoming connections from Clients to manage the computer on which it is installed.
+
+<br/>
 
 ## 2. Installing <a name="installing"></a>
 ```bash
@@ -54,6 +58,8 @@ installation. To do this:
 During the installation the configuration is imported from this file automatically. The
 installation must be started from a local location (a local disk or a flash drive); it may not work
 when installing from network locations or when deploying with AD.
+
+<br/>
 
 ## 4. Settings <a name="settings"></a>
 To change Host parameters, the application has a Settings dialog. Below is an overview of the possible options.
@@ -133,6 +139,8 @@ The dialog for adding or editing a user is as follows:
 
 <p align="center"><img src="/images/host-settings-user.png" width="300"/></p>
 
+<br/>
+
 ## 5. Command Line <a name="command-line"></a>
 
 | Argument          | Description                                                              |
@@ -160,6 +168,8 @@ The dialog for adding or editing a user is as follows:
   - **ASPIA_MAX_FPS** - Determines the maximum value up to which the FPS can be increased during automatic bandwidth control. If variable ASPIA_NO_OVERFLOW_DETECTION is declared, then this value is ignored. It can take values from 1 to 60. For computers with more than 2 logical processors, the default value is 30. Otherwise, the default value is 20.
   - **ASPIA_NO_VERIFY_TLS_PEER** - If the variable is declared, then the validity of the TLS certificate is not checked when checking for updates and downloading them. It is not recommended to declare this variable unnecessarily. Declaring this variable can help solve the problem with checking for updates in Windows 7/2008R2, where root certificates are not updated.
   - **ASPIA_SMALL_ICON_SIZE** - Sets the size of the small icons of the interface in pixels, from 16 to 48, default 24.
+
+<br/>
 
 ## 7. Files <a name="files"></a>
 **Data base** `host.db3` contains all the important data of the Host: the users, the connection to
@@ -207,7 +217,30 @@ The parameters of the appearance of the window of the Host are stored in the pro
 
 <br/>
 
-## 8. Logs <a name="logs"></a>
+## 8. Security log <a name="security-log"></a>
+The security log records the connections to the Host: the time, the type of the session, the user,
+the address and the name of the computer of the connecting side and the version of its application,
+as well as the disconnections and the failed attempts to connect. The log is opened with the
+**Security Log...** command of the **Aspia** menu of the window of the Host or with the
+`aspia_host --security-log` command. Administrator rights are required to view it.
+
+A new file is created every week, and the files older than 180 days are deleted automatically. The
+files are located in the following paths:
+
+```text
+Windows
+  C:\ProgramData\aspia\secure\logs\
+
+Linux
+  /var/log/aspia/security/
+
+macOS
+  /Library/Logs/aspia/security/
+```
+
+<br/>
+
+## 9. Logs <a name="logs"></a>
 By default the Host writes the log to files. To configure the logging parameters, use the
 following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 4 (0 - trace, 1 - info, 2 - warning, 3 - error, 4 - fatal). Decreasing the value increases the number of messages in the log.
@@ -235,7 +268,7 @@ Android
 
 <br/>
 
-## 9. Notes <a name="notes"></a>
+## 10. Notes <a name="notes"></a>
   - The ID of the computer is linked to the key stored in the data base of the Host,
     `C:\ProgramData\aspia\secure\host.db3`. The key does not contain the ID, but it allows to obtain
     the ID when connecting to the Router; the ID is assigned at the first connection. The data base
@@ -250,3 +283,22 @@ Android
     `C:\ProgramData\aspia\host.ini`. To transfer the configuration, use the import and the export.
     Do not copy these files as they are.
   - It is recommended to disable HDR mode for correct color rendering.
+
+<br/>
+
+## 11. Android <a name="android"></a>
+The Host for Android allows to connect to a phone or a tablet; the Desktop and File Transfer
+sessions are available. At the first start the application asks for the permissions it needs: the
+accessibility service, the display over other apps, the access to all files and the notifications.
+The application does not work until all of them are granted.
+
+The **Connection** section displays the ID of the device and the one-time password, and they can be
+sent to the connecting side with any application of the device. At every connection Android asks for
+the consent to capture the screen.
+
+During a desktop session a floating button is displayed on the screen of the device. It opens a menu
+with the synchronization of the clipboard and the Back, Home and Recents buttons.
+
+The users, the password protection of the settings, the connection to a Router and the updates are
+configured in the **Settings** section. The settings can also be imported from a file exported by
+the Host.
