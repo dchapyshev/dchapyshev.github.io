@@ -30,17 +30,14 @@ forget to install Relay.
 ## 2. Installing <a name="installing"></a>
 
 ```bash
-Windows x86
-  Run aspia-router-3.0.0-x86.msi and follow the instructions on the screen.
-
 Windows x86_64
-  Run aspia-router-3.0.0-x86_64.msi and follow the instructions on the screen.
+  Run aspia-router-<version>-x86_64.msi and follow the instructions on the screen.
 
 Ubuntu
-  sudo apt install ./aspia-router-3.0.0-x86_64.deb
+  sudo apt install ./aspia-router-<version>-x86_64.deb
 
 RHEL and compatible
-  sudo dnf install ./aspia-router-3.0.0-x86_64.rpm
+  sudo dnf install ./aspia-router-<version>-x86_64.rpm
 ```
 
 <br/>

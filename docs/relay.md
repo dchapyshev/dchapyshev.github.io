@@ -21,17 +21,14 @@ You must install at least one Relay server. Router and Relay can only work toget
 ## 2. Installing <a name="installing"></a>
 
 ```bash
-Windows x86
-  Run aspia-relay-3.0.0-x86.msi and follow the instructions on the screen.
-
 Windows x86_64
-  Run aspia-relay-3.0.0-x86_64.msi and follow the instructions on the screen.
+  Run aspia-relay-<version>-x86_64.msi and follow the instructions on the screen.
 
 Ubuntu
-  sudo apt install ./aspia-relay-3.0.0-x86_64.deb
+  sudo apt install ./aspia-relay-<version>-x86_64.deb
 
 RHEL and compatible
-  sudo dnf install ./aspia-relay-3.0.0-x86_64.rpm
+  sudo dnf install ./aspia-relay-<version>-x86_64.rpm
 ```
 
 <br/>
