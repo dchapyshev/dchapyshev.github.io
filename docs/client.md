@@ -88,9 +88,9 @@ password it cannot read its data base.
 
 **Changing the password**
 
-Open the settings with the **Settings...** command of the **File** menu, find the **Master Password**
-group and press **Change...**. The "Change Master Password" dialog contains the "Current password",
-"New password" and "Confirm password" fields.
+Open the settings with the **Settings...** command of the **File** menu, go to the **General** page
+and press **Change Master Password...** in the **Security** group. The "Change Master Password"
+dialog contains the "Current password", "New password" and "Confirm password" fields.
 
 <p align="center"><img src="/images/client-master-password-change.png" width="400"/></p>
 
@@ -128,22 +128,7 @@ users of a Router these are the commands of the users. The **Edit**, **Session T
 menus are filled the same way and are not displayed when the active tab has nothing to put in them.
 
 The search field of the tool bar looks for computers in the local address book and on all the
-connected Routers at once, whatever is selected in the tree. In the address book the name and the
-address are compared with the request, on a Router the name of the computer and its Host ID. The
-results replace the list in the right part of the tab and are displayed by pages.
-
-The **File** menu contains the **Settings...** and **Exit** commands, the **Help** menu contains the
-online help and the information about the application. The **View** menu changes the appearance of
-the window:
-
-| Command               | Description                                                  |
-|-----------------------|--------------------------------------------------------------|
-| Tool Bar              | Shows or hides the tool bar.                                 |
-| Status Bar            | Shows or hides the status bar.                               |
-| Search Field          | Shows or hides the search field in the tool bar.             |
-| Large icons           | Switches the list of computers to large icons.               |
-| Open Sessions in Tabs | If disabled, every session is opened in a separate window.   |
-| Always on Top         | Keeps the window of the application above the other windows. |
+connected Routers at once, whatever is selected in the tree.
 
 <br/>
 
@@ -713,17 +698,19 @@ correspondence is saved and is displayed again at the next connection to the sam
 <br/>
 
 ## 9. Settings <a name="settings"></a>
-The settings are opened with the **Settings...** command of the **File** menu.
+The settings are opened with the **Settings...** command of the **File** menu. They are displayed
+in a tab of the main window and are divided into the **General**, **Desktop** and **Update** pages.
 
-| Group           | Parameters                                                                                                                                                                                                                                                           |
-|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Interface       | The language of the interface, the theme and the name displayed to the user of the remote computer.                                                                                                                                                                  |
-| UDP Connections | Enables direct connections and the methods of the passage of NAT: UDP hole punching, PCP, NAT-PMP and UPnP.                                                                                                                                                          |
-| Master Password | Changes the master password.                                                                                                                                                                                                                                         |
-| Features        | The parameters of a desktop session: the audio, the clipboard, the display of the remote cursor, the disabling of the effects and of the wallpaper, the locking of the computer at disconnect, the blocking of the remote input and the sending of key combinations. |
-| Screen          | The preferred resolution of the remote desktop.                                                                                                                                                                                                                      |
-| Recording       | The automatic start of the recording of a session and the directory for the files.                                                                                                                                                                                   |
-| Update          | The check for updates at the start and the address of the update server.                                                                                                                                                                                             |
+| Page    | Group           | Parameters                                                                                                                                                                                                                                                                                                     |
+|---------|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| General | Interface       | The language of the interface, the theme and the name displayed to the user of the remote computer.                                                                                                                                                                                                            |
+| General | Backup          | The creation of a backup of the data base at the start of the application, the directory for the backups and how long they are kept.                                                                                                                                                                           |
+| General | UDP Connections | Enables direct connections and the methods of the passage of NAT: UDP hole punching, PCP, NAT-PMP and UPnP.                                                                                                                                                                                                    |
+| General | Security        | The locking of the application after inactivity and the change of the master password.                                                                                                                                                                                                                         |
+| Desktop | Features        | The parameters of a desktop session: the audio, the clipboard, the display of the remote cursor, the disabling of the effects and of the wallpaper, the locking of the computer at disconnect, the blocking of the remote input, the sending of key combinations and the hardware video encoding and decoding. |
+| Desktop | Screen          | The preferred resolution of the remote desktop.                                                                                                                                                                                                                                                                |
+| Desktop | Recording       | The automatic start of the recording of a session and the directory for the files.                                                                                                                                                                                                                             |
+| Update  | Update          | The check for updates at the start, the update channel and the manual check for updates.                                                                                                                                                                                                                       |
 
 <br/>
 
