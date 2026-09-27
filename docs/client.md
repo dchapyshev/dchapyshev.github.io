@@ -27,10 +27,11 @@ title: Aspia Client
     3. [File transfer](#session-filetransfer)
     4. [System information](#session-sysinfo)
     5. [Text chat](#session-textchat)
-9. [Settings](#settings)
-10. [Command line](#command-line)
-11. [Environment variables](#env-vars)
-12. [Logs](#logs)
+9. [Credentials](#credentials)
+10. [Settings](#settings)
+11. [Command line](#command-line)
+12. [Environment variables](#env-vars)
+13. [Logs](#logs)
 
 ## 1. Purpose <a name="purpose"></a>
 Allows you to connect to and control Hosts. It also contains the address book and the management of
@@ -698,7 +699,44 @@ correspondence is saved and is displayed again at the next connection to the sam
 
 <br/>
 
-## 9. Settings <a name="settings"></a>
+## 9. Credentials <a name="credentials"></a>
+A record of credentials stores a user name and a password under a name. In the properties of a
+computer the record is selected with "Use saved credentials" instead of entering the user name and
+the password, so one record can be used by several computers of the local address book and of the
+Routers: when the password changes, it is enough to change it in one place. The records are stored
+in the data base of the application and are not sent to the Routers.
+
+The list of the records is opened with the **Credentials...** command of the **File** menu.
+
+**Commands**
+
+| Command                                                                                                    | Description                                                                                                       |
+|------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| <img src="/images/icons/add.svg" width="24" height="24" alt="add"/> Add Credentials                        | Creates a new record.                                                                                             |
+| <img src="/images/icons/pencil-drawing.svg" width="24" height="24" alt="pencil-drawing"/> Edit Credentials | Changes the record.                                                                                               |
+| <img src="/images/icons/cancel.svg" width="24" height="24" alt="cancel"/> Delete Credentials               | Deletes the record. The computers that used it lose their credentials, and they are asked at the next connection. |
+| <img src="/images/icons/export.svg" width="24" height="24" alt="export"/> Export Credentials...            | Saves the selected records to an `.aspia-credentials` file.                                                       |
+| <img src="/images/icons/import.svg" width="24" height="24" alt="import"/> Import Credentials...            | Loads the records from an `.aspia-credentials` file.                                                              |
+
+<br/>
+The dialog of a record contains the following fields:
+
+| Field     | Required | Description                                                                                                      |
+|-----------|----------|------------------------------------------------------------------------------------------------------------------|
+| Name      | Yes      | The name displayed in the list and in the properties of the computers, up to 64 characters.                      |
+| User Name | Yes      | The name of the user of the Host, up to 64 characters. Letters, digits and the `. _ - @` characters are allowed. |
+| Password  | Yes      | The password of the user of the Host.                                                                            |
+
+<br/>
+At the export the records to save are checked and a password is entered; the file is encrypted with
+it, and the same password is asked at the import. At the import the records of the file are
+displayed with their status: a "New" record is added, an "Exists" record was imported or created
+from the same record before and is replaced. Unlike a backup, the export and the import concern the
+credentials only and do not change the rest of the data base.
+
+<br/>
+
+## 10. Settings <a name="settings"></a>
 The settings are opened with the **Settings...** command of the **File** menu. They are displayed
 in a tab of the main window and are divided into the **General**, **Desktop** and **Update** pages.
 
@@ -719,7 +757,7 @@ in a tab of the main window and are divided into the **General**, **Desktop** an
 
 <br/>
 
-## 10. Command line <a name="command-line"></a>
+## 11. Command line <a name="command-line"></a>
 The Client accepts a link of the form `aspia://` as the only argument. Such a link is copied in the
 address book and allows to start a session at once. If the application is already running, the link
 is opened in it.
@@ -731,13 +769,13 @@ is opened in it.
 
 <br/>
 
-## 11. Environment variables <a name="env-vars"></a>
+## 12. Environment variables <a name="env-vars"></a>
   - **ASPIA_NO_VERIFY_TLS_PEER** - If the variable is declared, then the validity of the TLS certificate is not checked when checking for updates and downloading them. It is not recommended to declare this variable unnecessarily.
   - **ASPIA_SMALL_ICON_SIZE** - Sets the size of the small icons of the interface in pixels, from 16 to 48, default 24.
 
 <br/>
 
-## 12. Logs <a name="logs"></a>
+## 13. Logs <a name="logs"></a>
 By default the Client writes the log to files. To configure the logging parameters, use the
 following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 4 (0 - trace, 1 - info, 2 - warning, 3 - error, 4 - fatal). Decreasing the value increases the number of messages in the log.
