@@ -64,6 +64,7 @@ title: Documentation
        12. [Environment variables](/docs/client#env-vars)
        13. [Files](/docs/client#files)
        14. [Logs](/docs/client#logs)
+       15. [Android](/docs/client#android)
     4. [Aspia Host](/docs/host)
        1. [Purpose](/docs/host#purpose)
        2. [Installing](/docs/host#installing)

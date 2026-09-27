@@ -33,6 +33,7 @@ title: Aspia Client
 12. [Environment variables](#env-vars)
 13. [Files](#files)
 14. [Logs](#logs)
+15. [Android](#android)
 
 ## 1. Purpose <a name="purpose"></a>
 Allows you to connect to and control Hosts. It also contains the address book and the management of
@@ -102,7 +103,7 @@ the next start requires the new password.
 
 **WARNING!** The master password is not stored anywhere and cannot be recovered or reset. If it is
 lost, the data base cannot be decrypted, and the only way to continue is to create it anew. This
-means the loss of the address book, of the saved credentials and of the connections to Routers.
+means the loss of the address book, of the credentials and of the connections to Routers.
 
 ## 4. Main window <a name="main-window"></a>
 The window of the application consists of tabs. The **Management** tab is always present, the
@@ -191,14 +192,14 @@ To create an entry, select a group and use **Add Host**. The dialog contains the
 | Name                  | Yes      | The name displayed in the list, from 1 to 64 characters. Any characters are allowed. The name must be unique within the group.                                                                                                        |
 | Router                | Yes      | Either "Without Router" for a direct connection, or one of the Routers added to the address book.                                                                                                                                     |
 | Address / ID          | Yes      | The address of the Host for a direct connection. If a Router is selected, the field is called "ID" and contains the Host ID on that Router. See the formats below.                                                                    |
-| Use saved credentials | No       | Takes the user name and the password from a record of the saved credentials instead of the fields below. It is available when at least one record exists.                                                                             |
-| Credentials           | No       | The record of the saved credentials. It is displayed instead of the user name and the password when "Use saved credentials" is enabled.                                                                                               |
+| Use saved credentials | No       | Takes the user name and the password from a record of the [Credentials](#credentials) instead of the fields below. It is available when at least one record exists.                                                                   |
+| Credentials           | No       | The record of the credentials. It is displayed instead of the user name and the password when "Use saved credentials" is enabled.                                                                                                     |
 | User Name             | No       | The name of the user of the Host, up to 64 characters. Letters, digits and the `. _ - @` characters are allowed. It is filled in together with the password. If both fields are empty, the credentials are asked at every connection. |
 | Password              | No       | The password of the user of the Host. It is filled in together with the user name.                                                                                                                                                    |
 | Comment               | No       | Any text up to 2048 characters, for example the location of the computer or the name of its owner.                                                                                                                                    |
 
 <br/>
-One record of the saved credentials can be used by several computers: when its password changes,
+One record of the credentials can be used by several computers: when its password changes,
 it is enough to change it in one place.
 
 If a Router is not selected, the field contains a domain name, an IPv4 or an IPv6 address. The port
@@ -250,7 +251,7 @@ in the credentials and then copy it the required number of times.
 The data base of the application is encrypted, so it cannot be copied to another computer as a
 file. To transfer the address book between computers or to keep a copy of it, use a backup. A
 backup holds the whole address book: the Routers and the saved passwords of their hosts, the local
-groups and computers and the saved credentials.
+groups and computers and the credentials.
 
 **Commands** (the **File** menu)
 
@@ -845,3 +846,34 @@ macOS
 Android
   /sdcard/Android/data/org.aspia.client/files/log/
 ```
+
+<br/>
+
+## 15. Android <a name="android"></a>
+The Client for Android has the same local address book, connections to Routers and credentials as
+the desktop version. The data base is protected with the master password; on devices that support it
+the application can also be unlocked with the fingerprint. The Desktop, File Transfer and Text Chat
+sessions are available. A Router is always connected with the Operator access level, so the
+management of the Router is not available.
+
+The [backups](#backup-and-restore) are compatible with the desktop version: a backup created on a
+computer can be restored on a device, and the other way round. The **Create Backup** and **Restore
+from Backup** commands are in the menu of the **Local** section. The [credentials](#credentials) are
+exported and imported the same way, with the **Export Credentials** and **Import Credentials**
+commands on the credentials page of the **Settings** section.
+
+In a desktop session the screen works like a touchpad: the finger moves the cursor, and a click is
+made at the position of the cursor. The menu of the session is opened with the button in the lower
+right corner: the choice of the monitor, the power control, the on-screen keyboard, Ctrl+Alt+Del,
+the user sessions and the disconnection. Above the on-screen keyboard there is a bar with additional
+keys; a modifier key stays pressed until the next key.
+
+| Gesture                                                | Action                                                                                |
+|--------------------------------------------------------|---------------------------------------------------------------------------------------|
+| Moving one finger                                      | Moves the cursor.                                                                     |
+| Tap                                                    | Left click.                                                                           |
+| Double tap                                             | Double click.                                                                         |
+| Tap, touch again and move, or hold the finger and move | Drag with the left button held. Near the edge of the screen the view scrolls.         |
+| Tap with two fingers                                   | Right click.                                                                          |
+| Pinching or spreading two fingers                      | Zooms the image in or out (up to 5 times); moving the fingers moves the zoomed image. |
+| Moving two fingers up or down                          | Scrolls with the mouse wheel.                                                         |
