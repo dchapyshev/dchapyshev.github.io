@@ -183,17 +183,21 @@ without entering the address and the credentials every time.
 
 To create an entry, select a group and use **Add Host**. The dialog contains the following fields:
 
-| Field    | Required | Description                                                                                                                                                                            |
-|----------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Group    | Yes      | The group the entry is placed in. The group selected in the tree is offered by default.                                                                                                |
-| Name     | Yes      | The name displayed in the list, from 1 to 64 characters. Any characters are allowed.                                                                                                   |
-| Router   | Yes      | Either "Without Router" for a direct connection, or one of the Routers added to the address book.                                                                                      |
-| Address  | Yes      | The address of the Host for a direct connection, or the Host ID on the selected Router. See the formats below.                                                                         |
-| Username | No       | The name of the user of the Host, up to 64 characters. Letters, digits and the `. _ - @` characters are allowed. If the field is empty, the credentials are asked at every connection. |
-| Password | No       | The password of the user of the Host, up to 64 characters. Any characters are allowed.                                                                                                 |
-| Comment  | No       | Any text up to 2048 characters, for example the location of the computer or the name of its owner.                                                                                     |
+| Field                 | Required | Description                                                                                                                                                                                                                           |
+|-----------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Group                 | Yes      | The group the entry is placed in. The group selected in the tree is offered by default.                                                                                                                                               |
+| Name                  | Yes      | The name displayed in the list, from 1 to 64 characters. Any characters are allowed. The name must be unique within the group.                                                                                                        |
+| Router                | Yes      | Either "Without Router" for a direct connection, or one of the Routers added to the address book.                                                                                                                                     |
+| Address / ID          | Yes      | The address of the Host for a direct connection. If a Router is selected, the field is called "ID" and contains the Host ID on that Router. See the formats below.                                                                    |
+| Use saved credentials | No       | Takes the user name and the password from a record of the saved credentials instead of the fields below. It is available when at least one record exists.                                                                             |
+| Credentials           | No       | The record of the saved credentials. It is displayed instead of the user name and the password when "Use saved credentials" is enabled.                                                                                               |
+| User Name             | No       | The name of the user of the Host, up to 64 characters. Letters, digits and the `. _ - @` characters are allowed. It is filled in together with the password. If both fields are empty, the credentials are asked at every connection. |
+| Password              | No       | The password of the user of the Host. It is filled in together with the user name.                                                                                                                                                    |
+| Comment               | No       | Any text up to 2048 characters, for example the location of the computer or the name of its owner.                                                                                                                                    |
 
 <br/>
+One record of the saved credentials can be used by several computers: when its password changes,
+it is enough to change it in one place.
 
 If a Router is not selected, the field contains a domain name, an IPv4 or an IPv6 address. The port
 is specified after a colon; when it is omitted, the default port 8050 is used. An IPv6 address is
@@ -224,7 +228,7 @@ Computer or domain name (with port)
 If a Router is selected, the field contains the Host ID issued by that Router, and the connection is
 established through it.
 
-<p align="center"><img src="/images/client-host-properties.png" width="400"/></p>
+<p align="center"><img src="/images/client-host-properties.png" width="400"/> <img src="/images/client-host-properties2.png" width="400"/></p>
 
 **Commands for computers**
 
