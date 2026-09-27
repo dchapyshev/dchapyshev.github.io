@@ -322,7 +322,7 @@ The dialog of a Router contains the following fields:
 |--------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Address      | Yes      | The address of the Router. The port is specified after a colon; when it is omitted, the default port 8062 is used.                                                                                                                                             |
 | Display Name | No       | The name under which the Router is displayed in the tree. When the field is empty, the address of the Router is displayed instead. Give a name to the Routers when there are several of them or when the address says nothing about the purpose of the server. |
-| Access Level | Yes      | The type of the session the connection is established with: Administrator, Manager or Client. The account must have the rights of the selected type on the Router.                                                                                             |
+| Access Level | Yes      | The type of the session the connection is established with: Administrator, Manager or Operator. The account must have the rights of the selected type on the Router.                                                                                           |
 | User Name    | Yes      | The name of the account on the Router.                                                                                                                                                                                                                         |
 | Password     | Yes      | The password of the account on the Router.                                                                                                                                                                                                                     |
 
@@ -362,12 +362,12 @@ user:
 |---------------|----------------------------------------------------------------------------------|
 | Administrator | All the sections, including the users, the clients and the relays of the Router. |
 | Manager       | The workspaces available to the user, their hosts and the unapproved hosts.      |
-| Client        | The workspaces available to the user and their hosts.                            |
+| Operator      | The workspaces available to the user, their hosts and the unapproved hosts.      |
 
 <br/>
 
-The rights are inherited: an administrator has the rights of a manager and a client, a manager has
-the rights of a client.
+The rights are inherited: an administrator has the rights of a manager and an operator, a manager
+has the rights of an operator.
 
 <br/>
 
@@ -521,21 +521,21 @@ deleted, the hosts themselves are not deleted, but their comments and credential
 **Rights of the users**
 
 When a workspace is created, all the administrators of the Router are included in the list of its
-users automatically, so the administrators see all the workspaces. The managers and the clients see
-only the workspaces to which they are given access in the properties of a workspace.
+users automatically, so the administrators see all the workspaces. The managers and the operators
+see only the workspaces to which they are given access in the properties of a workspace.
 
 An administrator cannot exclude themselves from the list of the users of a workspace: without access
 the key of the workspace is not available and the workspace cannot be managed any more.
 
-| Operation                                             | Administrator | Manager | Client |
-|-------------------------------------------------------|---------------|---------|--------|
-| Viewing the workspaces, the groups and the hosts      | +             | +       | +      |
-| Connecting to the hosts                               | +             | +       | +      |
-| Creating, editing and deleting the workspaces         | +             | -       | -      |
-| Adding hosts to a workspace and removing them from it | +             | -       | -      |
-| Granting and revoking the access of the users         | +             | -       | -      |
-| Creating, editing and deleting the groups             | +             | +       | -      |
-| Editing the hosts and moving them between the groups  | +             | +       | -      |
+| Operation                                             | Administrator | Manager | Operator |
+|-------------------------------------------------------|---------------|---------|----------|
+| Viewing the workspaces, the groups and the hosts      | +             | +       | +        |
+| Connecting to the hosts                               | +             | +       | +        |
+| Creating, editing and deleting the workspaces         | +             | -       | -        |
+| Adding hosts to a workspace and removing them from it | +             | -       | -        |
+| Granting and revoking the access of the users         | +             | -       | -        |
+| Creating, editing and deleting the groups             | +             | +       | -        |
+| Editing the hosts and moving them between the groups  | +             | +       | -        |
 
 <br/>
 
