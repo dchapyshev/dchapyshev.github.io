@@ -161,20 +161,29 @@ The dialog for adding or editing a user is as follows:
   - **ASPIA_SMALL_ICON_SIZE** - Sets the size of the small icons of the interface in pixels, from 16 to 48, default 24.
 
 ## 7. Logs <a name="logs"></a>
-To configure the Router logging parameters, use the following recommendations:
-  - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 2. Decreasing the value increases the number of messages in the log.
+By default the Host writes the log to files. To configure the logging parameters, use the
+following recommendations:
+  - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 4 (0 - trace, 1 - info, 2 - warning, 3 - error, 4 - fatal). Decreasing the value increases the number of messages in the log.
   - To enable logging to a file (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_FILE with a value other than 0. If the environment variable is declared with a value of 0, then logging to file will be disabled.
   - To enable logging to stdout (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_STDOUT with a value other than 0. If the environment variable is declared with a value of 0, then logging to stdout will be disabled.
-  - Log files can have a limited size and after reaching the maximum file size a new log file will be created. By default, the maximum log file size is limited to 2 MB. If you need to change this size, then declare environment variable ASPIA_MAX_LOG_FILE_SIZE with a numeric value in bytes. The variable can take a value from 1024 (1 KB) to 10485760 (10 MB).
   - By default, log files older than 14 days are automatically deleted. If you want to change this value, then declare environment variable ASPIA_MAX_LOG_FILE_AGE with a numeric value in days. The variable can take a value from 0 to 366. If the variable is set to 0, then the log files will not be automatically deleted.
 
-The log file for Windows is located in the following path:
+The log files are located in the following paths:
 
 ```text
-C:\Users\<user_name>\AppData\Local\Temp\aspia\aspia_host-*.log
-C:\Windows\Temp\aspia\aspia_host_service-*.log
-C:\Windows\Temp\aspia\aspia_desktop_agent-*.log
-C:\Windows\Temp\aspia\aspia_file_transfer _agent-*.log
+Windows
+  %TEMP%\aspia\aspia_host-*.log (the window of the Host)
+  C:\Windows\SystemTemp\aspia\aspia_host-*.log (the service; C:\Windows\Temp\aspia on older versions)
+
+Linux
+  ~/.local/state/aspia/logs/aspia_host-*.log (the window of the Host)
+  /var/log/aspia/host/aspia_host-*.log (the service)
+
+macOS
+  $TMPDIR/aspia/aspia_host-*.log
+
+Android
+  /sdcard/Android/data/org.aspia.host/files/log/
 ```
 
 <br/>
