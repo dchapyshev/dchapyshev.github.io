@@ -103,7 +103,7 @@ access only to the directories of the Relay.
 
 The Relay configuration file is located in the following paths:
 
-```bash
+```text
 Windows
   C:\ProgramData\aspia\relay.conf
 
@@ -160,7 +160,7 @@ following recommendations:
 
 The log files are located in the following paths:
 
-```bash
+```text
 Windows
   C:\ProgramData\aspia\logs\aspia_relay-*.log
 

@@ -144,7 +144,7 @@ To configure the Router logging parameters, use the following recommendations:
 
 The log file for Windows is located in the following path:
 
-```bash
+```text
 C:\Users\<user_name>\AppData\Local\Temp\aspia\aspia_host-*.log
 C:\Windows\Temp\aspia\aspia_host_service-*.log
 C:\Windows\Temp\aspia\aspia_desktop_agent-*.log

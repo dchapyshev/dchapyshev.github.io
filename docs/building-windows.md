@@ -41,7 +41,7 @@ If you do not follow any of the points of these instructions and the project is 
 5. Download and install [Git](https://git-scm.com/downloads).
 
 6. Disable path length limit.
-```bash
+```text
 Set HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem\LongPathsEnabled to 1
 ```
 <br/>

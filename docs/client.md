@@ -758,7 +758,7 @@ By default the Client writes the log to a file on Windows and to stdout on Linux
 
 The log files are located in the following paths:
 
-```bash
+```text
 Windows
   %TEMP%\aspia\aspia_client-*.log
 

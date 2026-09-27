@@ -57,10 +57,6 @@ only if the previous one does not exist.
 installation! To manage users, use the Router management in the [Client](/docs/client#router-manage).
 
 ```bash
-Windows x86
-  cd /d "C:\Program Files (x86)\Aspia\Router"
-  aspia_router --create-config
-
 Windows x64
   cd /d "C:\Program Files\Aspia\Router"
   aspia_router --create-config
@@ -113,7 +109,7 @@ The configuration file contains parameters that do not change while the applicat
 
 The Router configuration file is located in the following paths:
 
-```bash
+```text
 Windows
   C:\ProgramData\aspia\router.conf
 
@@ -210,7 +206,7 @@ The database file contains information about users, workspaces and issued IDs fo
 
 The database file is located in the following paths:
 
-```bash
+```text
 Windows
   C:\ProgramData\aspia\router.db3
 
@@ -226,7 +222,7 @@ files are needed to configure Hosts and Relays.
 
 The public key files are located in the following paths:
 
-```bash
+```text
 Windows
   C:\ProgramData\aspia\host.pub
   C:\ProgramData\aspia\relay.pub
@@ -248,7 +244,7 @@ following recommendations:
 
 The log files are located in the following paths:
 
-```bash
+```text
 Windows
   C:\ProgramData\aspia\logs\aspia_router-*.log
 
