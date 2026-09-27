@@ -180,15 +180,18 @@ sudo journalctl -u aspia-relay
 ## 7. Command line <a name="command-line"></a>
 The Relay supports the following command line arguments:
 
-| Argument          | Description                                                                                                                                                                                  |
-|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--install`       | Installs the Relay service and enables its start at the system startup. If the configuration does not exist yet, the service is not installed. Administrator rights are required to execute. |
-| `--remove`        | Removes the Relay service. A running service is stopped before the removal. Administrator rights are required to execute.                                                                    |
-| `--start`         | Starts the Relay service. Administrator rights are required to execute.                                                                                                                      |
-| `--stop`          | Stops the Relay service. Administrator rights are required to execute.                                                                                                                       |
-| `--create-config` | Creates an initial configuration. Administrator rights are required to execute.                                                                                                              |
-| `--version`       | Displays the version of the application.                                                                                                                                                     |
-| `--help`          | Displays help about command line arguments.                                                                                                                                                  |
+| Argument                     | Description                                                                                                                                                                                  |
+|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--install`                  | Installs the Relay service and enables its start at the system startup. If the configuration does not exist yet, the service is not installed. Administrator rights are required to execute. |
+| `--remove`                   | Removes the Relay service. A running service is stopped before the removal. Administrator rights are required to execute.                                                                    |
+| `--start`                    | Starts the Relay service. Administrator rights are required to execute.                                                                                                                      |
+| `--stop`                     | Stops the Relay service. Administrator rights are required to execute.                                                                                                                       |
+| `--create-config`            | Creates an initial configuration. Administrator rights are required to execute.                                                                                                              |
+| `--check-update`             | Checks for an update and displays the available version.                                                                                                                                     |
+| `--install-update`           | Downloads and installs the available update. Administrator rights are required to execute.                                                                                                   |
+| `--update-channel <channel>` | The channel for `--check-update` and `--install-update`: `stable`, `beta` or `alpha`. Default `stable`.                                                                                      |
+| `--version`                  | Displays the version of the application.                                                                                                                                                     |
+| `--help`                     | Displays help about command line arguments.                                                                                                                                                  |
 
 <br/>
 

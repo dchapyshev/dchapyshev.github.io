@@ -268,17 +268,20 @@ sudo journalctl -u aspia-router
 ## 10. Command line <a name="command-line"></a>
 The Router supports the following command line arguments:
 
-| Argument             | Description                                                                                                                                                                                   |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--install`          | Installs the Router service and enables its start at the system startup. If the configuration does not exist yet, the service is not installed. Administrator rights are required to execute. |
-| `--remove`           | Removes the Router service. A running service is stopped before the removal. Administrator rights are required to execute.                                                                    |
-| `--start`            | Starts the Router service. Administrator rights are required to execute.                                                                                                                      |
-| `--stop`             | Stops the Router service. Administrator rights are required to execute.                                                                                                                       |
-| `--keygen`           | Generates a pair of private and public keys and displays them in the terminal. Running the command does not affect the current configuration.                                                 |
-| `--create-config`    | Creates an initial configuration, the data base and the keys. Administrator rights are required to execute.                                                                                   |
-| `--reset-otp <user>` | Resets the two-factor authentication of the specified user. At the next connection the user passes the enrollment again. Administrator rights are required to execute.                        |
-| `--version`          | Displays the version of the application.                                                                                                                                                      |
-| `--help`             | Displays help about command line arguments.                                                                                                                                                   |
+| Argument                     | Description                                                                                                                                                                                   |
+|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--install`                  | Installs the Router service and enables its start at the system startup. If the configuration does not exist yet, the service is not installed. Administrator rights are required to execute. |
+| `--remove`                   | Removes the Router service. A running service is stopped before the removal. Administrator rights are required to execute.                                                                    |
+| `--start`                    | Starts the Router service. Administrator rights are required to execute.                                                                                                                      |
+| `--stop`                     | Stops the Router service. Administrator rights are required to execute.                                                                                                                       |
+| `--keygen`                   | Generates a pair of private and public keys and displays them in the terminal. Running the command does not affect the current configuration.                                                 |
+| `--create-config`            | Creates an initial configuration, the data base and the keys. Administrator rights are required to execute.                                                                                   |
+| `--reset-otp <user>`         | Resets the two-factor authentication of the specified user. At the next connection the user passes the enrollment again. Administrator rights are required to execute.                        |
+| `--check-update`             | Checks for an update and displays the available version.                                                                                                                                      |
+| `--install-update`           | Downloads and installs the available update. Administrator rights are required to execute.                                                                                                    |
+| `--update-channel <channel>` | The channel for `--check-update` and `--install-update`: `stable`, `beta` or `alpha`. Default `stable`.                                                                                       |
+| `--version`                  | Displays the version of the application.                                                                                                                                                      |
+| `--help`                     | Displays help about command line arguments.                                                                                                                                                   |
 
 <br/>
 
