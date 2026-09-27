@@ -590,9 +590,7 @@ different types with the same computer, can be opened at the same time.
 Allows to connect to a remote computer to interact with its desktop.
 
 At the top of the desktop window there is a toolbar that allows you to perform a number of actions.
-It appears when you hover the mouse cursor and hides when the cursor leaves the toolbar area. The
-<img src="/images/icons/pin.svg" width="24" height="24" alt="pin"/> button locks the toolbar so that
-it is displayed permanently.
+It appears when you hover the mouse cursor and hides when the cursor leaves the toolbar area.
 
 <p align="center"><img src="/images/client-desktop-window.png"/></p>
 
@@ -665,8 +663,7 @@ determine what can be done in the session.
 
 ### 8.3. File transfer <a name="session-filetransfer"></a>
 Allows to transfer files between the local and the remote computer, delete and rename files, create
-directories. When connected to a remote computer lists of disks are displayed that allow you to
-estimate the amount of free space on them.
+directories.
 
 <p align="center"><img src="/images/client-file-transfer.png"/></p>
 
