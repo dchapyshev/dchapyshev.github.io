@@ -120,17 +120,17 @@ On the "Router" tab you can specify parameters for connecting to the [Aspia Rout
 <p align="center"><img src="/images/host-settings-router.png" width="400"/></p>
 
 ### 4.4. Users tab <a name="settings-users"></a>
-To manage users, you need to run the Aspia Host Settings and go to the “Users” tab.
-<p align="center"><img src="/images/settings-users.png"/></p>
+To manage users, you need to run the Aspia Host Settings and go to the "Users" tab.
+<p align="center"><img src="/images/host-settings-users.png" width="400"/></p>
 
-To add a user, click on the button with the icon ![add](/images/plus.png). To delete a user, use the button ![delete](/images/minus.png), and to edit button ![edit](/images/pencil.png).
+To add a user, use the <img src="/images/icons/add.svg" width="24" height="24" alt="add"/> **Add** button. To edit a user, use the <img src="/images/icons/pencil-drawing.svg" width="24" height="24" alt="pencil-drawing"/> **Modify** button, and to delete a user, the <img src="/images/icons/cancel.svg" width="24" height="24" alt="cancel"/> **Delete** button.
 When adding a new user, you need to enter a username and password, as well as select the types of sessions that this user can connect to.
 
 **Warning!** When you change your username, you also need to re-enter the password.
 
 The dialog for adding or editing a user is as follows:
 
-<p align="center"><img src="/images/settings-user.png"/></p>
+<p align="center"><img src="/images/host-settings-user.png" width="300"/></p>
 
 ## 5. Command Line <a name="command-line"></a>
 
