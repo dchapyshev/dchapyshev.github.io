@@ -112,8 +112,7 @@ Linux
 ```
 
 <br/>
-The path can be changed by the environment variable ASPIA_RELAY_CONFIG_FILE. The file is created
-with the access rights of its owner only.
+The path can be changed by the environment variable ASPIA_RELAY_CONFIG_FILE.
 
 <br/>
 The file has the ini format: the parameters are grouped into sections. The description of the
@@ -131,13 +130,13 @@ sections and their parameters is given below.
 
 **Section [peer]**
 
-| Parameter          | Values                                    | Description                                                                                                                                                 |
-|--------------------|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `listen_interface` | IPv4 or IPv6 address, empty by default    | Interface address on which the server will listen for incoming connections. Specify an empty value if you want to listen for connections on all interfaces. |
-| `public_address`   | Host name or IP address, required         | The address that peers will receive to connect to the Relay. See the warning below.                                                                         |
-| `port`             | Number from 1 to 65535, default 8070      | The port through which peers will connect to the Relay.                                                                                                     |
-| `idle_timeout`     | Number of minutes from 1 to 60, default 5 | If during this time no data comes from the peers, the connection is terminated. A value outside of this range stops the Relay from serving peers.           |
-| `max_count`        | Number from 1 to 1000, default 100        | The maximum number of simultaneous connections established between peers. A greater value is reduced to 1000.                                               |
+| Parameter          | Values                                    | Description                                                                                                                                                                                                                                        |
+|--------------------|-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `listen_interface` | IPv4 or IPv6 address, empty by default    | Interface address on which the server will listen for incoming connections. Specify an empty value if you want to listen for connections on all interfaces. If the value is not a valid address, the Relay does not accept connections from peers. |
+| `public_address`   | Host name or IP address, required         | The address that peers will receive to connect to the Relay. See the warning below.                                                                                                                                                                |
+| `port`             | Number from 1 to 65535, default 8070      | The port through which peers will connect to the Relay.                                                                                                                                                                                            |
+| `idle_timeout`     | Number of minutes from 1 to 60, default 5 | If during this time no data comes from the peers, the connection is terminated. A value outside of this range stops the Relay from serving peers.                                                                                                  |
+| `max_count`        | Number from 1 to 1000, default 100        | The maximum number of simultaneous connections established between peers. A greater value is reduced to 1000.                                                                                                                                      |
 
 <br/>
 
