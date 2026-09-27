@@ -5,6 +5,18 @@ title: Change Log
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.18 (Sep 27, 2026)
+
+**Common**
+
+  * The text chat is now called "Chat" everywhere in the interface.
+  * Fixed errors and typos in the Russian translation.
+
+**Client**
+
+  * The commands for editing and deleting a workspace are now shown only to administrators of the router.
+  * Android: routers imported from a desktop backup with the Administrator or Manager access level now connect with the Operator access level, the only one supported on Android.
+
 ### Version 3.0.17 (Sep 26, 2026)
 
 **Common**
