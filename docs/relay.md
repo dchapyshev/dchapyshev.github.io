@@ -151,20 +151,25 @@ information on how to do this.
 <br/>
 
 ## 6. Logs <a name="logs"></a>
-By default the Relay writes the log to a file on Windows and to stdout on Linux, where the messages are collected by systemd. To configure the Relay logging parameters, use the following recommendations:
+By default the Relay writes the log to files. To configure the Relay logging parameters, use the
+following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 4 (0 - trace, 1 - info, 2 - warning, 3 - error, 4 - fatal). Decreasing the value increases the number of messages in the log.
   - To enable logging to a file (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_FILE with a value other than 0. If the environment variable is declared with a value of 0, then logging to file will be disabled.
   - To enable logging to stdout (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_STDOUT with a value other than 0. If the environment variable is declared with a value of 0, then logging to stdout will be disabled.
   - By default, log files older than 14 days are automatically deleted. If you want to change this value, then declare environment variable ASPIA_MAX_LOG_FILE_AGE with a numeric value in days. The variable can take a value from 0 to 366. If the variable is set to 0, then the log files will not be automatically deleted.
 
-The log files for Windows are located in the following path:
+The log files are located in the following paths:
 
 ```bash
-C:\ProgramData\aspia\logs\aspia_relay-*.log
+Windows
+  C:\ProgramData\aspia\logs\aspia_relay-*.log
+
+Linux
+  /var/log/aspia/relay/aspia_relay-*.log
 ```
 
 <br/>
-For Linux, you can enable log output to a file through environment variables or use the command to output the log:
+If logging to stdout is enabled on Linux, the log can be viewed with the command:
 
 ```bash
 sudo journalctl -u aspia-relay
