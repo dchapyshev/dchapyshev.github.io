@@ -18,7 +18,7 @@ title: Aspia Host
 8. [Notes](#notes)
 
 ## 1. Purpose <a name="purpose"></a>
-Allows accepts incoming connections from Clients and Consoles to manage the computer on which it is installed.
+Accepts incoming connections from Clients to manage the computer on which it is installed.
 
 ## 2. Installing <a name="installing"></a>
 ```bash
