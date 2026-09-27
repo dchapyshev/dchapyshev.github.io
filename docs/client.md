@@ -40,20 +40,20 @@ Routers.
 
 ## 2. Installing <a name="installing"></a>
 ```bash
-Windows x86
-  Run aspia-client-3.0.0-x86.msi and follow the instructions on the screen.
-
 Windows x86_64
-  Run aspia-client-3.0.0-x86_64.msi and follow the instructions on the screen.
+  Run aspia-client-<version>-x86_64.msi and follow the instructions on the screen.
 
 macOS
-  Open aspia-client-3.0.0.dmg and move "Aspia Client" to "Applications".
+  Run aspia-client-<version>-universal.pkg and follow the instructions on the screen.
 
 Ubuntu
-  sudo apt install ./aspia-client-3.0.0-x86_64.deb
+  sudo apt install ./aspia-client-<version>-x86_64.deb
 
 RHEL and compatible
-  sudo dnf install ./aspia-client-3.0.0-x86_64.rpm
+  sudo dnf install ./aspia-client-<version>-x86_64.rpm
+
+Android
+  Open aspia-client-<version>-arm64.apk on the device and follow the instructions on the screen.
 ```
 
 <br/>

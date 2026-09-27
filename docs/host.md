@@ -21,13 +21,24 @@ title: Aspia Host
 Allows accepts incoming connections from Clients and Consoles to manage the computer on which it is installed.
 
 ## 2. Installing <a name="installing"></a>
-The Host is only available for Windows.
 ```bash
 Windows x86
-  Run aspia-host-2.7.0-x86.msi and follow the instructions on the screen.
+  Run aspia-host-<version>-x86.msi and follow the instructions on the screen.
 
 Windows x86_64
-  Run aspia-host-2.7.0-x86_64.msi and follow the instructions on the screen.
+  Run aspia-host-<version>-x86_64.msi and follow the instructions on the screen.
+
+macOS
+  Run aspia-host-<version>-universal.pkg and follow the instructions on the screen.
+
+Ubuntu
+  sudo apt install ./aspia-host-<version>-x86_64.deb
+
+RHEL and compatible
+  sudo dnf install ./aspia-host-<version>-x86_64.rpm
+
+Android
+  Open aspia-host-<version>-arm64.apk on the device and follow the instructions on the screen.
 ```
 <br/>
 
