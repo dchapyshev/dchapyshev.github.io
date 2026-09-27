@@ -31,7 +31,8 @@ title: Aspia Client
 10. [Settings](#settings)
 11. [Command line](#command-line)
 12. [Environment variables](#env-vars)
-13. [Logs](#logs)
+13. [Files](#files)
+14. [Logs](#logs)
 
 ## 1. Purpose <a name="purpose"></a>
 Allows you to connect to and control Hosts. It also contains the address book and the management of
@@ -775,7 +776,52 @@ is opened in it.
 
 <br/>
 
-## 13. Logs <a name="logs"></a>
+## 13. Files <a name="files"></a>
+The Client keeps its data in the profile of the user, so every user of the computer has their own
+address book and settings.
+
+**Data base** `client.db3` contains all the important data of the application.
+
+```text
+Windows
+  %APPDATA%\aspia\client.db3
+
+Linux
+  ~/.local/share/aspia/client.db3
+  ($XDG_DATA_HOME/aspia if the variable is set)
+
+macOS
+  ~/Library/Application Support/aspia/client.db3
+
+Android
+  /data/data/org.aspia.client/files/aspia/client.db3
+```
+
+<br/>
+**Parameters file** `client.ini` contains the parameters of the appearance of the application.
+
+```text
+Windows
+  %APPDATA%\aspia\client.ini
+
+Linux
+  ~/.config/aspia/client.ini
+  ($XDG_CONFIG_HOME/aspia if the variable is set)
+
+macOS
+  ~/.config/aspia/client.ini
+
+Android
+  /data/data/org.aspia.client/files/settings/aspia/client.ini
+```
+
+<br/>
+**Chat history** is kept in the `chat` directory next to the data base, in a separate file for
+every computer.
+
+<br/>
+
+## 14. Logs <a name="logs"></a>
 By default the Client writes the log to files. To configure the logging parameters, use the
 following recommendations:
   - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 4 (0 - trace, 1 - info, 2 - warning, 3 - error, 4 - fatal). Decreasing the value increases the number of messages in the log.
