@@ -417,7 +417,7 @@ the architecture, the time of the last connection and of the last modification a
 
 | Command                                                                                                       | Description                                                                                                                                                          |
 |---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <img src="/images/icons/change-computer.svg" width="24" height="24" alt="change-computer"/> Edit Host         | Changes the group inside the workspace, the display name, the comment and the credentials of the host. The credentials are stored on this computer only.             |
+| <img src="/images/icons/change-computer.svg" width="24" height="24" alt="change-computer"/> Edit Host         | Changes the workspace and the group of the host, the display name, the comment and the credentials. See [Host properties](#router-host-properties).                  |
 | <img src="/images/icons/computer-update.svg" width="24" height="24" alt="computer-update"/> Check for Updates | Makes the host check for updates immediately. The host must be online.                                                                                               |
 | <img src="/images/icons/disconnect-one.svg" width="24" height="24" alt="disconnect-one"/> Disconnect          | Disconnects the host from the Router. The host must be online.                                                                                                       |
 | <img src="/images/icons/disconnect-all.svg" width="24" height="24" alt="disconnect-all"/> Disconnect All      | Disconnects all the hosts from the Router.                                                                                                                           |
@@ -510,11 +510,14 @@ workspace.
 
 A host is not required to belong to a workspace. Right after the approval a host belongs to no
 workspace and is displayed only in the **Approved Hosts** section, which is available to an
-administrator. Hosts are added to a workspace and removed from it in the properties of the
-workspace, by the **Edit Workspace** command. A host belongs to one workspace at a time. In the
-properties of a workspace only a host without a workspace can be added; an administrator can also
-move a host to another workspace by dragging it with the mouse onto that workspace or onto one of
-its groups.
+administrator. A host belongs to one workspace at a time. An administrator adds hosts to a
+workspace and removes them from it in three ways:
+
+  - in the properties of the workspace, by the **Edit Workspace** command. Only a host without a
+    workspace can be added there;
+  - in the properties of the host, by the **Edit Host** command. There a host can also be moved from
+    one workspace to another, see [Host properties](#router-host-properties);
+  - by dragging a host with the mouse onto a workspace or onto one of its groups.
 
 The credentials of the hosts are not sent to the Router: they are stored on the computer where they
 were entered and are available only there. When a host is removed from a workspace and when a
@@ -554,7 +557,30 @@ name and comment, the list of the users who have access to it and the list of it
 
 Groups of computers inside a workspace are created, edited and deleted with the same commands as the
 groups of the local address book. A host is moved to another group by dragging it in the list of the
-computers or with the **Edit Host** command.
+computers or with the **Edit Host** command. With the same command an administrator also moves a
+host to another workspace.
+
+**Host properties** <a name="router-host-properties"></a>
+
+The **Edit Host** command opens the properties of a host of the Router. It is available in a
+workspace, in the **Approved Hosts** section and in the search results. The dialog contains the
+following fields:
+
+| Field                 | Description                                                                                                                                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Workspace             | The workspace the host belongs to. "Not assigned" means that the host belongs to no workspace. Only an administrator can change the workspace; for the other users the field shows the current one. |
+| Group                 | The group inside the selected workspace. "Not assigned" places the host at the root of the workspace. The field is not available when the host belongs to no workspace.                             |
+| Display Name          | The name displayed in the lists, up to 64 bytes (64 Latin characters, fewer characters of other alphabets). If the field is empty, the name of the computer is displayed.                           |
+| Use saved credentials | Takes the user name and the password from a record of the [Credentials](#credentials) instead of the fields below. It is available when at least one record exists.                                 |
+| Credentials           | The record of the credentials. It is displayed instead of the user name and the password when "Use saved credentials" is enabled.                                                                   |
+| User Name             | The name of the user of the Host. It is filled in together with the password. If both fields are empty, the credentials are asked at every connection.                                              |
+| Password              | The password of the user of the Host. It is filled in together with the user name.                                                                                                                  |
+| Comment               | Any text up to 8 KB.                                                                                                                                                                                |
+
+<br/>
+The workspace, the group, the display name and the comment are stored on the Router and are the same
+for all its users. The credentials are stored on this computer only and are not sent to the Router.
+An operator can change only the credentials, the other fields are read-only for them.
 
 <br/>
 
