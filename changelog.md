@@ -5,6 +5,28 @@ title: Change Log
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.20 (Sep 29, 2026)
+
+**Host**
+
+  * The host window now shows the last permanent ID of the computer when it is not connected to the host service (for example, in an RDP session) and while the connection to the router is being restored.
+  * The password dialog that protects the host settings is now shown on top of other windows.
+  * Added support for macOS 27.
+  * Linux: fixed the missing login screen after the user logs out on some systems.
+  * Linux: fixed KMS screen capture on computers with several video cards.
+  * Linux: a crashed host process now leaves a complete core dump for diagnostics.
+
+**Client**
+
+  * Added "Quick Connect" (F8): a one-time connection to a computer by its address or by its ID through a router, without adding it to the database.
+  * Several hosts can now be moved to another group at once by drag and drop, for both local and router hosts.
+  * Router administrators can now approve several temporary hosts at once.
+  * Windows, macOS: added the "Unlock automatically on startup" option for the master password. The key of the database is then kept in the keystore of the system.
+
+**Relay**
+
+  * Fixed the error on a clean installation of the Relay on a computer without other Aspia components.
+
 ### Version 3.0.19 (Sep 28, 2026)
 
 **Common**
