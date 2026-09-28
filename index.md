@@ -12,11 +12,11 @@ Free open source application for real-time desktop remote control and file trans
 With Aspia, you can create your own NAT traversal infrastructure (using Router and Relay servers) with connection by ID or use direct connections. Aspia supports many features. Among them, detailed information about the system, task manager, audio, text chat.
 It is safe. All transmitted data is encrypted.
 <br><br>
-Current Version: <b>3.0.20</b> (September 29, 2026)
+Current Version: <b class="latest-version"></b>
 <br>
 <a href="/changelog">Change Log</a>
 <br><br>
-<button type="button" class="btn btn-primary" onclick="window.location.href='https://github.com/dchapyshev/aspia/releases';">Download</button>
+<button type="button" class="btn btn-primary" onclick="window.location.href='/download';">Download</button>
 <button type="button" class="btn btn-danger" onclick="window.location.href='/donate';">Donate</button>
 </div>
 
