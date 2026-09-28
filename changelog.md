@@ -5,6 +5,22 @@ title: Change Log
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.19 (Sep 28, 2026)
+
+**Common**
+
+  * Linux: automatic updates now work on systems based on ALT Linux (for example, Ximper Linux).
+
+**Host**
+
+  * Linux, macOS: the "aspia_host --version" command no longer needs a graphical session and prints only the version number.
+
+**Client**
+
+  * The workspace of a router host can now be changed in the host properties dialog (for router administrators). The dialog can also take a host out of its workspace or group.
+  * Fixed a client crash when removing hosts from a workspace in the workspace properties dialog.
+  * Fixed possible client crashes when the list shown behind an open dialog, question or context menu is updated at the same time.
+
 ### Version 3.0.18 (Sep 27, 2026)
 
 **Common**
