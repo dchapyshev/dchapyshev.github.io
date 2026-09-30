@@ -7,6 +7,25 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.21 (Sep 30, 2026)
+
+**Common**
+
+  * Added the Bulgarian translation.
+  * Added the ability to set a custom update server (its address and an optional public key of its packages).
+
+**Host**
+
+  * Windows: added the "Export installer" button to the host settings. It saves the installed package of the host with the current settings built in, so that already configured hosts can be installed on other computers.
+  * macOS: added "Uninstall Application" to the "Aspia" menu of the host window.
+  * macOS: fixed the restart of the host after a privacy permission is granted.
+  * Android: added "Background mode": the host stays connected to the router while the app is not on the screen or the screen is off.
+  * Android: added the option to confirm the screen capture request automatically.
+
+**Client**
+
+  * The host telemetry window now shows the update server of the host.
+
 ### Version 3.0.20 (Sep 29, 2026)
 
 **Host**
