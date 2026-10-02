@@ -7,6 +7,20 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.22 (Oct 2, 2026)
+
+**Host**
+
+  * Windows: added Aspia Quick Support, a portable version of the host that runs without installation and works through a router. It is exported from the host settings with the settings of the host built in: the "Export" button now offers the settings, the installer or Quick Support.
+  * Android: in the background mode the host now runs with a notification and stays reachable in the local network as well as through the router.
+  * Android: the system Back button now closes dialogs and returns to the previous page of the settings instead of closing the application. In the background mode it moves the application to the background on the main screen.
+  * Android: the floating session button is now shown over the system settings and is hidden on the lock screen.
+  * Android: fixed the host disconnecting from the router while the application was on the screen after it was reopened from the launcher.
+
+**Client**
+
+  * The list of temporary hosts of the router shows the type of the host: installed or Quick Support. Quick Support hosts cannot be approved as permanent ones.
+
 ### Version 3.0.21 (Sep 30, 2026)
 
 **Common**
