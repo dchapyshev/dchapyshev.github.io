@@ -7,6 +7,26 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.23 (Oct 3, 2026)
+
+**Host**
+
+  * Windows: Quick Support started in a Remote Desktop session with administrator rights now gives access to that session instead of the console session.
+  * Windows: several copies of Quick Support can now run on one computer at the same time, for example in different Remote Desktop sessions.
+  * Windows: Quick Support now has its own icon for the executable file, the windows and the tray.
+  * Android: the status line no longer shows the address of the router.
+
+**Client**
+
+  * The list of unapproved hosts now has the "Connect Time" column, lets you choose the visible columns and marks Quick Support hosts with their own icon.
+  * Connecting to a Quick Support host now offers only the one-time password in the authorization dialog.
+  * A double click on a Quick Support host with a session type that Quick Support does not serve now shows a message instead of doing nothing.
+  * The list of approved hosts of a router now has the session type selector on the toolbar, and a double click connects to the host with the selected session type instead of opening the host properties.
+
+**Router**
+
+  * The list of temporary hosts now includes the time each host connected.
+
 ### Version 3.0.22 (Oct 2, 2026)
 
 **Host**
