@@ -7,6 +7,18 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.24 (Oct 5, 2026)
+
+**Host**
+
+  * Windows: the one-time password of Quick Support now changes every 15 minutes instead of 5.
+
+**Client**
+
+  * If the host refuses the user name or password, the authorization dialog now opens again to enter them once more.
+  * F1 and F8 are no longer taken by the "Help" and "Quick Connect" actions while a session is open in a tab.
+  * The settings of remote desktop sessions, of session recording and of UDP connections are now kept in the database and are no longer reset when the application is updated.
+
 ### Version 3.0.23 (Oct 3, 2026)
 
 **Host**
