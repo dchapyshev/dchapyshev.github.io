@@ -7,6 +7,23 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.25 (Oct 6, 2026)
+
+**Host**
+
+  * Windows: fixed a crash of the host service when it stops.
+  * Linux: reduced memory usage of the screen capture in GNOME sessions.
+  * Reduced memory usage when there are no active connections.
+
+**Client**
+
+  * In the "Host" dialog of a local host, the "Address" field now gets the focus. When a host is added, the "Name" field is filled in from the address as you type until you change the name yourself.
+  * In the "Host Properties" dialog of a router host, the "Display Name" field now gets the focus.
+
+**Common**
+
+  * The standard context menus of text and number fields (Undo, Redo, Cut, Copy, Paste, Delete, Select All) are now translated.
+
 ### Version 3.0.24 (Oct 5, 2026)
 
 **Host**
