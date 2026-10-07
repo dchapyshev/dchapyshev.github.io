@@ -7,6 +7,12 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.28 (Oct 7, 2026)
+
+**Client**
+
+  * A comment of several lines no longer stretches the row in the list of router hosts. The whole comment is shown in the tooltip.
+
 ### Version 3.0.27 (Oct 7, 2026)
 
 **Host**
