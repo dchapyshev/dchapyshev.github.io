@@ -7,6 +7,12 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.26 (Oct 7, 2026)
+
+**Host**
+
+  * Windows: fixed settings import from an exported installer when upgrading from version 2.x.
+
 ### Version 3.0.25 (Oct 6, 2026)
 
 **Host**
