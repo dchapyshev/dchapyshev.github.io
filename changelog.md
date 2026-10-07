@@ -7,6 +7,12 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.27 (Oct 7, 2026)
+
+**Host**
+
+  * Windows: fixed connections being rejected after an update when the session was locked on disconnect.
+
 ### Version 3.0.26 (Oct 7, 2026)
 
 **Host**

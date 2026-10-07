@@ -1,7 +1,7 @@
 {
   "format": 1,
   "targets": {
-    "latest": "3.0.26"
+    "latest": "3.0.27"
   },
   "updates": [
     {
@@ -58,6 +58,10 @@
     },
     {
       "source": "3.0.26",
+      "target": "@latest"
+    },
+    {
+      "source": "3.0.27",
       "target": "@latest"
     }
   ]
