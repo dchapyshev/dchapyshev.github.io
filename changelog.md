@@ -7,6 +7,17 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.29 (Oct 8, 2026)
+
+**Host**
+
+  * Linux: fixed wrong screen colors in some wlroots-based sessions.
+  * Linux: the notifier window is no longer shown in the taskbar in labwc.
+
+**Client**
+
+  * Android: the system "Back" now closes dialogs and menus and returns to the previous page instead of closing the application.
+
 ### Version 3.0.28 (Oct 7, 2026)
 
 **Client**
