@@ -7,6 +7,12 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.30 (Oct 8, 2026)
+
+**Host**
+
+  * Android: fixed the screen image and mouse control after the device is rotated during a connection.
+
 ### Version 3.0.29 (Oct 8, 2026)
 
 **Host**
