@@ -7,6 +7,14 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.31 (Oct 9, 2026)
+
+**Host**
+
+  * Linux: when the screen is captured directly from the video card and the video driver does not report the active point of the mouse pointer, the remote mouse pointer is no longer shown; the local pointer is shown instead.
+  * Linux: fixed a leak of video card resources when the screen is captured directly from the video card.
+  * Linux: fixed the missing mouse pointer in GNOME sessions on older systems such as AlmaLinux 8 and RHEL 8.
+
 ### Version 3.0.30 (Oct 8, 2026)
 
 **Host**

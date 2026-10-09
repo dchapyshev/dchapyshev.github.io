@@ -1,80 +1,27 @@
 {
   "format": 1,
   "targets": {
-    "latest": "3.0.30"
+    "latest": "3.0.31"
   },
   "updates": [
-    {
-      "source": "3.0.12",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.13",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.15",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.16",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.17",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.18",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.19",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.20",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.21",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.22",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.23",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.24",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.25",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.26",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.27",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.28",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.29",
-      "target": "@latest"
-    },
-    {
-      "source": "3.0.30",
-      "target": "@latest"
-    }
+    {"source": "3.0.12", "target": "@latest"},
+    {"source": "3.0.13", "target": "@latest"},
+    {"source": "3.0.15", "target": "@latest"},
+    {"source": "3.0.16", "target": "@latest"},
+    {"source": "3.0.17", "target": "@latest"},
+    {"source": "3.0.18", "target": "@latest"},
+    {"source": "3.0.19", "target": "@latest"},
+    {"source": "3.0.20", "target": "@latest"},
+    {"source": "3.0.21", "target": "@latest"},
+    {"source": "3.0.22", "target": "@latest"},
+    {"source": "3.0.23", "target": "@latest"},
+    {"source": "3.0.24", "target": "@latest"},
+    {"source": "3.0.25", "target": "@latest"},
+    {"source": "3.0.26", "target": "@latest"},
+    {"source": "3.0.27", "target": "@latest"},
+    {"source": "3.0.28", "target": "@latest"},
+    {"source": "3.0.29", "target": "@latest"},
+    {"source": "3.0.30", "target": "@latest"},
+    {"source": "3.0.31", "target": "@latest"}
   ]
 }
