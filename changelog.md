@@ -7,6 +7,12 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.33 (Oct 12, 2026)
+
+**Common**
+
+  * Fixed the remote screen image that could stop updating after the network channel was switched.
+
 ### Version 3.0.32 (Oct 10, 2026)
 
 **Common**
