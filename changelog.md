@@ -7,6 +7,17 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.34 (Oct 13, 2026)
+
+**Common**
+
+  * Fixed switching the connection between TCP and UDP.
+
+**Host**
+
+  * Linux: in X11 sessions the mouse pointer shape is no longer resent with every screen update.
+  * Android: fixed a possible crash when sending data to a client failed.
+
 ### Version 3.0.33 (Oct 12, 2026)
 
 **Common**
