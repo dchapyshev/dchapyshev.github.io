@@ -7,6 +7,14 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.35 (Oct 14, 2026)
+
+**Client**
+
+  * Fixed a frozen screen image after switching to UDP.
+  * Android: fixed the layout with the on-screen keyboard shown.
+  * Android: fixed the layout on narrow screens.
+
 ### Version 3.0.34 (Oct 13, 2026)
 
 **Common**
