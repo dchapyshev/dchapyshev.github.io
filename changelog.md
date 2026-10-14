@@ -7,6 +7,16 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.36 (Oct 14, 2026)
+
+**Common**
+
+  * macOS: fixed invisible check boxes in lists.
+
+**Host**
+
+  * Android: clients older than the host are rejected.
+
 ### Version 3.0.35 (Oct 14, 2026)
 
 **Client**
