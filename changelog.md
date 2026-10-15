@@ -7,6 +7,15 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.0.37 (Oct 15, 2026)
+
+**Host**
+
+  * Fixed the session types allowed for connections by one-time password being reset.
+  * Android: the permissions screen now detects an accessibility service that is turned on but stopped by Android.
+  * Android: the background mode option has been removed.
+  * Android: the option to confirm screen capture automatically has been removed.
+
 ### Version 3.0.36 (Oct 14, 2026)
 
 **Common**
