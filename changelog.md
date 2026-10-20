@@ -7,6 +7,28 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.1.2 (Oct 20, 2026)
+
+**Common**
+
+  * Added support for proxy servers.
+  * Support for versions 2.x has been discontinued.
+  * Android: fixed a possible crash when opening a drop-down list.
+
+**Router**
+
+  * The administrator password is now generated randomly when the configuration is created.
+
+**Client**
+
+  * Added an MCP connector for AI applications. It is turned off by default.
+  * Added saved OS credentials for signing in to the remote operating system.
+  * Added the "Quick Support" section for Routers.
+  * Added filters for Router hosts.
+  * Search now also matches the host comment.
+  * Added group actions for selected hosts, clients and relays.
+  * "Workspaces" have been renamed to "Spaces".
+
 ### Version 3.0.37 (Oct 15, 2026)
 
 **Host**
