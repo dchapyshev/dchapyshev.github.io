@@ -7,6 +7,35 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.2.2 (Nov 2, 2026)
+
+**Common**
+
+  * Improved the adaptation of the video stream to the network bandwidth.
+  * Added the "Full Desktop" mode for Windows hosts that shows all monitors at once.
+  * System information now shows the last logged on user.
+  * The reason is now shown when signing in with saved OS credentials fails.
+  * The statistics window now shows the estimated bandwidth and the capture frame rate.
+
+**Router**
+
+  * Added email notifications about logins with two-factor authentication.
+
+**Host**
+
+  * Windows: saved OS credentials now accept user names in the user@domain form.
+  * Windows: fixed the use of saved OS credentials in the UAC prompt.
+  * Linux: fixed the missing screen image on the login and lock screens on some virtual machines.
+
+**Client**
+
+  * Added the "Access Log" section for Routers.
+  * Added an email address for Router users.
+  * The list of Router clients now shows the user name.
+  * The database can now be reset if the master password is forgotten.
+  * Fixed the scaling of the remote mouse pointer on screens with different DPI.
+  * Windows 11: fixed minimizing the window from full screen mode.
+
 ### Version 3.1.2 (Oct 20, 2026)
 
 **Common**
