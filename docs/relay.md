@@ -198,4 +198,3 @@ The Relay supports the following command line arguments:
   - Don't forget to add rules in your firewall to access the Relay. The Relay does not add rules automatically.
   - When uninstalling, the Relay does not delete its configuration files.
   - After changing the configuration files, you must restart the Relay service. The Relay reads the configuration at startup!
-  - The configuration of version 2.7 is migrated automatically, see [Migration from version 2.7](/docs/migration#relay).
