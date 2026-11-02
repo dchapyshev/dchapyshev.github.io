@@ -1,0 +1,165 @@
+{
+  "format": 1,
+  "version": "3.2.2",
+  "description": "Aspia 3.2.2 beta release.",
+  "path": "https://github.com/dchapyshev/aspia/releases/download/v3.2.2",
+  "packages": {
+    "host": {
+      "windows": {
+        "x86_64": [
+          {
+            "format": "msi",
+            "file": "aspia-host-3.2.2-x86_64.msi",
+            "sha256": "af48fbc1be83a1e886f4e6758bc2e49357436fecb29da62f3efb307700d4fcd6"
+          }
+        ],
+        "x86": [
+          {
+            "format": "msi",
+            "file": "aspia-host-3.2.2-x86.msi",
+            "sha256": "9fd41e1d8cf8f91eb2788b76f4e9cedcfbf292a683c5d1115ae89218900594fc"
+          }
+        ]
+      },
+      "linux": {
+        "x86_64": [
+          {
+            "format": "deb",
+            "file": "aspia-host-3.2.2-x86_64.deb",
+            "sha256": "8466d34514f10624254a78dffc05ee20f48e6b370dc16a8e19a6e2452c38a574"
+          },
+          {
+            "format": "rpm",
+            "file": "aspia-host-3.2.2-x86_64.rpm",
+            "sha256": "ccca0ce9f9f67ddd514f5183a73cd7a0d2da7ab512cd123eed507019e32f150a"
+          }
+        ]
+      },
+      "macosx": {
+        "x86_64": [
+          {
+            "format": "pkg",
+            "file": "aspia-host-3.2.2-universal.pkg",
+            "sha256": "25218b11fb435e9a034e69b8d5bb9d9df557d0b856c2e7f5cf7ac84012d35344"
+          }
+        ],
+        "arm64": [
+          {
+            "format": "pkg",
+            "file": "aspia-host-3.2.2-universal.pkg",
+            "sha256": "25218b11fb435e9a034e69b8d5bb9d9df557d0b856c2e7f5cf7ac84012d35344"
+          }
+        ]
+      },
+      "android": {
+        "arm64": [
+          {
+            "format": "apk",
+            "file": "aspia-host-3.2.2-arm64.apk",
+            "sha256": "4da72597e8d281410170b61346af80b14e9dec498782897e0801efd92b052b3d"
+          }
+        ]
+      }
+    },
+    "client": {
+      "windows": {
+        "x86_64": [
+          {
+            "format": "msi",
+            "file": "aspia-client-3.2.2-x86_64.msi",
+            "sha256": "45c1b82650c6aa89e2f14d47846ab22e2fafcd965222c21c47b43775e62d31c9"
+          }
+        ]
+      },
+      "linux": {
+        "x86_64": [
+          {
+            "format": "deb",
+            "file": "aspia-client-3.2.2-x86_64.deb",
+            "sha256": "eaf87f5ef9244ceba1385e5113ff08e008cf265bf979da66f08182143e6c1e5c"
+          },
+          {
+            "format": "rpm",
+            "file": "aspia-client-3.2.2-x86_64.rpm",
+            "sha256": "0df4769156e7b8890bd4139e66abfde71dd1f8fda388681f440f056b1e14c264"
+          }
+        ]
+      },
+      "macosx": {
+        "x86_64": [
+          {
+            "format": "pkg",
+            "file": "aspia-client-3.2.2-universal.pkg",
+            "sha256": "ed3d7465a60286e409a2bc2a20f156b48fc788a0998b2b7c32f8942d13d68fc6"
+          }
+        ],
+        "arm64": [
+          {
+            "format": "pkg",
+            "file": "aspia-client-3.2.2-universal.pkg",
+            "sha256": "ed3d7465a60286e409a2bc2a20f156b48fc788a0998b2b7c32f8942d13d68fc6"
+          }
+        ]
+      },
+      "android": {
+        "arm64": [
+          {
+            "format": "apk",
+            "file": "aspia-client-3.2.2-arm64.apk",
+            "sha256": "c0c25b3507f31b30cf2896d9a1802ec38f0fe4218640a532cf6da6147d4aaeaf"
+          }
+        ]
+      }
+    },
+    "router": {
+      "windows": {
+        "x86_64": [
+          {
+            "format": "msi",
+            "file": "aspia-router-3.2.2-x86_64.msi",
+            "sha256": "03090366f6edac3d9fcb45b663e52d8b1b1b9266d793997b97cf1f453aa38e3a"
+          }
+        ]
+      },
+      "linux": {
+        "x86_64": [
+          {
+            "format": "deb",
+            "file": "aspia-router-3.2.2-x86_64.deb",
+            "sha256": "825ccc405772b29176d0cfd95f34e5185e2737cc4f53db1d2c1837bc41f36065"
+          },
+          {
+            "format": "rpm",
+            "file": "aspia-router-3.2.2-x86_64.rpm",
+            "sha256": "dfdf6035725b577be48c37e66be25b588d1434d46c819ac03da86f387f9d0e33"
+          }
+        ]
+      }
+    },
+    "relay": {
+      "windows": {
+        "x86_64": [
+          {
+            "format": "msi",
+            "file": "aspia-relay-3.2.2-x86_64.msi",
+            "sha256": "819ac0945e88cd674f229756a8ec6e3f921c96321df1100ddcc16fb1431af193"
+          }
+        ]
+      },
+      "linux": {
+        "x86_64": [
+          {
+            "format": "deb",
+            "file": "aspia-relay-3.2.2-x86_64.deb",
+            "sha256": "106c3cf597393a976376f2675a4d517cd1cd59e6f774f2696f7a8ce0999edee1"
+          },
+          {
+            "format": "rpm",
+            "file": "aspia-relay-3.2.2-x86_64.rpm",
+            "sha256": "05d7d47ee4f66528d0831be04a6718d1ea744b468e85de548207c4e18575cb1e"
+          }
+        ]
+      }
+    }
+  }
+}
