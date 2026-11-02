@@ -7,12 +7,7 @@ title: Documentation
 
 1. [About](/docs/about)
 2. [F.A.Q.](/docs/faq)
-3. [Migration from version 2.7](/docs/migration)
-    1. [Aspia Router](/docs/migration#router)
-    2. [Aspia Relay](/docs/migration#relay)
-    3. [Aspia Host](/docs/migration#host)
-    4. [Aspia Client](/docs/migration#client)
-4. Components
+3. Components
     1. [Aspia Router](/docs/router)
        1. [Purpose](/docs/router#purpose)
        2. [Installing](/docs/router#installing)
@@ -81,16 +76,16 @@ title: Documentation
        9. [Logs](/docs/host#logs)
        10. [Notes](/docs/host#notes)
        11. [Android](/docs/host#android)
-5. Examples
+4. Examples
     1. [Installation of Router and Relay](docs/install-router-and-relay)
     2. [Backuping Router and Relay](docs/backup-router-and-relay)
     3. [Updating Router and Relay](docs/update-router-and-relay)
     4. [Configuration for Mikrotik](/docs/mikrotik)
     5. [Configuration for iptables](/docs/iptables)
-6. Building
+5. Building
     1. [Windows](/docs/building-windows)
     2. [Linux](/docs/building-linux)
     3. [MacOS](/docs/building-macos)
-7. [Instructions for translators](/docs/translators)
-8. [Third-party components](/docs/third-party)
-9. [Bug reporting](/docs/bug-reporting)
+6. [Instructions for translators](/docs/translators)
+7. [Third-party components](/docs/third-party)
+8. [Bug reporting](/docs/bug-reporting)
