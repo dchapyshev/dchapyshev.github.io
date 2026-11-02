@@ -47,14 +47,11 @@ configuration and register the service as described below.
 <br/>
 
 ## 3. Creating a configuration <a name="create-config"></a>
-**WARNING!** There must be no existing configuration file or database in the destination directory.
-The Router never overwrites the current configuration and creating a new configuration is possible
-only if the previous one does not exist.
+**WARNING!** There must be no existing configuration file, database or public key files in the
+destination directories. The Router never overwrites the current configuration and creating a new
+configuration is possible only if the previous one does not exist.
 
 **WARNING!** Administrator rights are required to create a configuration.
-
-**WARNING!** Default username and password: admin/admin. Don't forget to change this after
-installation! To manage users, use the Router management in the [Client](/docs/client#router-manage).
 
 ```bash
 Windows x64
@@ -64,6 +61,26 @@ Windows x64
 Linux
   sudo aspia_router --create-config
 ```
+
+<br/>
+The command creates the configuration file, the database, the keys for Hosts and Relays and the
+user `admin` with the Administrator, Manager and Operator access levels. The password of the user is
+generated randomly and is displayed once at the end of the command output:
+
+```text
+==================== LOGIN CREDENTIALS ====================
+User name: admin
+Password: <generated password>
+Save the password. It is not shown again.
+===========================================================
+```
+
+<br/>
+**WARNING!** Save the password. It is not stored in clear form and cannot be displayed again.
+
+Use this user for the first connection to the Router from the [Client](/docs/client#router-connect).
+At the first connection the two-factor authentication of the user is set up. To manage users, use
+the Router management in the [Client](/docs/client#router-manage).
 
 <br/>
 
@@ -118,28 +135,27 @@ Linux
 ```
 
 <br/>
-The path can be changed by the environment variable ASPIA_ROUTER_CONFIG_FILE. The file contains the
-private keys of the Router.
+The path can be changed by the environment variable ASPIA_ROUTER_CONFIG_FILE.
 
 The file has the ini format: the parameters are grouped into sections. The description of the
 sections and their parameters is given below.
 
 **Section [router]**
 
-| Parameter  | Values                                | Description                                                                                                            |
-|------------|---------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| `seed_key` | 128 hexadecimal characters (64 bytes) | It is automatically generated when the configuration is created. Do not change this setting unless you really need to. |
+| Parameter         | Values                                | Description                                                                                                                       |
+|-------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| `seed_key`        | 128 hexadecimal characters (64 bytes) | It is automatically generated when the configuration is created. Do not change this setting unless you really need to.            |
+| `access_log_days` | Number from 1 to 365, default 45      | The number of days the records of the access log are kept. Older records are deleted automatically. A value outside the range is replaced by the nearest bound. |
 
 <br/>
 
 **Section [host]**
 
-| Parameter          | Values                                          | Description                                                                                                                                                                                                                    |
-|--------------------|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `listen_interface` | IPv4 or IPv6 address, empty by default          | Interface address on which the listener of the Hosts (both ports) accepts connections. Specify an empty value to listen on all interfaces. If the value is not a valid address, this listener is not started.                  |
-| `port`             | Number from 1 to 65535, default 8061            | The TCP port for Hosts of version 3.0.0 and above.                                                                                                                                                                             |
-| `legacy_port`      | Number from 1 to 65535, default 8060            | The TCP port for Hosts of versions below 3.0.0.                                                                                                                                                                                |
-| `private_key`      | Hexadecimal string, required                    | The private key used for connections with Hosts. It is automatically generated when the configuration is created. Without it the listeners of the Hosts are not started. Do not change this setting unless you really need to. |
+| Parameter          | Values                                          | Description                                                                                                                                                                                                                   |
+|--------------------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `listen_interface` | IPv4 or IPv6 address, empty by default          | Interface address on which the listener of the Hosts accepts connections. Specify an empty value to listen on all interfaces. If the value is not a valid address, this listener is not started.                              |
+| `port`             | Number from 1 to 65535, default 8061            | The TCP port for Hosts.                                                                                                                                                                                                       |
+| `private_key`      | Hexadecimal string, required                    | The private key used for connections with Hosts. It is automatically generated when the configuration is created. Without it the listener of the Hosts is not started. Do not change this setting unless you really need to. |
 | `white_list`       | Addresses separated by commas, empty by default | The list of Hosts who are allowed to connect to the Router.                                                                                                                                                                    |
 
 <br/>
@@ -175,6 +191,22 @@ sections and their parameters is given below.
 
 <br/>
 
+**Section [smtp]**
+
+The section contains the parameters of the SMTP server through which the Router sends email
+notifications to its users. A notification is sent only to a user who has an email address.
+
+| Parameter  | Values                                                  | Description                                                                                                                                                                         |
+|------------|---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `server`   | Host name or IP address, empty by default               | The address of the SMTP server used to send emails. Specify an empty value to disable sending of emails.                                                                           |
+| `port`     | Number from 1 to 65535, default 587                     | The TCP port of the SMTP server.                                                                                                                                                    |
+| `security` | `none`, `starttls` or `tls`, default `starttls`         | `starttls` - the connection is switched to TLS with the STARTTLS command, `tls` - the connection uses TLS from the start, `none` - without encryption. An unknown value is replaced by `starttls`. |
+| `user`     | String, empty by default                                | The user name for authentication on the SMTP server. If the value is empty, authentication is not performed.                                                                       |
+| `password` | String, empty by default                                | The password for authentication on the SMTP server.                                                                                                                                 |
+| `from`     | Email address, required if `server` is specified        | The address of the sender of the emails. If the address is not valid, emails are not sent.                                                                                         |
+
+<br/>
+
 **White lists.** A white list can contain IP addresses and subnets separated by commas, for example
 `192.168.1.10,10.0.0.0/8`. If the list is empty, then connections from all peers of this type are
 allowed. If the list contains items, then only the peers specified in it can connect. Entries that
@@ -185,13 +217,12 @@ are neither a valid address nor a valid subnet are ignored.
 ## 6. Ports <a name="ports"></a>
 The Router listens on several ports. Each type of a peer has its own listener:
 
-| Port | Protocol | Purpose                          |
-|------|----------|----------------------------------|
-| 8060 | TCP      | Hosts of versions below 3.0.0    |
-| 8061 | TCP      | Hosts of version 3.0.0 and above |
-| 8062 | TCP      | Clients                          |
-| 8063 | TCP      | Relays                           |
-| 8065 | UDP      | Built-in STUN server             |
+| Port | Protocol | Purpose              |
+|------|----------|----------------------|
+| 8061 | TCP      | Hosts                |
+| 8062 | TCP      | Clients              |
+| 8063 | TCP      | Relays               |
+| 8065 | UDP      | Built-in STUN server |
 
 <br/>
 
@@ -215,6 +246,16 @@ Linux
 ```
 
 <br/>
+**Auxiliary databases**
+
+Besides the main database the Router keeps auxiliary databases in the same directory:
+
+| File              | Contents                                                                                                                  |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------|
+| `access_log.db3`  | The access log. The retention period of the records is set by the `access_log_days` parameter of the [configuration file](#config-file). |
+| `email_queue.db3` | Email notifications waiting to be sent.                                                                                   |
+
+<br/>
 
 ## 8. Public key <a name="public-key"></a>
 The Router uses two pairs of keys: one for Hosts and one for Relays. The contents of the public key
@@ -235,12 +276,12 @@ Linux
 <br/>
 
 ## 9. Logs <a name="logs"></a>
-By default the Router writes the log to files. To configure the Router logging parameters, use the
-following recommendations:
-  - To set the log level, declare an environment variable ASPIA_LOG_LEVEL with a value from 0 to 4 (0 - trace, 1 - info, 2 - warning, 3 - error, 4 - fatal). Decreasing the value increases the number of messages in the log.
-  - To enable logging to a file (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_FILE with a value other than 0. If the environment variable is declared with a value of 0, then logging to file will be disabled.
-  - To enable logging to stdout (if it is not enabled by default for platform), declare environment variable ASPIA_LOG_TO_STDOUT with a value other than 0. If the environment variable is declared with a value of 0, then logging to stdout will be disabled.
-  - By default, log files older than 14 days are automatically deleted. If you want to change this value, then declare environment variable ASPIA_MAX_LOG_FILE_AGE with a numeric value in days. The variable can take a value from 0 to 366. If the variable is set to 0, then the log files will not be automatically deleted.
+The Router writes the log to files. Logging to stdout is disabled by default. The logging parameters
+are changed by the following environment variables:
+  - ASPIA_LOG_LEVEL sets the log level with a value from 0 to 4 (0 - trace, 1 - info, 2 - warning, 3 - error, 4 - fatal). Default 1. Decreasing the value increases the number of messages in the log.
+  - ASPIA_LOG_TO_FILE with a value of 0 disables logging to files.
+  - ASPIA_LOG_TO_STDOUT with a value other than 0 enables logging to stdout.
+  - ASPIA_MAX_LOG_FILE_AGE sets the age in days after which the log files are deleted automatically. The variable can take a value from 0 to 366. Default 14. If the variable is set to 0, then the log files are not deleted automatically.
 
 The log files are located in the following paths:
 
@@ -288,5 +329,5 @@ The Router supports the following command line arguments:
   - Don't forget to add rules in your firewall to access the Router. The Router does not add rules automatically.
   - It is recommended to limit the list of Relays that can be connected to the Router. Whitelist the required Relays.
   - When uninstalling, the Router does not delete its configuration files and database.
-  - When updating the Router, do not forget to back up the configuration files and database. The configuration of version 2.7 is migrated automatically, see [Migration from version 2.7](/docs/migration#router).
+  - When updating the Router, do not forget to back up the configuration files and database.
   - After changing the configuration files, you must restart the Router service. The Router reads the configuration at startup!
