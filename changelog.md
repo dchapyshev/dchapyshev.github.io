@@ -7,6 +7,28 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.3.2 (Nov 7, 2026)
+
+**Common**
+
+  * All session types now work over UDP when it is available.
+  * Added the video quality setting.
+  * Added an option to turn off scaling the image to the window size on the host side.
+  * Improved the accuracy of the remote mouse pointer on scaled screens.
+  * The statistics window now shows the frame size, the preferred size and the video quality.
+
+**Host**
+
+  * Windows: the terminal now accepts user names in the user@domain form.
+
+**Client**
+
+  * Added an option to ask for confirmation when closing the application.
+  * Screen recordings are now encoded with VP9.
+  * Support for aspia:// links has been removed.
+  * Fixed the default sort order of file lists in "File Transfer".
+  * macOS: improved the quality of the scaled remote screen.
+
 ### Version 3.2.2 (Nov 2, 2026)
 
 **Common**
