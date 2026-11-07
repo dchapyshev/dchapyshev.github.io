@@ -7,7 +7,7 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
-### Version 3.3.2 (Nov 7, 2026)
+### Version 3.3.3 (Nov 7, 2026)
 
 **Common**
 
@@ -16,6 +16,7 @@ The change log for versions 1.x is available [here](/changelog-1.x).
   * Added an option to turn off scaling the image to the window size on the host side.
   * Improved the accuracy of the remote mouse pointer on scaled screens.
   * The statistics window now shows the frame size, the preferred size and the video quality.
+  * Windows: HTTPS connections now use the TLS implementation of the system (Schannel). This fixes downloading updates on systems that do not have the required root certificate yet.
 
 **Host**
 
