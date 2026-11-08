@@ -7,7 +7,7 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
-### Version 3.3.4 (Nov 8, 2026)
+### Version 3.3.5 (Nov 8, 2026)
 
 **Common**
 
