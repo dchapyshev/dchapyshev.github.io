@@ -7,6 +7,25 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.4.2 (Nov 15, 2026)
+
+**Common**
+
+  * Updating to this version is possible only from version 3.3.5. Older versions must be updated to 3.3.5 first.
+
+**Host**
+
+  * Fixed the size and position of the notification window after changing the screen resolution or scale.
+  * Windows: the shape of the mouse pointer is now shown on computers without a mouse.
+  * Android: file transfer now works only with folders chosen by the user.
+
+**Client**
+
+  * Added "Profiles" with session settings that can be assigned to hosts.
+  * Each database now works with one Router. A database with several Routers is split into separate databases on update.
+  * The unlock window now allows creating, renaming and deleting databases. Each database has its own master password.
+  * The Router settings have moved to the application settings.
+
 ### Version 3.3.5 (Nov 8, 2026)
 
 **Common**
