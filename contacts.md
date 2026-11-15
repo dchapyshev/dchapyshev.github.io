@@ -5,7 +5,6 @@ title: Contacts
 
 | Developer         | Dmitry Chapyshev                                               |
 |-------------------|----------------------------------------------------------------|
-| Location          | Russia, Chelyabinsk                                            |
 | GitHub            | [https://github.com/dchapyshev](https://github.com/dchapyshev) |
 | Telegram          | [@dchapyshev](https://t.me/dchapyshev)                         |
 | Group in Telegram | [@aspia_talks](https://t.me/aspia_talks)                       |
