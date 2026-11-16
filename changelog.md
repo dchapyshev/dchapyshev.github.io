@@ -7,6 +7,13 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.4.3 (Nov 16, 2026)
+
+**Client**
+
+  * Fixed the length limit for the names of hosts, groups and "Spaces" on the Router, which was too short for non-Latin text.
+  * Minor user interface fixes.
+
 ### Version 3.4.2 (Nov 15, 2026)
 
 **Common**
