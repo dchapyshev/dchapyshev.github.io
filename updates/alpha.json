@@ -45,6 +45,7 @@
     {"source": "3.4.1", "target": "@latest"},
     {"source": "3.4.2", "target": "@latest"},
     {"source": "3.4.3", "target": "@latest"},
+    {"source": "3.5.0", "target": "@latest"},
     {"source": "3.5.1", "target": "@latest"}
   ]
 }
