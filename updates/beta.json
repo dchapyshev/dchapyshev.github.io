@@ -1,7 +1,7 @@
 {
   "format": 1,
   "targets": {
-    "latest": "3.4.3"
+    "latest": "3.5.2"
   },
   "updates": [
     {"source": "3.0.12", "target": "3.3.5"},
@@ -44,6 +44,9 @@
     {"source": "3.4.0", "target": "@latest"},
     {"source": "3.4.1", "target": "@latest"},
     {"source": "3.4.2", "target": "@latest"},
-    {"source": "3.4.3", "target": "@latest"}
+    {"source": "3.4.3", "target": "@latest"},
+    {"source": "3.5.0", "target": "@latest"},
+    {"source": "3.5.1", "target": "@latest"},
+    {"source": "3.5.2", "target": "@latest"}
   ]
 }

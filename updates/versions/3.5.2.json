@@ -1,7 +1,7 @@
 {
   "format": 1,
   "version": "3.5.2",
-  "description": "Aspia 3.5.2 alpha release.",
+  "description": "Aspia 3.5.2 beta release.",
   "path": "https://github.com/dchapyshev/aspia/releases/download/v3.5.2",
   "packages": {
     "host": {

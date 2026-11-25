@@ -7,6 +7,28 @@ The change log for versions 2.x is available [here](/changelog-2.x).
 
 The change log for versions 1.x is available [here](/changelog-1.x).
 
+### Version 3.5.2 (Nov 25, 2026)
+
+**Common**
+
+  * Scripts now run on the remote computer without opening a window there. Their output is shown in a window of the Client.
+
+**Router**
+
+  * After two-factor authentication a device is now remembered for 14 days without signing in instead of 7.
+
+**Host**
+
+  * The Host no longer updates to a version newer than its Router.
+
+**Client**
+
+  * Added data synchronization through the Router between the devices of one user: credentials, profiles, local hosts and groups and the saved data of Router hosts.
+  * The Client now reports when the Router has a newer version and the Client must be updated.
+  * "Quick Connect" now remembers recently used addresses.
+  * The layout of windows and tables is now kept after updating the Client.
+  * Fixed Tab and Shift+Tab in the "Terminal" session.
+
 ### Version 3.4.3 (Nov 16, 2026)
 
 **Client**
